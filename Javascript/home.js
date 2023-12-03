@@ -60,15 +60,15 @@ const getYoutubeVideoDetails = async () => {
 
         const videos = getVideoData.data.items;
         videos.forEach(video => {
-            const videoUrl = 'https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId;
+            const videoUrl = 'https://www.youtube.com/embed/' + video.snippet.resourceId.videoId;
             const videoTitle = video.snippet.title;
             const videoThumnnail = video.snippet.thumbnails.medium.url;
 
             document.querySelector(".cards-content").innerHTML +=
                 `<div class="card mx-2 my-2">
                 <a href="${videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
-                <div class="card_image">                      
-                      <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+                <div class="embed-responsive embed-responsive-16by9">  
+                <iframe class="embed-responsive-item rounded-2" width="auto" height="" src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="card-body p-0 py-3 px-2">
                     <p class="card-title latest_video_title">${videoTitle}</p>
@@ -81,6 +81,8 @@ const getYoutubeVideoDetails = async () => {
     }
 
 };
+{/* <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid"> */}
+
 
 getYoutubeSubscribers();
 getYoutubeTitle();
