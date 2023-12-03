@@ -65,13 +65,13 @@ const getYoutubeVideoDetails = async () => {
             const videoThumnnail = video.snippet.thumbnails.medium.url;
 
             document.querySelector(".cards-content").innerHTML +=
-                `<div class="cards">
-                <a href="${videoUrl}" class="latest_video_title_link" target="_blank">
-                <div class="cards-img">                      
-                      <img src="${videoThumnnail}" alt="" height="250" width="300">
+                `<div class="card mx-2 my-2">
+                <a href="${videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
+                <div class="card_image">                      
+                      <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
                 </div>
-                <div class="cards-text">
-                    <h6>${videoTitle}</h6>
+                <div class="card-body p-0 py-3 px-2">
+                    <p class="card-title latest_video_title">${videoTitle}</p>
                 </div>
                 </a>
             </div>`
