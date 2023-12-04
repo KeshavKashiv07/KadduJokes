@@ -145,18 +145,18 @@ prev.addEventListener('click', handleScrollPrev)
 
 
 //Slider Code for Popular Videos
-const nextMP = document.querySelector('#nextMP')
-const prevMP = document.querySelector('#prevMP')
+ const next_mostPopular = document.querySelector('#next_mostPopular')
+ const prev_mostPopular = document.querySelector('#prev_mostPopular')
 
-function handleScrollNext(direction) {
+function handleScrollNext_mostPopular(direction) {
     const cards = document.querySelector('.mostPoupler-cards-content')
     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
 
-function handleScrollPrev(direction) {
+function handleScrollPrev_mostPopular(direction) {
     const cards = document.querySelector('.mostPoupler-cards-content')
     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
 
-next.addEventListener('click', handleScrollNext)
-prev.addEventListener('click', handleScrollPrev)
+ next_mostPopular.addEventListener('click', handleScrollNext_mostPopular)
+ prev_mostPopular.addEventListener('click', handleScrollPrev_mostPopular)
