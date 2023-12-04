@@ -82,7 +82,7 @@ const getYoutubeVideoDetails = async () => {
 
 };
 
-// function for Most Popular videos 
+// Function for Most Popular videos 
 const getMostPopularVideos = async()=>{   
     try {
    const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=50&order=viewCount&regionCode=IN&key=${Api_Key}`);
@@ -117,11 +117,46 @@ const getMostPopularVideos = async()=>{
     }
 }
 
+// Function for Comedy Movies videos 
+const getComedyMoviesVideos = async()=>{   
+    try {
+         const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR&key=${Api_Key}`);
+         console.log(getMoviesVideo);
+
+        videos = getMoviesVideo.data.items;
+        videos.forEach(video => {
+        const videoId = video.snippet.resourceId.videoId;
+        const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
+        console.log(videoUrl);
+
+        const videoTitle = video.snippet.title;
+        console.log(videoTitle);
+
+        const videoThumnnail = video.snippet.thumbnails.medium.url;
+        console.log(videoThumnnail)
+
+        document.querySelector(".movies-cards-content").innerHTML +=
+        `<div class="card mx-2 my-2">
+        <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
+        <div class="embed-responsive embed-responsive-16by9">  
+        <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body p-0 py-3 px-2">
+            <p class="card-title mostpopular_video_title">${videoTitle}</p>
+        </div>
+        </a>
+    </div>`
+    });
+    } catch (error) {
+        console.error("Error fetching video data:", error);
+    }
+}
+
 getYoutubeSubscribers();
 getYoutubeTitle();
 getYoutubeVideoDetails();
 getMostPopularVideos();
-
+getComedyMoviesVideos();
 
 
 //Slider Code for Latest Videos
@@ -132,12 +167,10 @@ function handleScrollNext(direction) {
     const cards = document.querySelector('.cards-content')
     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
-
 function handleScrollPrev(direction) {
     const cards = document.querySelector('.cards-content')
     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
-
 next.addEventListener('click', handleScrollNext)
 prev.addEventListener('click', handleScrollPrev)
 
@@ -145,18 +178,32 @@ prev.addEventListener('click', handleScrollPrev)
 
 
 //Slider Code for Popular Videos
- const next_mostPopular = document.querySelector('#next_mostPopular')
- const prev_mostPopular = document.querySelector('#prev_mostPopular')
+const next_mostPopular = document.querySelector('#next_mostPopular')
+const prev_mostPopular = document.querySelector('#prev_mostPopular')
 
 function handleScrollNext_mostPopular(direction) {
     const cards = document.querySelector('.mostPopular-cards-content')
     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
-
 function handleScrollPrev_mostPopular(direction) {
     const cards = document.querySelector('.mostPopular-cards-content')
     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
+next_mostPopular.addEventListener('click', handleScrollNext_mostPopular)
+prev_mostPopular.addEventListener('click', handleScrollPrev_mostPopular)
 
- next_mostPopular.addEventListener('click', handleScrollNext_mostPopular)
- prev_mostPopular.addEventListener('click', handleScrollPrev_mostPopular)
+
+//Slider Code for Movies Videos
+const next_movies = document.querySelector('#next_movies')
+const prev_movies = document.querySelector('#prev_movies')
+ 
+function handleScrollNext_movies(direction) {
+     const cards = document.querySelector('.mostPoupler-cards-content')
+     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+ } 
+function handleScrollPrev_movies(direction) {
+     const cards = document.querySelector('.mostPoupler-cards-content')
+     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+ } 
+next_movies.addEventListener('click', handleScrollNext_movies)
+prev_movies.addEventListener('click', handleScrollPrev_movies)

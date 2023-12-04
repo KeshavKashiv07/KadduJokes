@@ -162,6 +162,29 @@ body{
     position:relative;
   }
 
+  /*Comedy Movies Videos */
+  .movies-cards-content {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    overflow:auto;
+    scroll-behavior:smooth;
+  }
+  
+  .movies-cards-content::-webkit-scrollbar {
+     height:0px;
+  }
+  
+  .movies-cards-content:after {
+    content:'';
+    display:block;
+    min-width:20px;
+    height:100px;
+    position:relative;
+  }
+
+
 /* KEYFRAMES  */
 /* CHANNEL NAME  */
 @keyframes focus-in-contract-bck{
