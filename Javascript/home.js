@@ -100,14 +100,14 @@ const getMostPopularVideos = async()=>{
         const videoThumnnail = video.snippet.thumbnails.medium.url;
         console.log(videoThumnnail)
 
-        document.querySelector(".mostPoupler-cards-content").innerHTML +=
+        document.querySelector(".mostPopular-cards-content").innerHTML +=
         `<div class="card mx-2 my-2">
-        <a href="${videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
+        <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
         <div class="embed-responsive embed-responsive-16by9">  
         <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
         </div>
         <div class="card-body p-0 py-3 px-2">
-            <p class="card-title latest_video_title">${videoTitle}</p>
+            <p class="card-title mostpopular_video_title">${videoTitle}</p>
         </div>
         </a>
     </div>`
@@ -149,12 +149,12 @@ prev.addEventListener('click', handleScrollPrev)
  const prev_mostPopular = document.querySelector('#prev_mostPopular')
 
 function handleScrollNext_mostPopular(direction) {
-    const cards = document.querySelector('.mostPoupler-cards-content')
+    const cards = document.querySelector('.mostPopular-cards-content')
     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
 
 function handleScrollPrev_mostPopular(direction) {
-    const cards = document.querySelector('.mostPoupler-cards-content')
+    const cards = document.querySelector('.mostPopular-cards-content')
     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
 
