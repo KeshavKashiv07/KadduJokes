@@ -1,4 +1,4 @@
-const Api_Key = "AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E";
+const Api_Key = "AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
@@ -137,12 +137,12 @@ const getComedyMoviesVideos = async()=>{
 
         document.querySelector(".movies-cards-content").innerHTML +=
         `<div class="card mx-2 my-2">
-        <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
+        <a href="${videoUrl}" class="movies_video_title_link text-decoration-none" target="_blank">
         <div class="embed-responsive embed-responsive-16by9">  
         <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
         </div>
         <div class="card-body p-0 py-3 px-2">
-            <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            <p class="card-title movies_video_title">${videoTitle}</p>
         </div>
         </a>
     </div>`
