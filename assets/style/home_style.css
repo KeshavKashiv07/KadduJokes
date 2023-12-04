@@ -140,6 +140,29 @@ body{
 .custom-shape-divider-bottom-1701437909 .shape-fill {
     fill: #FEAA28;
 }
+
+/* Most Popular videos */
+.mostPoupler-cards-content {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    overflow:auto;
+    scroll-behavior:smooth;
+  }
+  
+  .mostPoupler-cards-content::-webkit-scrollbar {
+     height:0px;
+  }
+  
+  .mostPoupler-cards-content:after {
+    content:'';
+    display:block;
+    min-width:20px;
+    height:100px;
+    position:relative;
+  }
+
 /* KEYFRAMES  */
 /* CHANNEL NAME  */
 @keyframes focus-in-contract-bck{

@@ -82,17 +82,49 @@ const getYoutubeVideoDetails = async () => {
 
 };
 
-//<iframe class="embed-responsive-item rounded-2" width="auto" height="" src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+// function for Most Popular videos 
+const getMostPopularVideos = async()=>{   
+    try {
+   const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=50&order=viewCount&regionCode=IN&key=${Api_Key}`);
+    console.log(getpopularVideo);
 
+    const videos = getpopularVideo.data.items;
+     videos.forEach(video => {
+        const videoId = video.id.videoId;
+        const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
+        console.log(videoUrl);
 
+        const videoTitle = video.snippet.title;
+        console.log(videoTitle);
+
+        const videoThumnnail = video.snippet.thumbnails.medium.url;
+        console.log(videoThumnnail)
+
+        document.querySelector(".mostPoupler-cards-content").innerHTML +=
+        `<div class="card mx-2 my-2">
+        <a href="${videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
+        <div class="embed-responsive embed-responsive-16by9">  
+        <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body p-0 py-3 px-2">
+            <p class="card-title latest_video_title">${videoTitle}</p>
+        </div>
+        </a>
+    </div>`
+       });
+    } catch (error) {
+        console.error("Error fetching video data:", error);
+    }
+}
 
 getYoutubeSubscribers();
 getYoutubeTitle();
 getYoutubeVideoDetails();
+getMostPopularVideos();
 
 
 
-// Slider Code
+//Slider Code for Latest Videos
 const next = document.querySelector('#next')
 const prev = document.querySelector('#prev')
 
@@ -103,6 +135,26 @@ function handleScrollNext(direction) {
 
 function handleScrollPrev(direction) {
     const cards = document.querySelector('.cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+
+next.addEventListener('click', handleScrollNext)
+prev.addEventListener('click', handleScrollPrev)
+
+
+
+
+//Slider Code for Popular Videos
+const nextMP = document.querySelector('#nextMP')
+const prevMP = document.querySelector('#prevMP')
+
+function handleScrollNext(direction) {
+    const cards = document.querySelector('.mostPoupler-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+
+function handleScrollPrev(direction) {
+    const cards = document.querySelector('.mostPoupler-cards-content')
     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
 }
 
