@@ -3,7 +3,7 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 
 
-const Api_Key = "AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs";
+const Api_Key = "AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
@@ -46,11 +46,11 @@ const searchVideos = () => {
         //document.querySelector(".mostpopular_videos_container").style.display="none";
     } else {
        // document.querySelector(".mostpopular_videos_container").style.display="block";
-        document.querySelector(".Search_Cointainer").innerHTML += `<section class="mostpopular_videos_container row my-3 m-0 px-3 container-fluid">
-        <section class="mostpopular_heading col-lg-12 col-md-12 col-sm-12">
-          <h3 class="mostpopular">Search Videos</h3>
+        document.querySelector(".Search_Cointainer").innerHTML += `<section class="search_videos_container row my-3 m-0 px-3 container-fluid">
+        <section class="search_video_heading col-lg-12 col-md-12 col-sm-12">
+          <h3 class="search_video">Search Videos</h3>
         </section>
-        <section class="mostpopular_video_cards_container my-3 p-0">
+        <section class="search_video_cards_container my-3 p-0">
           <div class="slider">
             <button id="prev_search" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
               <defs>
@@ -88,12 +88,12 @@ const searchVideos = () => {
             //console.log(`Title: ${video.videoTitle}, URL: ${video.videoUrl}, Thumbnail: ${video.videoThumnnail}`);
             document.querySelector(".search-cards-content").innerHTML +=
             `<div class="card mx-2 my-2">
-            <a href="${video.videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
+            <a href="${video.videoUrl}" class="search_video_title_link text-decoration-none" target="_blank">
             <div class="embed-responsive embed-responsive-16by9">  
             <img src="${video.videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
             </div>
             <div class="card-body p-0 py-3 px-2">
-                <p class="card-title latest_video_title">${video.videoTitle}</p>
+                <p class="card-title search_video_title">${video.videoTitle}</p>
             </div>
             </a>
         </div>`
