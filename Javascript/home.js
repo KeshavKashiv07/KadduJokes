@@ -1,4 +1,9 @@
-const Api_Key = "AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM";
+// Hersh API Key : AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs
+// Keshav API Key : AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
+// Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
+
+
+const Api_Key = "AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
@@ -6,6 +11,12 @@ const video_count = document.querySelector("#video_count")
 const title = document.querySelector("#channel_name")
 const description = document.querySelector("#description")
 const views = document.querySelector("#views")
+
+// Create an object to store fetched data
+const FetchedVideosData = {
+    videosArray: []
+};
+
 
 // Function to format a numbers in K and M.
 function formatNumber(number) {
@@ -18,6 +29,80 @@ function formatNumber(number) {
     }
 }
 
+
+const videoName = document.getElementById('searchInput').value.toLowerCase();
+console.log("Search term:", videoName);
+
+// Function for searching videos
+const searchVideos = () => {
+    //console.log("Search button clicked");
+    const videoName = document.getElementById('searchInput').value.toLowerCase();
+    //console.log("Search term:", videoName);
+    const matchingVideos = FetchedVideosData.videosArray.filter(video => video.videoTitle.toLowerCase().includes(videoName.toLowerCase()));
+    //console.log("Matching videos:", matchingVideos);
+
+    if (videoName == "" || !videoName) { 
+        console.log("No videos found.");
+        //document.querySelector(".mostpopular_videos_container").style.display="none";
+    } else {
+       // document.querySelector(".mostpopular_videos_container").style.display="block";
+        document.querySelector(".Search_Cointainer").innerHTML += `<section class="mostpopular_videos_container row my-3 m-0 px-3 container-fluid">
+        <section class="mostpopular_heading col-lg-12 col-md-12 col-sm-12">
+          <h3 class="mostpopular">Search Videos</h3>
+        </section>
+        <section class="mostpopular_video_cards_container my-3 p-0">
+          <div class="slider">
+            <button id="prev_search" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+              <defs>
+                <linearGradient id="gradient1">
+                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                </linearGradient>
+              </defs>
+              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+              <g id="group" transform="translate(0,0) scale(1)">
+                <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+              </g>
+            </svg>
+          </button>
+            <div class="search-cards-content d-flex"></div>
+          <button id="next_search" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+              <defs>
+                <linearGradient id="gradient1">
+                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                </linearGradient>
+              </defs>
+              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+              <g id="group" transform="translate(0,0) scale(1)">
+                <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+              </g>
+            </svg>
+          </button>
+          </div>
+        </section>
+        </section>` 
+        matchingVideos.forEach(video => {
+            //console.log(`Title: ${video.videoTitle}, URL: ${video.videoUrl}, Thumbnail: ${video.videoThumnnail}`);
+            document.querySelector(".search-cards-content").innerHTML +=
+            `<div class="card mx-2 my-2">
+            <a href="${video.videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
+            <div class="embed-responsive embed-responsive-16by9">  
+            <img src="${video.videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            </div>
+            <div class="card-body p-0 py-3 px-2">
+                <p class="card-title latest_video_title">${video.videoTitle}</p>
+            </div>
+            </a>
+        </div>`
+        });        
+        sliderSearch();
+       
+    }
+};
+
 // Function to fatching subscribers , views and videos.
 const getYoutubeSubscribers = async () => {
     try {
@@ -29,7 +114,7 @@ const getYoutubeSubscribers = async () => {
         const youtube_views = getSubData.data.items[0].statistics.viewCount;
 
         subscriber_count.innerHTML = formatNumber(parseInt(youtube_subscribers));
-        video_count.innerHTML = youtube_videos;
+        video_count.innerHTML = formatNumber(parseInt(youtube_videos));
         views.innerHTML = formatNumber(parseInt(youtube_views));
     } catch (error) {
         console.error("Error fetching video data:", error);
@@ -43,10 +128,10 @@ const getYoutubeTitle = async () => {
         console.log(getTitleData);
 
         const channel_name = getTitleData.data.items[0].brandingSettings.channel.title;
-        const channel_description = getTitleData.data.items[0].brandingSettings.channel.description;
+       // const channel_description = getTitleData.data.items[0].brandingSettings.channel.description;
 
         title.innerHTML = channel_name;
-        description.innerHTML = channel_description;
+       // description.innerHTML = channel_description;
     } catch (error) {
         console.error("Error fetching video data:", error);
     }
@@ -63,6 +148,13 @@ const getYoutubeVideoDetails = async () => {
             const videoUrl = 'https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId;
             const videoTitle = video.snippet.title;
             const videoThumnnail = video.snippet.thumbnails.medium.url;
+
+            // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
 
             document.querySelector(".cards-content").innerHTML +=
                 `<div class="card mx-2 my-2">
@@ -83,25 +175,27 @@ const getYoutubeVideoDetails = async () => {
 };
 
 // Function for Most Popular videos 
-const getMostPopularVideos = async()=>{   
+const getMostPopularVideos = async () => {
     try {
-   const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=50&order=viewCount&regionCode=IN&key=${Api_Key}`);
-    console.log(getpopularVideo);
+        const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=50&order=viewCount&regionCode=IN&key=${Api_Key}`);
+        console.log(getpopularVideo);
 
-    const videos = getpopularVideo.data.items;
-     videos.forEach(video => {
-        const videoId = video.id.videoId;
-        const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
-        console.log(videoUrl);
+        const videos = getpopularVideo.data.items;
+        videos.forEach(video => {
+            const videoId = video.id.videoId;
+            const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
+            const videoTitle = video.snippet.title;
+            const videoThumnnail = video.snippet.thumbnails.medium.url;
 
-        const videoTitle = video.snippet.title;
-        console.log(videoTitle);
+            // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
 
-        const videoThumnnail = video.snippet.thumbnails.medium.url;
-        console.log(videoThumnnail)
-
-        document.querySelector(".mostPopular-cards-content").innerHTML +=
-        `<div class="card mx-2 my-2">
+            document.querySelector(".mostPopular-cards-content").innerHTML +=
+                `<div class="card mx-2 my-2">
         <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
         <div class="embed-responsive embed-responsive-16by9">  
         <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
@@ -111,32 +205,34 @@ const getMostPopularVideos = async()=>{
         </div>
         </a>
     </div>`
-       });
+        });
     } catch (error) {
         console.error("Error fetching video data:", error);
     }
 }
 
 // Function for Comedy Movies videos 
-const getComedyMoviesVideos = async()=>{   
+const getComedyMoviesVideos = async () => {
     try {
-         const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR&key=${Api_Key}`);
-         console.log(getMoviesVideo);
+        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR&key=${Api_Key}`);
+        console.log(getMoviesVideo);
 
         videos = getMoviesVideo.data.items;
         videos.forEach(video => {
-        const videoId = video.snippet.resourceId.videoId;
-        const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
-        console.log(videoUrl);
+            const videoId = video.snippet.resourceId.videoId;
+            const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
+            const videoTitle = video.snippet.title;
+            const videoThumnnail = video.snippet.thumbnails.medium.url;
 
-        const videoTitle = video.snippet.title;
-        console.log(videoTitle);
+            // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
 
-        const videoThumnnail = video.snippet.thumbnails.medium.url;
-        console.log(videoThumnnail)
-
-        document.querySelector(".movies-cards-content").innerHTML +=
-        `<div class="card mx-2 my-2">
+            document.querySelector(".movies-cards-content").innerHTML +=
+                `<div class="card mx-2 my-2">
         <a href="${videoUrl}" class="movies_video_title_link text-decoration-none" target="_blank">
         <div class="embed-responsive embed-responsive-16by9">  
         <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
@@ -146,7 +242,7 @@ const getComedyMoviesVideos = async()=>{
         </div>
         </a>
     </div>`
-    });
+        });
     } catch (error) {
         console.error("Error fetching video data:", error);
     }
@@ -157,6 +253,7 @@ getYoutubeTitle();
 getYoutubeVideoDetails();
 getMostPopularVideos();
 getComedyMoviesVideos();
+console.log(FetchedVideosData)
 
 
 //Slider Code for Latest Videos
@@ -196,14 +293,56 @@ prev_mostPopular.addEventListener('click', handleScrollPrev_mostPopular)
 //Slider Code for Movies Videos
 const next_movies = document.querySelector('#next_movies')
 const prev_movies = document.querySelector('#prev_movies')
- 
+
 function handleScrollNext_movies(direction) {
-     const cards = document.querySelector('.mostPoupler-cards-content')
-     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
- } 
+    const cards = document.querySelector('.mostPoupler-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
 function handleScrollPrev_movies(direction) {
-     const cards = document.querySelector('.mostPoupler-cards-content')
-     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
- } 
+    const cards = document.querySelector('.mostPoupler-cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
 next_movies.addEventListener('click', handleScrollNext_movies)
 prev_movies.addEventListener('click', handleScrollPrev_movies)
+
+
+
+// //Slider Code for Search Videos
+// const next_search = document.querySelector('#next_search')
+// const prev_search= document.querySelector('#prev_search')
+
+// function handleScrollNext_search(direction) {
+//     const cards = document.querySelector('.search-cards-content')
+//     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+// }
+// function handleScrollPrev_search(direction) {
+//     const cards = document.querySelector('.search-cards-content')
+//     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+// }
+// next_search.addEventListener('click', handleScrollNext_search)
+// prev_search.addEventListener('click', handleScrollPrev_search)
+
+
+
+const sliderSearch = ()=>{
+    //Slider Code for Search Videos
+const next_search = document.querySelector('#next_search')
+const prev_search= document.querySelector('#prev_search')
+
+function handleScrollNext_search(direction) {
+    const cards = document.querySelector('.search-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+function handleScrollPrev_search(direction) {
+    const cards = document.querySelector('.search-cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+next_search.addEventListener('click', handleScrollNext_search)
+prev_search.addEventListener('click', handleScrollPrev_search)
+}
+
+
+
+
+
+

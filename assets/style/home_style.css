@@ -11,6 +11,7 @@ body{
 }
 .nav-link{
   color: whitesmoke;
+  font-family: "Roboto",sans-serif;
 }
 .nav-link:hover{
   color: #FEAA28;
@@ -189,6 +190,26 @@ body{
     position:relative;
   }
 
+  /*Search Videos */
+  .search-cards-content {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    overflow:auto;
+    scroll-behavior:smooth;
+  }  
+  .search-cards-content::-webkit-scrollbar {
+     height:0px;
+  }  
+  .search-cards-content:after {
+    content:'';
+    display:block;
+    min-width:20px;
+    height:100px;
+    position:relative;
+  }
+
   /* OUR CHANNEL CSS  */
   .our_channel_container{
     background-image: linear-gradient(to bottom, #000000 10%, rgba(255, 160, 17, 0.61) 100%);
@@ -209,6 +230,32 @@ body{
     font-weight: 500;
     font-size: medium;
     color: whitesmoke;
+  }
+
+  /* FOOTER  */
+  .footer_container{
+    background-color: #000000;
+    border-top: 8px solid #FEAA28;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+  }
+  .footer_logo{
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: rgba(254, 168, 40, 0.886) 0px 25px 20px -20px;
+  }
+  .footer_title{
+    font-family: 'Anton',sans-serif;
+    font-weight: 500;
+    color: #FEAA28;
+    letter-spacing: 1px;
+  }
+  .footer_description{
+    font-family: 'Roboto',sans-serif;
+    color: wheat;
+  }
+  .social_item{
+    list-style-type: none;
   }
 
 
