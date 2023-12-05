@@ -191,7 +191,7 @@ body{
 
   /* OUR CHANNEL CSS  */
   .our_channel_container{
-    box-shadow: rgba(254, 168, 40, 0.514) 0px 20px 70px -25px;
+    box-shadow: rgba(254, 168, 40, 0.671) 0px 5px 15px;
     animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
     background-size: cover;
       background-position: center center;
