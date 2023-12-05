@@ -21,15 +21,8 @@ body{
     font-size: 6em;
     letter-spacing: 0.5px;
     animation:focus-in-contract-bck 1s cubic-bezier(.25,.46,.45,.94) both}
-/* .channel_description{
-    color: whitesmoke;
-    font-family: 'Poppins','sans-serif';
-    font-weight: 400;
-    font-size: medium;
-    animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;
-} */
 .content_container{
-    background-image: url('../images/pumpkins_bg.webp');
+    background-image: url('../images/pumpkin.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
@@ -38,14 +31,22 @@ body{
     position: relative;
     background-color:#0f0f0fdf;
 }
-.carousel_container{
-  max-width: 50%;
+.shape_one{
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+  left: 70px;
+  opacity: 0.8;
+  animation: instagram 3s ease-in 1s infinite alternate;
 }
-/* .channel_image{
-    border-radius:100%;
-    box-shadow: rgba(254, 170, 40, 0.829) 0px 7px 29px 0px;
-    animation:bounce-in-top 1.1s cubic-bezier(.95,.05,.795,.035) both;
-} */
+.shape_two{
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+  right: 70px;
+  opacity: 0.8;
+  animation: facebook 3s ease-in 1s infinite alternate;
+}
 .counters{
     margin: 50px 0 50px 0;
 }
@@ -233,4 +234,19 @@ body{
 @keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 /* OUR CHANNELS  */
 @keyframes scale-up-center{0%{transform:scale(.5)}100%{transform:scale(1)}}
-  
+@keyframes instagram {
+from{
+  top: 20%;
+}
+to{
+  top: 50%;
+}
+}  
+@keyframes facebook {
+  from{
+    bottom: 20%;
+  }
+  to{
+    bottom: 50%;
+  }
+  }  
