@@ -307,23 +307,6 @@ prev_movies.addEventListener('click', handleScrollPrev_movies)
 
 
 
-// //Slider Code for Search Videos
-// const next_search = document.querySelector('#next_search')
-// const prev_search= document.querySelector('#prev_search')
-
-// function handleScrollNext_search(direction) {
-//     const cards = document.querySelector('.search-cards-content')
-//     cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-// }
-// function handleScrollPrev_search(direction) {
-//     const cards = document.querySelector('.search-cards-content')
-//     cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-// }
-// next_search.addEventListener('click', handleScrollNext_search)
-// prev_search.addEventListener('click', handleScrollPrev_search)
-
-
-
 const sliderSearch = ()=>{
     //Slider Code for Search Videos
 const next_search = document.querySelector('#next_search')
