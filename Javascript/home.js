@@ -152,11 +152,11 @@ const getComedyMoviesVideos = async()=>{
     }
 }
 
-// getYoutubeSubscribers();
-// getYoutubeTitle();
-// getYoutubeVideoDetails();
-// getMostPopularVideos();
-// getComedyMoviesVideos();
+getYoutubeSubscribers();
+getYoutubeTitle();
+getYoutubeVideoDetails();
+getMostPopularVideos();
+getComedyMoviesVideos();
 
 
 //Slider Code for Latest Videos
