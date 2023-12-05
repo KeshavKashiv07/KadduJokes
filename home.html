@@ -2,311 +2,334 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap 5 Link  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <!-- Fonts Links  -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
-  <!-- Stylesheet  -->
-  <link rel="stylesheet" href="../assets/style/home_style.css">
-  <!-- Title -->
-  <title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap 5 Link  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
+<!-- Fonts Links  -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+<!-- Stylesheet  -->
+<link rel="stylesheet" href="../assets/style/home_style.css">
+<!-- Title -->
+<title>Home</title>
 </head>
 
 <body>
-  <main class="main_container container-fluid p-0 m-0">
-    <!-- CONTENT CONTAINER  -->
-    <section class="content_container container-fluid px-5 py-4">
-      <!-- CHANNEL LOGO  -->
-      <div class="channel_logo_container d-flex justify-content-center my-2">
-        <img src="../assets/images/ch_6.jpg" alt="kaddu joke" class="channel_image img-fluid">
-      </div>
-      <!-- CHANNEL NAME  -->
-      <div class="channel_name_container d-flex justify-content-center">
-        <h1 class="channelname_heading text-uppercase mt-4 mb-2"><span id="channel_name"></span></h1>
-      </div>
-      <!-- CHANNEL DESCRIPTION  -->
-      <div class="channel_desc_container">
-        <p class="channel_description text-center"><span id="description"></span></p>
-      </div>
-      <!-- SUBSCRIBER,VIDEO AND PLAYIST COUNT ROW  -->
-      <section class="row counters p-4">
-        <!-- SUBSCRIBER COUNT COLUMN  -->
-        <section class="subscriber_count_column col-lg-4 col-md-4 col-sm-12 p-4 text-center">
-          <h1 class="subscriber_count display-5 mb-2"><span><svg class="subscriber_icon"
-                xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-                <defs>
-                  <linearGradient id="gradient1">
-                    <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                    <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-                  </linearGradient>
-                </defs>
-                <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-                <g id="group" transform="translate(0,0) scale(1)">
-                  <path
-                    d="M129.999 117.961H144.000C164.619 117.961 181.333 134.816 181.333 155.607M83.334 117.961H69.333C48.715 117.961 32.000 134.816 32.000 155.607V183.843C32.000 194.239 40.357 202.667 50.667 202.667H138.667M144.000 87.249C144.000 111.871 123.260 127.373 106.667 127.373C90.074 127.373 69.333 111.871 69.333 87.249C69.333 62.627 83.757 42.667 106.667 42.667C129.577 42.667 144.000 62.627 144.000 87.249Z"
-                    stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
-                  </path>
-                  <path d="M170.667 192.000L192.000 213.333L224.000 160.000" stroke="#ffa559" stroke-width="14"
-                    stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-                </g>
-              </svg></span> <span id="subscriber_count"></span></h1>
-          <p class="subscriber text-light text-center fs-5">Subscribers</p>
-        </section>
-        <!-- VIDEO COUNT COLUMN  -->
-        <section class="video_count_column col-lg-4 col-md-4 col-sm-12 p-4 text-center">
-          <h1 class="video_count display-5 mb-2"><span><svg class="video_icon" xmlns="http://www.w3.org/2000/svg"
-                width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-                <defs>
-                  <linearGradient id="gradient1">
-                    <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                    <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-                  </linearGradient>
-                </defs>
-                <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-                <g id="group" transform="translate(0,0) scale(1)">
-                  <path d="M53.333 64.000H202.667M74.667 32.000H181.333M32.000 96.000V213.333H224.000V96.000H32.000Z"
-                    stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
-                  </path>
-                  <path
-                    d="M106.667 178.437V133.011C106.667 127.429 112.807 124.027 117.541 126.985L153.886 149.697C158.340 152.481 158.340 158.967 153.886 161.751L117.541 184.464C112.807 187.422 106.667 184.019 106.667 178.437Z"
-                    stroke="#ffa559" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary">
-                  </path>
-                </g>
-              </svg></span> <span id="video_count"></span></h1>
-          <p class="videos text-light text-center fs-5">Videos</p>
-        </section>
-        <!-- VIEWS COUNT COLUMN  -->
-        <section class="views_count_column col-lg-4 col-md-4 col-sm-12 p-4 text-center">
-          <h1 class="views_count display-5 mb-2"><span><svg class="view_icon" xmlns="http://www.w3.org/2000/svg"
-                width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-                <defs>
-                  <linearGradient id="gradient1">
-                    <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                    <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-                  </linearGradient>
-                </defs>
-                <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-                <g id="group" transform="translate(0,0) scale(1)">
-                  <path
-                    d="M128.000 181.333C78.222 181.333 53.333 128.000 53.333 128.000C53.333 128.000 78.222 74.667 128.000 74.667C177.778 74.667 202.667 128.000 202.667 128.000C202.667 128.000 177.778 181.333 128.000 181.333Z"
-                    stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
-                  </path>
-                  <path
-                    d="M149.333 128.000C149.333 139.782 139.782 149.333 128.000 149.333C116.218 149.333 106.667 139.782 106.667 128.000C106.667 116.218 116.218 106.667 128.000 106.667C139.782 106.667 149.333 116.218 149.333 128.000Z"
-                    stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
-                  </path>
-                  <path
-                    d="M85.333 32.000H74.667C51.103 32.000 32.000 51.103 32.000 74.667V85.333M170.667 32.000H181.333C204.897 32.000 224.000 51.103 224.000 74.667V85.333M85.333 224.000H74.667C51.103 224.000 32.000 204.897 32.000 181.333V170.667M170.667 224.000H181.333C204.897 224.000 224.000 204.897 224.000 181.333V170.667"
-                    stroke="#ffa559" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary">
-                  </path>
-                </g>
-              </svg></span> <span id="views"></span></h1>
-          <p class="views text-light text-center fs-5">Views</p>
-        </section>
+<main class="main_container container-fluid p-0 m-0">
+<!-- NAVBAR CONTAINER -->
+<section class="container-fluid p-0">
+<nav class="navbar navbar-expand-lg navbar-expand-md px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home.html"><img src="../assets/images/ch_6.jpg" alt="brand-logo" class="logo img-fluid" width="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ms-5" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link mx-2" aria-current="page" href="../assets/pages/gaming.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="../assets/pages/gaming.html">Series</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link mx-2" aria-disabled="true" href="../assets/pages/gaming.html">Gaming</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" aria-disabled="true" href="../assets/pages/gaming.html">Learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" aria-disabled="true" href="../assets/pages/gaming.html">Contact Us</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</section>
+
+  <!-- CONTENT CONTAINER  -->
+  <section class="content_container container-fluid px-5 py-4 row">
+    <!-- CHANNEL LOGO  -->
+    <!-- <div class="channel_logo_container d-flex justify-content-center my-2">
+      <img src="../assets/images/ch_6.jpg" alt="kaddu joke" class="channel_image img-fluid">
+    </div> -->
+    <!-- CHANNEL NAME  -->
+    <div class="channel_name_container d-flex justify-content-center col-lg-12 col-md-12 col-sm-12">
+      <h1 class="channelname_heading text-uppercase mt-4 mb-2 text-center"><span id="channel_name"></span></h1>
+    </div>
+    <!-- CHANNEL DESCRIPTION  -->
+    <!-- <div class="channel_desc_container">
+      <p class="channel_description text-center"><span id="description"></span></p>
+    </div> -->
+
+    <!-- SUBSCRIBER,VIDEO AND PLAYIST COUNT ROW  -->
+    <section class="row counters p-4">
+      <!-- SUBSCRIBER COUNT COLUMN  -->
+      <section class="subscriber_count_column col-lg-4 col-md-4 col-sm-12 p-4 text-center">
+        <h1 class="subscriber_count display-5 mb-2"><span><svg class="subscriber_icon"
+              xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+              <defs>
+                <linearGradient id="gradient1">
+                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                </linearGradient>
+              </defs>
+              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+              <g id="group" transform="translate(0,0) scale(1)">
+                <path
+                  d="M129.999 117.961H144.000C164.619 117.961 181.333 134.816 181.333 155.607M83.334 117.961H69.333C48.715 117.961 32.000 134.816 32.000 155.607V183.843C32.000 194.239 40.357 202.667 50.667 202.667H138.667M144.000 87.249C144.000 111.871 123.260 127.373 106.667 127.373C90.074 127.373 69.333 111.871 69.333 87.249C69.333 62.627 83.757 42.667 106.667 42.667C129.577 42.667 144.000 62.627 144.000 87.249Z"
+                  stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
+                </path>
+                <path d="M170.667 192.000L192.000 213.333L224.000 160.000" stroke="#ffa559" stroke-width="14"
+                  stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+              </g>
+            </svg></span> <span id="subscriber_count"></span></h1>
+        <p class="subscriber text-light text-center fs-5">Subscribers</p>
       </section>
-      <!-- DIVIDER  -->
-      <div class="custom-shape-divider-bottom-1701437909 p-0 mt-3">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect x="1200" height="3.6"></rect>
-          <rect height="3.6"></rect>
-          <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z" class="shape-fill">
-          </path>
-        </svg>
-      </div>
-    </section>
-    <!-- NAVIGATION BAR -->
-    <!-- <section class="navbar_container p-0 m-0">
-      <div
-        class="navbar_item_container row p-0 m-0 my-4 d-inline-flex justify-content-center w-100">
-        <ul
-          class="navbar_items rounded-5 w-auto col-lg-12 col-md-12 col-sm-12  d-flex justify-content-center align-items-center my-3 px-3 py-3"
-          type="none">
-          <li class="navbar_list"><a href="/home.html" class="navbar_links text-decoration-none mx-3 px-3 py-2">Home</a>
-          </li>
-          <li class="navbar_list w-auto"><a href="/series.html"
-              class="navbar_links text-decoration-none mx-3 px-3 py-2">Series</a></li>
-          <li class="navbar_list w-auto"><a href="/gaming.html"
-              class="navbar_links text-decoration-none mx-3 px-3 py-2">Gaming</a></li>
-          <li class="navbar_list w-auto"><a href="/learning.html"
-              class="navbar_links text-decoration-none mx-3 px-3 py-2">Learning</a></li>
-          <li class="navbar_list w-auto"><a href="/contactus.html"
-              class="navbar_links text-decoration-none mx-3 px-3 py-2">Contact Us</a></li>
-        </ul>
-      </div>
-    </section> -->
-    <!-- FEATURED VIDEO  -->
-    <section class="featured_video_container d-flex justify-content-center row m-0 my-3">
-      <iframe class="featured_video p-2 rounded-4 col-lg-12 col-md-12 col-sm-12" width="1500" height="400"
-        src="https://www.youtube.com/embed/5m0O9TU3wZc?si=fxi--XBEmhEt8BNL" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+      <!-- VIDEO COUNT COLUMN  -->
+      <section class="video_count_column col-lg-4 col-md-4 col-sm-12 p-4 text-center">
+        <h1 class="video_count display-5 mb-2"><span><svg class="video_icon" xmlns="http://www.w3.org/2000/svg"
+              width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+              <defs>
+                <linearGradient id="gradient1">
+                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                </linearGradient>
+              </defs>
+              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+              <g id="group" transform="translate(0,0) scale(1)">
+                <path d="M53.333 64.000H202.667M74.667 32.000H181.333M32.000 96.000V213.333H224.000V96.000H32.000Z"
+                  stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
+                </path>
+                <path
+                  d="M106.667 178.437V133.011C106.667 127.429 112.807 124.027 117.541 126.985L153.886 149.697C158.340 152.481 158.340 158.967 153.886 161.751L117.541 184.464C112.807 187.422 106.667 184.019 106.667 178.437Z"
+                  stroke="#ffa559" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary">
+                </path>
+              </g>
+            </svg></span> <span id="video_count"></span></h1>
+        <p class="videos text-light text-center fs-5">Videos</p>
+      </section>
+      <!-- VIEWS COUNT COLUMN  -->
+      <section class="views_count_column col-lg-4 col-md-4 col-sm-12 p-4 text-center">
+        <h1 class="views_count display-5 mb-2"><span><svg class="view_icon" xmlns="http://www.w3.org/2000/svg"
+              width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+              <defs>
+                <linearGradient id="gradient1">
+                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                </linearGradient>
+              </defs>
+              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+              <g id="group" transform="translate(0,0) scale(1)">
+                <path
+                  d="M128.000 181.333C78.222 181.333 53.333 128.000 53.333 128.000C53.333 128.000 78.222 74.667 128.000 74.667C177.778 74.667 202.667 128.000 202.667 128.000C202.667 128.000 177.778 181.333 128.000 181.333Z"
+                  stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
+                </path>
+                <path
+                  d="M149.333 128.000C149.333 139.782 139.782 149.333 128.000 149.333C116.218 149.333 106.667 139.782 106.667 128.000C106.667 116.218 116.218 106.667 128.000 106.667C139.782 106.667 149.333 116.218 149.333 128.000Z"
+                  stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary">
+                </path>
+                <path
+                  d="M85.333 32.000H74.667C51.103 32.000 32.000 51.103 32.000 74.667V85.333M170.667 32.000H181.333C204.897 32.000 224.000 51.103 224.000 74.667V85.333M85.333 224.000H74.667C51.103 224.000 32.000 204.897 32.000 181.333V170.667M170.667 224.000H181.333C204.897 224.000 224.000 204.897 224.000 181.333V170.667"
+                  stroke="#ffa559" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary">
+                </path>
+              </g>
+            </svg></span> <span id="views"></span></h1>
+        <p class="views text-light text-center fs-5">Views</p>
+      </section>
     </section>
     
-    <!--LATEST VIDEOS CONTAINER  -->
-    <section class="latest_videos_container row mb-3 mt-5 m-0 px-3 container-fluid">
-      <!--LATEST VIDEO HEADING COLUMN  -->
-      <section class="latest_heading col-lg-12 col-md-12 col-sm-12">
-        <h3 class="latest">Latest Videos</h3>
-      </section>
-      <!-- LATEST VIDEO CARDS  -->
-      <section class="latest_video_cards_container my-3 p-0">
-        <div class="slider">
-          <button id="prev" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-            <defs>
-              <linearGradient id="gradient1">
-                <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-              </linearGradient>
-            </defs>
-            <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-            <g id="group" transform="translate(0,0) scale(1)">
-              <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
-              <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-            </g>
-          </svg>
-        </button>
-          <div class="cards-content d-flex"></div>
-        <button id="next" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-            <defs>
-              <linearGradient id="gradient1">
-                <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-              </linearGradient>
-            </defs>
-            <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-            <g id="group" transform="translate(0,0) scale(1)">
-              <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
-              <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-            </g>
-          </svg>
-        </button>
-        </div>
-      </section>
-      </section>
+    <!-- DIVIDER  -->
+    <div class="custom-shape-divider-bottom-1701437909 p-0 mt-3">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <rect x="1200" height="3.6"></rect>
+        <rect height="3.6"></rect>
+        <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z" class="shape-fill">
+        </path>
+      </svg>
+    </div>
+  </section>
 
-    <!--MOST POPULAR VIDEOS CONTAINER  -->
-    <section class="mostpopular_videos_container row my-3 m-0 px-3 container-fluid">
-      <!--MOST POPULAR VIDEO HEADING COLUMN  -->
-      <section class="mostpopular_heading col-lg-12 col-md-12 col-sm-12">
-        <h3 class="mostpopular">Most Popular Videos</h3>
-      </section>
-      <!-- MOST POPULAR VIDEO CARDS  -->
-      <section class="mostpopular_video_cards_container my-3 p-0">
-        <div class="slider">
-          <button id="prev_mostPopular" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-            <defs>
-              <linearGradient id="gradient1">
-                <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-              </linearGradient>
-            </defs>
-            <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-            <g id="group" transform="translate(0,0) scale(1)">
-              <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
-              <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-            </g>
-          </svg>
-        </button>
-          <div class="mostPopular-cards-content d-flex"></div>
-        <button id="next_mostPopular" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-            <defs>
-              <linearGradient id="gradient1">
-                <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-              </linearGradient>
-            </defs>
-            <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-            <g id="group" transform="translate(0,0) scale(1)">
-              <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
-              <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-            </g>
-          </svg>
-        </button>
-        </div>
-      </section>
-      </section>
-
-    <!--MOVIES VIDEOS CONTAINER  -->
-    <section class="movies_videos_container row my-3 m-0 px-3 container-fluid">
-      <!--MOVIES VIDEO HEADING COLUMN  -->
-      <section class="movies_heading col-lg-12 col-md-12 col-sm-12 px-3">
-        <h3 class="movies">Comedy Movies</h3>
-      </section>
-      <!-- MOVIES VIDEO CARDS  -->
-      <section class="movies_video_cards_container my-3">
-        <div class="slider">
-          <button id="prev_movies" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-            <defs>
-              <linearGradient id="gradient1">
-                <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-              </linearGradient>
-            </defs>
-            <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-            <g id="group" transform="translate(0,0) scale(1)">
-              <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
-              <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-            </g>
-          </svg>
-        </button>
-          <div class="movies-cards-content d-flex"></div>
-        <button id="next_movies" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
-            <defs>
-              <linearGradient id="gradient1">
-                <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
-                <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
-              </linearGradient>
-            </defs>
-            <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
-            <g id="group" transform="translate(0,0) scale(1)">
-              <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
-              <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
-            </g>
-          </svg>
-        </button>
-        </div>
-      </section>
-      </section>
-
-    <!-- OUR CHANNEL  -->
-    <section class="our_channel_container row pb-4 pt-3 gy-3 px-3 m-5 rounded-5">
-      <h3 class="our_channel_heading mb-3">Our Popular Channels</h3>
-      <!-- COL1  -->
-      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@taklanetavlogs" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_1.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Takla Neta Vlogs</p></a></section>
-      <!-- COL2 -->
-      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@GoraKadduComedy" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_2.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Gora kaddu Comedy</p></a></section>
-      <!-- COL3  -->
-      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@KalaKadduComedy" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_3.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Kala Kaddu Comedy</p></a></section>
-      <!-- COL4  -->
-      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@TaklaNetaComedy" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_4.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Takla Neta Comedy</p></a></section>
-       <!-- COL5  -->
-       <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@MyJokeOf" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_5.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">My Joke Of</p></a></section>
-       <!-- COL6 -->
-       <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@KadduJoke" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_6.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Kaddu Joke</p></a></section>
-       <!-- COL7  -->
-       <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="#" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_7.jpg" alt="" class="our_channel_image img-fluid mb-4" width="150"><p class="our_channel_title"></p></a></section>
-       <!-- COL8  -->
-       <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="#" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_8.jpg" alt="" class="our_channel_image img-fluid mb-4" width="150"><p class="our_channel_title"></p></a></section>
+  <!-- FEATURED VIDEO  -->
+  <section class="featured_video_container d-flex justify-content-center row m-0 my-3">
+    <iframe class="featured_video p-2 rounded-4 col-lg-12 col-md-12 col-sm-12" width="1500" height="400"
+      src="https://www.youtube.com/embed/5m0O9TU3wZc?si=fxi--XBEmhEt8BNL" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </section>
+  
+  <!--LATEST VIDEOS CONTAINER  -->
+  <section class="latest_videos_container row mb-3 mt-5 m-0 px-3 container-fluid">
+    <section class="latest_heading col-lg-12 col-md-12 col-sm-12">
+      <h3 class="latest">Latest Videos</h3>
     </section>
-  </main>
+    <section class="latest_video_cards_container my-3 p-0">
+      <div class="slider">
+        <button id="prev" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+          <defs>
+            <linearGradient id="gradient1">
+              <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+              <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+            </linearGradient>
+          </defs>
+          <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+          <g id="group" transform="translate(0,0) scale(1)">
+            <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+            <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+          </g>
+        </svg>
+      </button>
+        <div class="cards-content d-flex"></div>
+      <button id="next" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+          <defs>
+            <linearGradient id="gradient1">
+              <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+              <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+            </linearGradient>
+          </defs>
+          <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+          <g id="group" transform="translate(0,0) scale(1)">
+            <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+            <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+          </g>
+        </svg>
+      </button>
+      </div>
+    </section>
+    </section>
+
+  <!--MOST POPULAR VIDEOS CONTAINER  -->
+  <section class="mostpopular_videos_container row my-3 m-0 px-3 container-fluid">
+    <section class="mostpopular_heading col-lg-12 col-md-12 col-sm-12">
+      <h3 class="mostpopular">Most Popular Videos</h3>
+    </section>
+    <section class="mostpopular_video_cards_container my-3 p-0">
+      <div class="slider">
+        <button id="prev_mostPopular" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+          <defs>
+            <linearGradient id="gradient1">
+              <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+              <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+            </linearGradient>
+          </defs>
+          <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+          <g id="group" transform="translate(0,0) scale(1)">
+            <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+            <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+          </g>
+        </svg>
+      </button>
+        <div class="mostPopular-cards-content d-flex"></div>
+      <button id="next_mostPopular" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+          <defs>
+            <linearGradient id="gradient1">
+              <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+              <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+            </linearGradient>
+          </defs>
+          <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+          <g id="group" transform="translate(0,0) scale(1)">
+            <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+            <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+          </g>
+        </svg>
+      </button>
+      </div>
+    </section>
+    </section>
+
+  <!--MOVIES VIDEOS CONTAINER  -->
+  <section class="movies_videos_container row my-3 m-0 px-3 container-fluid">
+    <section class="movies_heading col-lg-12 col-md-12 col-sm-12 px-3">
+      <h3 class="movies">Comedy Movies</h3>
+    </section>
+    <section class="movies_video_cards_container my-3">
+      <div class="slider">
+        <button id="prev_movies" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+          <defs>
+            <linearGradient id="gradient1">
+              <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+              <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+            </linearGradient>
+          </defs>
+          <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+          <g id="group" transform="translate(0,0) scale(1)">
+            <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+            <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+          </g>
+        </svg>
+      </button>
+        <div class="movies-cards-content d-flex"></div>
+      <button id="next_movies" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+          <defs>
+            <linearGradient id="gradient1">
+              <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+              <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+            </linearGradient>
+          </defs>
+          <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+          <g id="group" transform="translate(0,0) scale(1)">
+            <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+            <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+          </g>
+        </svg>
+      </button>
+      </div>
+    </section>
+    </section>
+
+  <!-- OUR CHANNEL  -->
+  <section class="our_channel_container row pb-4 pt-3 gy-3 px-3 m-5 rounded-5">
+    <h3 class="our_channel_heading mb-3">Our Popular Channels</h3>
+    <!-- COL1  -->
+    <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@taklanetavlogs" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_1.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Takla Neta Vlogs</p></a></section>
+    <!-- COL2 -->
+    <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@GoraKadduComedy" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_2.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Gora kaddu Comedy</p></a></section>
+    <!-- COL3  -->
+    <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@KalaKadduComedy" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_3.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Kala Kaddu Comedy</p></a></section>
+    <!-- COL4  -->
+    <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@TaklaNetaComedy" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_4.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Takla Neta Comedy</p></a></section>
+      <!-- COL5  -->
+      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@MyJokeOf" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_5.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">My Joke Of</p></a></section>
+      <!-- COL6 -->
+      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@KadduJoke" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_6.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Kaddu Joke</p></a></section>
+      <!-- COL7  -->
+      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="#" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_7.jpg" alt="" class="our_channel_image img-fluid mb-4" width="150"><p class="our_channel_title"></p></a></section>
+      <!-- COL8  -->
+      <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="#" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_8.jpg" alt="" class="our_channel_image img-fluid mb-4" width="150"><p class="our_channel_title"></p></a></section>
+  </section>
+</main>
 
 <!-- axiox & Javascript file link -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="./Javascript/home.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./Javascript/home.js"></script>
 <!-- Icon Links -->
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </body>
 
 </html>
