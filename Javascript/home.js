@@ -248,12 +248,12 @@ const getComedyMoviesVideos = async () => {
     }
 }
 
-getYoutubeSubscribers();
-getYoutubeTitle();
-getYoutubeVideoDetails();
-getMostPopularVideos();
-getComedyMoviesVideos();
-console.log(FetchedVideosData)
+// getYoutubeSubscribers();
+// getYoutubeTitle();
+// getYoutubeVideoDetails();
+// getMostPopularVideos();
+// getComedyMoviesVideos();
+// console.log(FetchedVideosData)
 
 
 //Slider Code for Latest Videos
