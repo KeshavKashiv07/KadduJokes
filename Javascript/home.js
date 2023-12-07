@@ -3,7 +3,7 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 
 
-const Api_Key = "AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E";
+const Api_Key = " AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
@@ -98,8 +98,7 @@ const searchVideos = () => {
             </a>
         </div>`
         });        
-        sliderSearch();
-       
+        sliderSearch();      
     }
 };
 
@@ -140,7 +139,7 @@ const getYoutubeTitle = async () => {
 //Function to fetch video details and display in a card && its for kddu joks sated api link
 const getYoutubeVideoDetails = async () => {
     try {
-        const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Api_Key}`);
+        const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Api_Key}`);
         console.log(getVideoData);
 
         const videos = getVideoData.data.items;
@@ -177,7 +176,7 @@ const getYoutubeVideoDetails = async () => {
 // Function for Most Popular videos 
 const getMostPopularVideos = async () => {
     try {
-        const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=50&order=viewCount&regionCode=IN&key=${Api_Key}`);
+        const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=30&order=viewCount&regionCode=IN&key=${Api_Key}`);
         console.log(getpopularVideo);
 
         const videos = getpopularVideo.data.items;
@@ -248,11 +247,11 @@ const getComedyMoviesVideos = async () => {
     }
 }
 
-// getYoutubeSubscribers();
-// getYoutubeTitle();
-// getYoutubeVideoDetails();
-// getMostPopularVideos();
-// getComedyMoviesVideos();
+getYoutubeSubscribers();
+getYoutubeTitle();
+getYoutubeVideoDetails();
+getMostPopularVideos();
+getComedyMoviesVideos();
 // console.log(FetchedVideosData)
 
 
