@@ -24,6 +24,14 @@ const sendEmail=()=>{
         <b>Message:</b> ${Message}
         `
         }).then(
-      message => alert(message)    
+     // message => alert(message)
+     message => {
+      if(message == 'OK'){
+        swal("Success", "Message sent successfully, Press 'OK' ", "success");
+      }
+      else{
+        swal("Failed", "Message not sent, Press 'OK' ", "error");
+      }
+    }  
     );
 }

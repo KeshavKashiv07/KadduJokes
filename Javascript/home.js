@@ -2,7 +2,6 @@
 // Keshav API Key : AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 
-
 const Api_Key = " AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
@@ -12,13 +11,12 @@ const title = document.querySelector("#channel_name")
 const description = document.querySelector("#description")
 const views = document.querySelector("#views")
 
-// Create an object to store fetched data
+//Create an object to store fetched data
 const FetchedVideosData = {
     videosArray: []
 };
 
-
-// Function to format a numbers in K and M.
+//Function to format a numbers in K and M.
 function formatNumber(number) {
     if (number >= 1e6) {
         return (number / 1e6).toFixed(1) + 'M';
@@ -29,24 +27,23 @@ function formatNumber(number) {
     }
 }
 
-
-const videoName = document.getElementById('searchInput').value.toLowerCase();
-console.log("Search term:", videoName);
-
-// Function for searching videos
+// Function for found search videos
 const searchVideos = () => {
-    //console.log("Search button clicked");
-    const videoName = document.getElementById('searchInput').value.toLowerCase();
-    //console.log("Search term:", videoName);
-    const matchingVideos = FetchedVideosData.videosArray.filter(video => video.videoTitle.toLowerCase().includes(videoName.toLowerCase()));
-    //console.log("Matching videos:", matchingVideos);
+    try {
+        //console.log("Search button clicked");
+        const videoName = document.getElementById('searchInput').value.toLowerCase();
+        //console.log("Search term:", videoName);
+        const matchingVideos = FetchedVideosData.videosArray.filter(video => video.videoTitle.toLowerCase().includes(videoName.toLowerCase()));
+        //console.log("Matching videos:", matchingVideos);
 
-    if (videoName == "" || !videoName) { 
-        console.log("No videos found.");
-        //document.querySelector(".mostpopular_videos_container").style.display="none";
-    } else {
-       // document.querySelector(".mostpopular_videos_container").style.display="block";
-        document.querySelector(".Search_Cointainer").innerHTML += `<section class="search_videos_container row my-3 m-0 px-3 container-fluid">
+        //Clear previous search results
+        document.querySelector(".Search_Cointainer").innerHTML = "";
+
+        if (videoName == "" || !videoName || matchingVideos.length == 0) {
+            //console.log("No videos found.");
+            document.querySelector(".Search_Cointainer").innerHTML = `<h3 class="text-secondary m-5 d-flex justify-content-center">No Found Videos</h3>`
+        } else {
+            document.querySelector(".Search_Cointainer").innerHTML += `<section class="search_videos_container row my-3 m-0 px-3 container-fluid">
         <section class="search_video_heading col-lg-12 col-md-12 col-sm-12">
           <h3 class="search_video">Search Videos</h3>
         </section>
@@ -83,11 +80,11 @@ const searchVideos = () => {
           </button>
           </div>
         </section>
-        </section>` 
-        matchingVideos.forEach(video => {
-            //console.log(`Title: ${video.videoTitle}, URL: ${video.videoUrl}, Thumbnail: ${video.videoThumnnail}`);
-            document.querySelector(".search-cards-content").innerHTML +=
-            `<div class="card mx-2 my-2">
+        </section>`
+            matchingVideos.forEach(video => {
+                //console.log(`Title: ${video.videoTitle}, URL: ${video.videoUrl}, Thumbnail: ${video.videoThumnnail}`);
+                document.querySelector(".search-cards-content").innerHTML +=
+                    `<div class="card mx-2 my-2">
             <a href="${video.videoUrl}" class="search_video_title_link text-decoration-none" target="_blank">
             <div class="embed-responsive embed-responsive-16by9">  
             <img src="${video.videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
@@ -97,8 +94,11 @@ const searchVideos = () => {
             </div>
             </a>
         </div>`
-        });        
-        sliderSearch();      
+            });
+            sliderSearch();
+        }
+    } catch (error) {
+        console.error("Error fetching search video data:", error);
     }
 };
 
@@ -127,16 +127,16 @@ const getYoutubeTitle = async () => {
         console.log(getTitleData);
 
         const channel_name = getTitleData.data.items[0].brandingSettings.channel.title;
-       // const channel_description = getTitleData.data.items[0].brandingSettings.channel.description;
+        // const channel_description = getTitleData.data.items[0].brandingSettings.channel.description;
 
         title.innerHTML = channel_name;
-       // description.innerHTML = channel_description;
+        // description.innerHTML = channel_description;
     } catch (error) {
         console.error("Error fetching video data:", error);
     }
 };
 
-//Function to fetch video details and display in a card && its for kddu joks sated api link
+//Function to fetch latest video details and display in a card && its for kddu joks sated api link
 const getYoutubeVideoDetails = async () => {
     try {
         const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Api_Key}`);
@@ -252,7 +252,7 @@ getYoutubeTitle();
 getYoutubeVideoDetails();
 getMostPopularVideos();
 getComedyMoviesVideos();
-// console.log(FetchedVideosData)
+//console.log(FetchedVideosData)
 
 
 //Slider Code for Latest Videos
@@ -306,21 +306,21 @@ prev_movies.addEventListener('click', handleScrollPrev_movies)
 
 
 
-const sliderSearch = ()=>{
-    //Slider Code for Search Videos
-const next_search = document.querySelector('#next_search')
-const prev_search= document.querySelector('#prev_search')
+//Slider Function Code for Search Videos
+const sliderSearch = () => {
+    const next_search = document.querySelector('#next_search')
+    const prev_search = document.querySelector('#prev_search')
 
-function handleScrollNext_search(direction) {
-    const cards = document.querySelector('.search-cards-content')
-    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-}
-function handleScrollPrev_search(direction) {
-    const cards = document.querySelector('.search-cards-content')
-    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
-}
-next_search.addEventListener('click', handleScrollNext_search)
-prev_search.addEventListener('click', handleScrollPrev_search)
+    function handleScrollNext_search(direction) {
+        const cards = document.querySelector('.search-cards-content')
+        cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+    }
+    function handleScrollPrev_search(direction) {
+        const cards = document.querySelector('.search-cards-content')
+        cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+    }
+    next_search.addEventListener('click', handleScrollNext_search)
+    prev_search.addEventListener('click', handleScrollPrev_search)
 }
 
 
