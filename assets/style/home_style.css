@@ -314,15 +314,28 @@ body{
   .contactus_text{
     font-family: 'Poppins',sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.2em;
     color: whitesmoke;
   }
+  .about_us_text{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: whitesmoke;
+  }
+  .first_line{
+    color: #FEAA28;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
   .contactus_form{
     background: rgba(255, 255, 255, 0.134);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 6px );
 -webkit-backdrop-filter: blur( 8px );
 border-radius: 10px;
+animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both
   }
   .form-label{
     font-family: 'Poppins',sans-serif;
@@ -364,19 +377,18 @@ border-radius: 10px;
 @keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 /* OUR CHANNELS  */
 @keyframes scale-up-center{0%{transform:scale(.5)}100%{transform:scale(1)}}
-/* @keyframes instagram {
-from{
-  top: 20%;
-}
-to{
-  top: 50%;
-}
-}  
-@keyframes facebook {
-  from{
-    bottom: 20%;
+
+/* Form column contact Us */
+
+/* MEDIA QUERIES  */
+/* @media only screen and (max-width:391px){
+  section.contact_us_container{
+    padding: 20px 10px !important;
   }
-  to{
-    bottom: 50%;
+  .contact_us_content{
+    padding: 20px 10px !important;
   }
-  }   */
+  h3.contactus_heading{
+    font-size: 30px !important;
+  }
+} */

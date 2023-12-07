@@ -37,11 +37,11 @@ const searchVideos = () => {
         //console.log("Matching videos:", matchingVideos);
 
         //Clear previous search results
-        document.querySelector(".Search_Cointainer").innerHTML = "";
+        document.querySelector(".not_found").innerHTML = "";
 
         if (videoName == "" || !videoName || matchingVideos.length == 0) {
             //console.log("No videos found.");
-            document.querySelector(".Search_Cointainer").innerHTML = `<h3 class="text-secondary m-5 d-flex justify-content-center">No Found Videos</h3>`
+            document.querySelector(".not_found").innerHTML = `<iframe class="d-flex justify-content-center" src="https://lottie.host/embed/a4c3efd3-6ed4-47d3-8c1c-aafec349987e/I5nustqYHy.json"></iframe>`
         } else {
             document.querySelector(".Search_Cointainer").innerHTML += `<section class="search_videos_container row my-3 m-0 px-3 container-fluid">
         <section class="search_video_heading col-lg-12 col-md-12 col-sm-12">

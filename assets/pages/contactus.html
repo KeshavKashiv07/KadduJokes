@@ -61,26 +61,44 @@
     <!-- COLUMN 1  -->
     <section class="contact_us_content col-lg-12 col-md-12 col-sm-12 px-5">
         <h3 class="contactus_heading text-center mb-3">Contact Us</h3>
-        <p class="contactus_text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui odit, omnis nisi iste, dignissimos at dolorum perspiciatis optio asperiores vero, exercitationem soluta commodi. Perspiciatis iure reiciendis, beatae voluptates fuga quis.</p>
+        <p class="contactus_text text-center">Feels free to Connect With Us!</p>
     </section>
     <!-- CONTACT US DETAILS  -->
     <section class="contactus_detail_container container row px-5 my-5">
         <!-- COLUMN 1  -->
-        <section class="contactus_detail col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center"></section>
+        <section class="contactus_detail col-lg-6 col-md-6 col-sm-12 d-flex justify-content-centeralign-items-center px-4 py-2">
+          <p class="about_us_text"><span class="first_line">Welcome to Kaddu Joke, where laughter knows no bounds!</span> <br><br>
+            At Kaddu Joke, we believe in the power of humor to brighten your day and sprinkle a little joy into your life. Founded by a group of passionate jokesters, our channel is dedicated to curating the most rib-tickling, side-splitting content that will have you giggling, chuckling, and maybe even rolling on the floor laughing! <br><br>
+            From hilarious skits and comedic challenges to witty stand-up routines and clever parodies, we strive to be your ultimate destination for all things funny and entertaining. Our diverse team of comedians, each with their own unique style and flair, collaborates to create content that transcends borders and brings smiles to faces worldwide. <br><br>            
+            But Kaddu Joke isn’t just about the punchlines; it’s about fostering a community united by laughter. We cherish the connections we build with our viewers, and your laughter fuels our creativity. Whether you need a pick-me-up after a long day or simply crave a good laugh, we’re here to be your go-to source for humor and happiness. <br><br>            
+            Join us on this laughter-filled journey! Hit that subscribe button, ring the notification bell, and brace yourself for a rollercoaster of giggles, guffaws, and good times. Let’s spread laughter together and make every moment a bit more light-hearted and fun! <br> <br>            
+            Thank you for being a part of the Kaddu Joke family. Get ready to laugh till your sides ache! <br><br>            
+            Stay hilarious, <br><br>
+            The Kaddu Joke Team</p>
+        </section>
         <!-- COLUMN 2 -->
-        <section class="contactus_form col-lg-6 col-md-6 col-sm-12 px-4 py-4">
-            <form>
+        <section class="contactus_form col-lg-6 col-md-6 col-sm-12 px-5 py-4">
+            <form class="needs-validation" novalidate >
                 <div class="mb-3">
-                    <label for="full_name" class="form-label">Full Name </label>
-                    <input type="text" class="form-control" id="full_name" placeholder="John">
+                    <label for="full_name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="full_name" required placeholder="John">
+                    <div class="invalid-feedback">
+                    Please enter a Full Name !
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" required placeholder="name@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid E-mail address.
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="phone_number" class="form-label">Phone Number</label>
-                    <input type="phone" class="form-control" id="phone_number" placeholder="XXX-XXX-XXXX">
+                    <label for="phone_number" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="phone" class="form-control" id="phone_number" required placeholder="XXX-XXX-XXXX" minlength="10">
+                    <div class="invalid-feedback">
+                      Please enter a valid 10 digit phone number.
+                    </div>
                   </div>
                 <div class="mb-3">
                     <label for="city" class="form-label">City</label>
@@ -91,10 +109,13 @@
                     <input type="text" class="form-control" id="state">
                   </div>
                   <div class="mb-3">
-                    <label for="message_query" class="form-label">Message</label>
-                    <textarea class="form-control" id="message_query" rows="3"></textarea>
+                    <label for="message_query" class="form-label">Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message_query" rows="3" minlength="50" required></textarea>
+                    <div class="invalid-feedback">
+                    Message should contains upto 50 character.
+                    </div>
                   </div>
-                    <button class="contact_us_btn btn w-50" type="button" onclick="sendEmail()">Submit</button>
+                    <button class="contact_us_btn btn w-50" type="submit" onclick="sendEmail()" >Submit</button>
             </form>
         </section>
     </section>
