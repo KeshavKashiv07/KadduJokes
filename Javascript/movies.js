@@ -33,11 +33,11 @@ const getComedyMoviesVideos = async () => {
             });
 
             document.querySelector(".movies_cards").innerHTML +=
-                `<div class="card m-2" style="width: 18rem;">
-                <img src="${videoThumnnail}" class="card-img-top" alt="thumbnails">
-                <div class="card-body">
-                  <h6 class="card-title">${videoTitle}</h6>
-                  <a href="${videoUrl} target="_blank" class="btn btn-primary d-flex justify-content-center">Watch now</a>
+                `<div class="card m-2" style="width:20rem;">
+                <img src="${videoThumnnail}" class="card-img-top img-fluid" alt="thumbnails">
+                <div class="card-body px-1">
+                  <h6 class="card-title movie_title_link mb-4">${videoTitle}</h6>
+                  <a href="${videoUrl} target="_blank" class="watch_movie_btn btn px-1 d-flex justify-content-center ">Watch now</a>
                 </div>
                 <div></div>
               </div>`

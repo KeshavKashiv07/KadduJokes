@@ -1,5 +1,5 @@
 body{
-    background-color: #0f0f0f;
+    background-color: black;
     
 }
 .logo{
@@ -74,7 +74,7 @@ body{
     font-weight: 700;
     font-size: 30px;
 }
-.latest_video_title,.mostpopular_video_title,.movies_video_title,.search_video_title{
+.latest_video_title,.mostpopular_video_title,.movies_video_title,.search_video_title,.movie_title_link{
     font-family: 'Poppins','sans-serif';
     font-weight: 400;
     font-size: medium;
@@ -98,11 +98,11 @@ body{
   min-height: 300px;
   cursor:pointer;
   width: calc(100%/3);
-  background-color: #0f0f0f;
+  background-color: black;
   animation:fade-in 1.2s cubic-bezier(.39,.575,.565,0.6) both
 }
 .card:hover{
-  transition: 400ms;
+  transition: 500ms;
   transform: scale(0.9,0.9);
 }
 
@@ -354,6 +354,35 @@ animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both
     transform: scale(0.9,0.9);
     transition: 300ms ease;
   }
+
+/* MOVIES CSS  */
+.carousel_img{
+  height:fit-content;
+}
+.movies_heading{
+  font-family: 'Poppins',sans-serif;
+  color: #FEAA28;
+  font-weight: 700;
+  font-size: 30px;
+}
+.watch_movie_btn{
+  border: 1px solid #FEAA28;
+  color: #FEAA28;
+  font-family: 'Poppins',sans-serif;
+}
+.watch_movie_btn:hover{
+  border: 1px solid white;
+  color: whitesmoke;
+  font-family: 'Poppins',sans-serif;
+}
+.watch_moviebanner_btn{
+  border: 1px solid #FEAA28;
+  color: #FEAA28;
+  font-family: 'Poppins',sans-serif;
+}
+.active.btn_one{
+  background-color: #FEAA28;
+}
 
 
 /* KEYFRAMES  */
