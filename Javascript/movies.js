@@ -5,7 +5,6 @@
 const Api_Key = "AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
-
 //Create an object to store fetched data
 const FetchedVideosData = {
     videosArray: []
@@ -37,7 +36,7 @@ const getComedyMoviesVideos = async () => {
                 <img src="${videoThumnnail}" class="card-img-top img-fluid" alt="thumbnails">
                 <div class="card-body px-1">
                   <h6 class="card-title movie_title_link mb-4">${videoTitle}</h6>
-                  <a href="${videoUrl} target="_blank" class="watch_movie_btn btn px-1 d-flex justify-content-center ">Watch now</a>
+                  <a href="${videoUrl} target="_blank" class="watch_movie_btn btn px-1 d-flex justify-content-center">Watch now</a>
                 </div>
                 <div></div>
               </div>`
@@ -47,10 +46,10 @@ const getComedyMoviesVideos = async () => {
     }
 }
 
-// Function for found search videos
+//Function for found search videos
 const searchVideos = () => {
     try {
-       // console.log("Search button clicked");
+        console.log("Search button clicked");
         const videoName = document.getElementById('searchInput').value.toLowerCase();
         //console.log("Search term:", videoName);
         const matchingVideos = FetchedVideosData.videosArray.filter(video => video.videoTitle.toLowerCase().includes(videoName.toLowerCase()));
@@ -81,5 +80,22 @@ const searchVideos = () => {
         console.error("Error fetching search video data:", error);
     }
 };
+
+// Playvideo function when user will click oncarousel images
+function playVideo(index_value) {
+    console.log("funtion play...") 
+    const videoLink = FetchedVideosData.videosArray[index_value].videoUrl;
+    //console.log(videoLink)
+
+    let anchor_teg = document.createElement("a");
+    anchor_teg.href = videoLink;
+    anchor_teg.target = "_blank";
+    document.body.appendChild(anchor_teg); 
+
+    //Trigger a click on the anchor element
+    anchor_teg.click(); 
+    //Remove the anchor element from the document (optional) 
+    document.body.removeChild(anchor_teg);   
+  }
 
 getComedyMoviesVideos();
