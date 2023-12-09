@@ -2,7 +2,7 @@
 // Keshav API Key : AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 
-const Api_Key = " AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E";
+const Api_Key = " AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
