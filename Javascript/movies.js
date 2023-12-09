@@ -66,7 +66,7 @@ const searchVideos = () => {
             matchingVideos.forEach(video => {
                 console.log(`Title: ${video.videoTitle}, URL: ${video.videoUrl}, Thumbnail: ${video.videoThumnnail}`);
                 document.querySelector(".Search_Cointainer").innerHTML +=
-                `<div class="card m-2" style="width:20rem;">
+                `<div class="card rounded-3 m-2" style="width:20rem;">
                 <img src="${video.videoThumnnail}" class="card-img-top img-fluid" alt="thumbnails">
                 <div class="card-body px-1">
                   <h6 class="card-title movie_title_link mb-4">${video.videoTitle}</h6>
