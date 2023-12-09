@@ -38,6 +38,7 @@ const searchVideos = () => {
 
         //Clear previous search results
         document.querySelector(".not_found").innerHTML = "";
+        document.querySelector(".Search_Cointainer").innerHTML = "";
 
         if (videoName == "" || !videoName || matchingVideos.length == 0) {
             //console.log("No videos found.");
