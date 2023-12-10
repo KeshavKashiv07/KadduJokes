@@ -396,6 +396,50 @@ animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both
   background-color: #FEAA28;
 }
 
+/* Gaming CSS  */
+.gaming_row{
+  background-color: #27292a74;
+}
+.main_game_img:hover{
+  background-color: rgba(0, 0, 0, 0.242);
+  background-blend-mode: multiply;
+  box-shadow: rgba(166, 166, 170, 0.2) 0px 7px 29px 0px;
+  transition: 300ms ease-in;
+}
+.game_heading{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 700;
+  color: #FEAA28;
+  font-size: 35px;
+}
+.game_name_heading{
+  font-family: 'Poppins',sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #FEAA28;
+  border-top-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border-top-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+.game_carousel_items{
+border: 10px solid black;
+}
+.game_summary_heading{
+  font-family: 'Poppins',sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #FEAA28;
+}
+.game_summary_text{
+  font-size: 16px;
+  color: whitesmoke;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 300;
+}
+
+
 /* Terms and condition  */
 .terms_condition_container,.privacy_policy_container,.disclaimer_container{
     background-size: cover;
