@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <!-- Stylesheet  -->
     <link rel="stylesheet" href="/assets/style/home_style.css">
+    <!-- AOS Link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Fontawwsome Link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <title>Contact Us</title>
@@ -26,7 +28,7 @@
     <main class="main_container container-fluid p-0">
 
     <!-- NAVBAR CONTAINER -->
-    <section class="container-fluid p-0">
+    <section class="container-fluid p-0" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
     <nav class="navbar navbar-expand-lg px-3">
     <div class="container-fluid">
     <a class="navbar-brand" href="/home.html"><img src="/assets/images/ch_6.jpg" alt="brand-logo" class="logo img-fluid" width="50"></a>
@@ -57,7 +59,7 @@
     </section>
 
     <!-- CONTACT US CONTAINER  -->
-    <section class="contact_us_container row pt-5 pb-5 container-fluid px-0 mx-0">
+    <section class="contact_us_container row pt-5 pb-5 container-fluid px-0 mx-0" data-aos="zoom-in" data-aos-duration="1000" >
     <!-- COLUMN 1  -->
     <section class="contact_us_content col-lg-12 col-md-12 col-sm-12 px-5">
         <h3 class="contactus_heading text-center mb-3">Contact Us</h3>
@@ -66,7 +68,7 @@
     <!-- CONTACT US DETAILS  -->
     <section class="contactus_detail_container container row px-5 my-5">
         <!-- COLUMN 1  -->
-        <section class="contactus_detail col-lg-6 col-md-6 col-sm-12 d-flex justify-content-centeralign-items-center px-4 py-2">
+        <section class="contactus_detail col-lg-6 col-md-6 col-sm-12 d-flex justify-content-centeralign-items-center px-4 py-2" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-center">
           <p class="about_us_text"><span class="first_line">Welcome to Kaddu Joke, where laughter knows no bounds!</span> <br><br>
             At Kaddu Joke, we believe in the power of humor to brighten your day and sprinkle a little joy into your life. Founded by a group of passionate jokesters, our channel is dedicated to curating the most rib-tickling, side-splitting content that will have you giggling, chuckling, and maybe even rolling on the floor laughing! <br><br>
             From hilarious skits and comedic challenges to witty stand-up routines and clever parodies, we strive to be your ultimate destination for all things funny and entertaining. Our diverse team of comedians, each with their own unique style and flair, collaborates to create content that transcends borders and brings smiles to faces worldwide. <br><br>            
@@ -77,7 +79,7 @@
             The Kaddu Joke Team</p>
         </section>
         <!-- COLUMN 2 -->
-        <section class="contactus_form col-lg-6 col-md-6 col-sm-12 px-5 py-4">
+        <section class="contactus_form col-lg-6 col-md-6 col-sm-12 px-5 py-4" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-center">
             <form class="needs-validation" novalidate >
                 <div class="mb-3">
                     <label for="full_name" class="form-label">Full Name <span class="text-danger">*</span></label>
@@ -167,5 +169,10 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="/Javascript/contactus.js"></script>
+    <!-- AOS SCRIPT  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     </body>
     </html>

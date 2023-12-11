@@ -38,9 +38,14 @@ body{
     position: relative;
     background-color:#0f0f0fdf;
 }
+
+/* GAME BANNER  */
 .Game_Banner{
-  border: 2px solid #FEAA28;
-  border-radius: 10px;
+  border-right: 5px solid #FEAA28;
+  border-radius: 20px;
+  border-left: 5px solid #FEAA28;
+  border-top: 1px solid #fea82853;
+  border-bottom: 1px solid #fea82853;
 }
 .Game_Banner video{
   height:350px;
@@ -354,7 +359,7 @@ box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 6px );
 -webkit-backdrop-filter: blur( 8px );
 border-radius: 10px;
-animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both
+/* animation:scale-up-center .6s cubic-bezier(.39,.575,.565,1.000) both */
   }
   .form-label{
     font-family: 'Poppins',sans-serif;

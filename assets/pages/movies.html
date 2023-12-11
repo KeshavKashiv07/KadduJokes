@@ -18,6 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
   <!-- Stylesheet  -->
   <link rel="stylesheet" href="/assets/style/home_style.css">
+  <!-- AOS Link  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Fontawwsome Link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <title>Movies</title>
@@ -25,8 +27,9 @@
 
 <body>
   <main class="movie_main_container">
+
     <!-- NAVBAR CONTAINER -->
-    <section class="container-fluid">
+    <section class="container-fluid px-0" data-aos="fade-down" data-bs-interval="1000" data-aos-anchor-placement="top-center">
       <nav class="navbar navbar-expand-lg navbar-expand-md px-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="/home.html"><img src="/assets/images/ch_6.jpg" alt="brand-logo"
@@ -60,7 +63,7 @@
     </section>
 
     <!-- SEARCH BAR -->
-    <section class="d-flex justify-content-center m-2 my-3">
+    <section class="d-flex justify-content-center m-2 my-3" data-aos="fade-down" data-bs-interval="1000" data-aos-anchor-placement="bottom-bottom">
       <form class="d-flex" role="search">
         <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-warning" type="button" onclick="searchVideos()">Search</button>
@@ -68,11 +71,11 @@
     </section>
 
     <!--SEARCH VIDEOS CONTAINER  -->
-    <div class="not_found d-flex justify-content-center py-1"></div>
-    <div class="Search_Cointainer d-flex flex-wrap mx-0 my-1 justify-content-center"></div>
+    <div class="not_found d-flex justify-content-center py-1" data-aos="fade-up"></div>
+    <div class="Search_Cointainer d-flex flex-wrap mx-0 my-1 justify-content-center" data-aos="fade-up" data-bs-interval="1000" data-aos-anchor-placement="bottom-bottom"></div>
 
     <!-- MOVIE CAROUSEL CONTAINER -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-in" data-bs-interval="1000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active btn_one"
           aria-current="true" aria-label="Slide 1"></button>
@@ -123,7 +126,7 @@
     </div>
 
     <!-- MOVIE CARDS CONTAINER  -->
-    <section class="movies_card_container  mx-0 my-4 px-1 w-100 row">
+    <section class="movies_card_container  mx-0 my-4 px-1 w-100 row" data-aos="fade-up" data-bs-interval="1000" data-aos-anchor-placement="bottom-bottom">
       <section class="movie_cards_column col-lg-3 col-md-4 col-sm-6 w-100">
         <h3 class="movies_heading col-lg-12 col-md-12 col-sm-12 my-2">Movies</h3>
         <section class="movies_cards my-2 d-flex flex-wrap mx-0 justify-content-center"></section>
@@ -189,6 +192,11 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <!-- Javascript file link -->
   <script src="/Javascript/movies.js"></script>
+  <!-- AOS SCRIPT  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>

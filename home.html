@@ -19,6 +19,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 <!-- Stylesheet  -->
 <link rel="stylesheet" href="../assets/style/home_style.css">
+<!-- AOS Link  -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- Fontawwsome Link  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 <!-- Title -->
@@ -29,7 +31,7 @@
 <main class="main_container container-fluid p-0 m-0">
   
 <!-- NAVBAR CONTAINER -->
-<section class="container-fluid p-0">
+<section class="container-fluid p-0" data-aos="fade-down" data-aos-duration="1000" >
 <nav class="navbar navbar-expand-lg navbar-expand-md px-3">
   <div class="container-fluid">
     <a class="navbar-brand" href="/home.html"><img src="../assets/images/ch_6.jpg" alt="brand-logo" class="logo img-fluid" width="50"></a>
@@ -162,7 +164,7 @@
   <div class="Search_Cointainer"></div>
 
   <!-- FEATURED VIDEO  -->
-  <section class="featured_video_container d-flex justify-content-center row m-0 my-3">
+  <section class="featured_video_container d-flex justify-content-center row m-0 my-3" data-aos="fade-right">
     <iframe class="featured_video p-2 rounded-4 col-lg-12 col-md-12 col-sm-12" width="1500" height="400"
       src="https://www.youtube.com/embed/5m0O9TU3wZc?si=fxi--XBEmhEt8BNL" title="YouTube video player" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -170,7 +172,7 @@
   </section>
   
   <!--LATEST VIDEOS CONTAINER  -->
-  <section class="latest_videos_container row mb-3 mt-5 m-0 px-3 container-fluid">
+  <section class="latest_videos_container row mb-3 mt-5 m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
     <section class="latest_heading col-lg-12 col-md-12 col-sm-12">
       <h3 class="latest">Latest Videos</h3>
     </section>
@@ -210,7 +212,7 @@
     </section>
 
   <!--MOST POPULAR VIDEOS CONTAINER  -->
-  <section class="mostpopular_videos_container row my-3 m-0 px-3 container-fluid">
+  <section class="mostpopular_videos_container row my-3 m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
     <section class="mostpopular_heading col-lg-12 col-md-12 col-sm-12">
       <h3 class="mostpopular">Most Popular Videos</h3>
     </section>
@@ -250,12 +252,12 @@
     </section>
 
     <!-- Game Banner  -->
-  <section class="Game_Banner d-flex justify-content-center row m-0 my-2 mx-5">
+  <section class="Game_Banner d-flex justify-content-center row m-0 my-3 mx-5" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
     <video controls autoplay loop muted src="/assets/images/kalaKadduGameBanner.mp4">
   </section>
 
   <!--MOVIES VIDEOS CONTAINER  -->
-  <section class="movies_videos_container row my-3 m-0 px-3 container-fluid">
+  <section class="movies_videos_container row my-3 m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
     <section class="movies_heading col-lg-12 col-md-12 col-sm-12 px-3">
       <h3 class="movies">Comedy Movies</h3>
     </section>
@@ -295,7 +297,7 @@
     </section>
 
   <!-- OUR CHANNEL  -->
-  <section class="our_channel_container row pb-4 pt-3 gy-3 px-3 m-5 rounded-5">
+  <section class="our_channel_container row pb-4 pt-3 gy-3 px-3 m-5 rounded-5" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
     <h3 class="our_channel_heading mb-3">Our Popular Channels</h3>
     <!-- COL1  -->
     <section class="col-lg-3 col-md-4 col-sm-6 text-center"><a href="https://www.youtube.com/@taklanetavlogs" class="our_channel_link text-decoration-none"><img src="../assets/images/ch_1.jpg" alt="" class="our_channel_image img-fluid mb-4" width="120"><p class="our_channel_title">Takla Neta Vlogs</p></a></section>
@@ -367,5 +369,10 @@
 <!-- Icon Links -->
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<!-- AOS SCRIPT  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
