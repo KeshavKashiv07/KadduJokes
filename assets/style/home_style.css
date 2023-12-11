@@ -473,6 +473,31 @@ border: 10px solid black;
   box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
 }
 
+.animation_right {
+  opacity: 0;
+  transform: translateX(300px);
+  transition: all 0.7s ease-out;
+  transition-delay: 0.4s;
+
+}
+
+.scroll-animation {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animation_left {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.7s ease-in;
+  transition-delay: 0.1s;
+
+}
+.scroll-animation_left{
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 /* Terms and condition  */
 .terms_condition_container,.privacy_policy_container,.disclaimer_container{
