@@ -7,6 +7,10 @@ const sendEmail=()=>{
     let State = document.getElementById("state").value
     let Message = document.getElementById("message_query").value
 
+    if(Name=="" || email=="" ||Phone=="" || Message==""){
+      swal("All fields are mandatory", "Please fill in all the required fields.", "info");
+    }
+    else{
     console.log("function called")
     Email.send({
         Host : "smtp.elasticemail.com",
@@ -32,11 +36,11 @@ const sendEmail=()=>{
       else{
         swal("Failed", "Message not sent, Press 'OK' ", "error");
       }
-    }  
-    );
+    });
+  }
 }
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+//Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
   'use strict'
 
