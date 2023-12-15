@@ -59,22 +59,6 @@ body {
   height: 350px;
 }
 
-/* .shape_one{
-  position: absolute;
-  overflow: hidden;
-  width: auto;
-  left: 70px;
-  opacity: 0.8;
-  animation: instagram 3s ease-in 1s infinite alternate;
-}
-.shape_two{
-  position: absolute;
-  overflow: hidden;
-  width: auto;
-  right: 70px;
-  opacity: 0.8;
-  animation: facebook 3s ease-in 1s infinite alternate;
-} */
 .counters {
   margin: 50px 0 50px 0;
 }
@@ -569,6 +553,116 @@ body {
   box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
 }
 
+/* Learning CONTAINER CSS  */
+.learning_content_container{
+  background-image: url('../images/learning_bg.webp');
+  height: auto !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000c6;
+  background-blend-mode: multiply;
+  }
+  .carousel_img{
+    border: 10px solid whitesmoke;
+  }
+  .learning_tagline{
+    font-family: 'Poppins',sans-serif;
+    /* font-size: 20px; */
+    color: white;
+    font-weight: 400;
+  }
+  .course_name{
+    font-family: 'Poppins',sans-serif;
+    color: #FEAA28;
+    font-weight: 700;    
+  }
+  .learning_btn{
+    background-color: transparent;
+    border: 1px solid #FEAA28;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+  }
+  .learning_btn:hover{
+    background-color: #FEAA28;
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+  }
+  .about_tagline{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    color: whitesmoke;
+  }
+  .about_heading{
+    font-family: 'Poppins',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FEAA28;
+  }
+  .about_text{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 300;
+    color: rgba(245, 245, 245, 0.734);
+  }
+  .course_update{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    color: whitesmoke;
+  }
+  .what_container{
+    background-color:#FEAA28 ;
+  }
+  .what_tagline{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  .what_heading{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: black;
+  }
+  .what_list{
+    list-style: none;
+  }
+  .what_items{
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+  }
+  .what_items:hover{
+    transform: scale(1.1,1.1) !important;
+    transition: 300ms ease-in !important;
+    background-color: #000000 !important;
+    border: 2px solid #000000 !important;
+    color: #FEAA28 !important;
+    font-family: 'Poppins',sans-serif !important;
+  }
+
+  /* DIVIDER  */
+  .custom-shape-divider-bottom-1702616097 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1702616097 svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 140px;
+}
+
+.custom-shape-divider-bottom-1702616097 .shape-fill {
+    fill: #FEAA28;
+}
 /* Terms and condition  */
 .terms_condition_container,
 .privacy_policy_container,
