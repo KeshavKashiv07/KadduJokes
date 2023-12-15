@@ -564,7 +564,7 @@ body {
   background-blend-mode: multiply;
   }
   .carousel_img{
-    border: 10px solid whitesmoke;
+    border: 10px solid black;
   }
   .learning_tagline{
     font-family: 'Poppins',sans-serif;
