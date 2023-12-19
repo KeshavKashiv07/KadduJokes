@@ -880,17 +880,334 @@ body {
   }
 }
 
-/* Form column contact Us */
 
-/* MEDIA QUERIES  */
-/* @media only screen and (max-width:391px){
-  section.contact_us_container{
-    padding: 20px 10px !important;
+/* MEDIA QUERIES (Smart Phones) */
+@media only screen and (min-width:320px) and (max-width:420px){
+  .navbar{
+    padding: 10px !important;
   }
-  .contact_us_content{
-    padding: 20px 10px !important;
+  .content_container,.subscriber_count_column,.video_count_column,.views_count_column{
+    padding: 15px !important;
   }
-  h3.contactus_heading{
+  .channelname_heading{
+    font-size: 3.5em !important;
+  }
+  .counters{
+    margin-top: 10px !important;
+  }
+  .featured_video_container{
+    padding: 10px;
+  }
+  .latest_videos_container,.mostpopular_videos_container,.movies_videos_container{
+    padding: 5px !important;
+  }
+  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
+    padding: 5px;
+  }
+  .card-title,.our_channel_title,.subscriber,.videos,.views{
+    font-size: medium !important;
+  }
+  .Game_Banner{
+    margin: 10px !important;
+  }
+  video{
+    aspect-ratio: 3/4;
+    object-fit: fill;
+  }
+  .our_channel_container{
+    margin: 15px !important;
+    padding: 15px !important;
+  }
+  .our_channel_image{
+    width: 90px !important;
+  }
+  .our_channel_heading,.movies,.mostpopular,.latest,.game_name_heading{
+    font-size: 22px !important;
+  }
+  .footer_logo_column{
+    padding: 10px !important;
+  }
+  .channel_items_link,.contactus_link,.nav-link{
+    font-size: smaller !important;
+  }
+  .game_heading{
     font-size: 30px !important;
   }
-} */
+  .gaming_row{
+    margin: 10px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  .game_row_two{
+    margin: 30px 0 !important;
+    padding: 10px !important;
+  }
+  .game_carousel{
+    padding: 0 !important;
+  }
+  .game_summary_container{
+    padding: 0 !important;
+  }
+  .game_summary_text{
+    font-size: smaller;
+    line-height: 22px !important;
+  }
+  .contact_us_container{
+    justify-content: center;
+  }
+  .contact_us_container,.contact_us_content{
+    padding: 15px 10px !important;
+  }
+  .contactus_heading{
+    font-size:1.8em !important;
+  }
+  .contactus_text {
+    font-size: smaller;
+  }
+  .contactus_detail_container {
+    margin: 15px 10px !important;
+    padding: 15px 10px !important;
+  }
+  .contactus_detail{
+    padding: 10px !important;
+  }
+  .contactus_form{
+    padding: 15px 18px !important;
+  }
+  .privacy_policy_heading_container,.terms_condition_heading_container,.disclaimer_heading_container{
+    padding: 15px 10px !important;
+  }
+  .text{
+    font-size: smaller;
+    line-height: 22px !important;
+  }
+}
+/* MEDIA QUERIES (Tablet Devices) */
+@media only screen and (min-width:421px) and (max-width:768px){
+  .navbar{
+    padding: 8px !important;
+  }
+  .content_container,.subscriber_count_column,.video_count_column,.views_count_column{
+    padding: 20px !important;
+  }
+  .channelname_heading{
+    font-size: 4.5em !important;
+  }
+  .counters{
+    margin-top: 10px !important;
+  }
+  .featured_video_container{
+    padding: 10px;
+  }
+  .latest_videos_container,.mostpopular_videos_container,.movies_videos_container{
+    padding: 10px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
+    padding: 5px;
+  }
+  .card-title,.our_channel_title,.subscriber,.videos,.views{
+    font-size: medium !important;
+  }
+  .Game_Banner{
+    margin: 15px !important;
+  }
+  video{
+    aspect-ratio: 3/4;
+    object-fit: fill;
+  }
+  .our_channel_container{
+    margin: 20px !important;
+    padding: 20px !important;
+  }
+  .our_channel_image{
+    width: 90px !important;
+  }
+  .our_channel_heading,.movies,.mostpopular,.latest,.game_name_heading{
+    font-size: 26px !important;
+  }
+  .footer_logo_column{
+    padding: 15px !important;
+  }
+  .channel_items_link,.contactus_link,.nav-link{
+    font-size: smaller !important;
+  }
+  .navbar-nav{
+    margin: 10px 0 !important;
+    padding: 5px !important;
+    /* align-items: center !important; */
+  }
+  .game_heading{
+    font-size: 30px !important;
+  }
+  .gaming_row{
+    margin: 10px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  .game_row_two{
+    margin: 30px 0 !important;
+    padding: 10px !important;
+  }
+  .game_carousel{
+    padding: 0 !important;
+  }
+  .game_summary_container{
+    padding: 0 !important;
+  }
+  .game_summary_text{
+    font-size: medium;
+    line-height: 24px !important;
+  }
+  .contact_us_container{
+    justify-content: center;
+  }
+  .contact_us_container,.contact_us_content{
+    padding: 15px 10px !important;
+  }
+  .contactus_heading{
+    font-size:2.5em !important;
+  }
+  .contactus_text {
+    font-size: medium;
+  }
+  .contactus_detail_container {
+    margin: 15px 10px !important;
+    padding: 15px 10px !important;
+  }
+  .contactus_detail{
+    padding: 10px !important;
+  }
+  .contactus_form{
+    padding: 15px 18px !important;
+  }
+  .privacy_policy_heading_container,.terms_condition_heading_container,.disclaimer_heading_container{
+    padding: 15px 10px !important;
+  }
+  .text{
+    font-size: medium;
+    line-height: 24px !important;
+  }
+}
+/* MEDIA QUERIES (Laptop Devices) */
+@media only screen and (min-width:769px) and (max-width:1200px){
+  .navbar{
+    padding: 8px !important;
+  }
+  .content_container,.subscriber_count_column,.video_count_column,.views_count_column{
+    padding: 20px !important;
+  }
+  .channelname_heading{
+    font-size: 4.5em !important;
+  }
+  .counters{
+    margin-top: 10px !important;
+  }
+  .featured_video_container{
+    padding: 10px;
+  }
+  .latest_videos_container,.mostpopular_videos_container,.movies_videos_container{
+    padding: 10px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
+    padding: 5px;
+  }
+  .card-title,.our_channel_title,.subscriber,.videos,.views{
+    font-size: medium !important;
+  }
+  .Game_Banner{
+    margin: 15px !important;
+  }
+  video{
+    aspect-ratio: 3/4;
+    object-fit: fill;
+  }
+  .our_channel_container{
+    margin: 20px !important;
+    padding: 20px !important;
+  }
+  .our_channel_image{
+    width: 90px !important;
+  }
+  .our_channel_heading,.movies,.mostpopular,.latest,.game_name_heading{
+    font-size: 26px !important;
+  }
+  .footer_logo_column{
+    padding: 15px !important;
+  }
+  .channel_items_link,.contactus_link,.nav-link{
+    font-size: medium !important;
+  }
+  .navbar-nav{
+    margin: 5px !important;
+    padding: 5px !important;
+    /* align-items: center !important; */
+  }
+  .collapse{
+    justify-content: space-between !important;
+  }
+  .game_heading{
+    font-size: 30px !important;
+  }
+  .gaming_row{
+    margin: 10px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  .game_row_two{
+    margin: 30px 0 !important;
+    padding: 10px !important;
+  }
+  .game_carousel{
+    padding: 0 !important;
+  }
+  .game_summary_container{
+    padding: 0 !important;
+  }
+  .game_summary_text{
+    font-size: large;
+    line-height: 25px !important;
+  }
+  .contact_us_container{
+    justify-content: center;
+  }
+  .contact_us_container,.contact_us_content{
+    padding: 15px 10px !important;
+  }
+  .contactus_heading{
+    font-size:3em !important;
+  }
+  .contactus_text {
+    font-size: large;
+  }
+  .contactus_detail_container {
+    margin: 15px 10px !important;
+    padding: 15px 10px !important;
+  }
+  .contactus_detail{
+    padding: 10px !important;
+  }
+  .contactus_form{
+    padding: 15px 18px !important;
+  }
+  .privacy_policy_heading_container,.terms_condition_heading_container,.disclaimer_heading_container{
+    padding: 15px 10px !important;
+  }
+  .text{
+    font-size: 16px !important;
+    line-height: 25px !important;
+  }
+  .text_container{
+    padding: 20px 15px !important;
+    margin: 20px 15px !important;
+  }
+}
