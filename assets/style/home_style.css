@@ -55,8 +55,9 @@ body {
   border-bottom: 1px solid #fea82853;
 }
 
-.Game_Banner video {
-  height: 350px;
+.Game_Banner img {
+  padding: 0;
+  border-radius: 20px;
 }
 
 .counters {
