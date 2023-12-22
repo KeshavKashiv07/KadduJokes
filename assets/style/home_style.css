@@ -918,6 +918,7 @@ body {
   }
   #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
     padding: 5px;
+    display: none;
   }
   .card-title,.our_channel_title,.subscriber,.videos,.views{
     font-size: medium !important;
