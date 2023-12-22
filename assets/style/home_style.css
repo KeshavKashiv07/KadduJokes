@@ -998,6 +998,11 @@ body {
     font-size: smaller;
     line-height: 22px !important;
   }
+  .Learning_Banner,.Game_Banner{
+    margin: 20px 10px !important;
+    aspect-ratio: 21/9;
+    object-fit: cover;
+  }
 }
 /* MEDIA QUERIES (Tablet Devices) */
 @media only screen and (min-width:421px) and (max-width:768px){
@@ -1107,6 +1112,11 @@ body {
   .text{
     font-size: medium;
     line-height: 24px !important;
+  }
+  .Learning_Banner,.Game_Banner{
+    margin: 20px 10px !important;
+    aspect-ratio: 21/9;
+    object-fit: cover;
   }
 }
 /* MEDIA QUERIES (Laptop Devices) */
