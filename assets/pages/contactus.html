@@ -80,27 +80,28 @@
         </section>
         <!-- COLUMN 2 -->
         <section class="contactus_form col-lg-6 col-md-6 col-sm-12 px-5 py-4" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-center">
-            <form class="needs-validation" novalidate >
+            <form>
+              <!-- class="needs-validation" novalidate -->
                 <div class="mb-3">
                     <label for="full_name" class="form-label">Full Name <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="full_name" required placeholder="John">
-                    <div class="invalid-feedback">
+                    <!-- <div class="invalid-feedback">
                     Please enter a Full Name !
-                    </div>
+                    </div> -->
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
                     <input type="email" class="form-control" id="email" required placeholder="name@example.com">
-                    <div class="invalid-feedback">
+                    <!-- <div class="invalid-feedback">
                       Please enter a valid E-mail address.
-                    </div>
+                    </div> -->
                   </div>
                   <div class="mb-3">
                     <label for="phone_number" class="form-label">Phone Number <span class="text-danger">*</span></label>
                     <input type="phone" class="form-control" id="phone_number" required placeholder="XXX-XXX-XXXX" minlength="10">
-                    <div class="invalid-feedback">
+                    <!-- <div class="invalid-feedback">
                       Please enter a valid 10 digit phone number.
-                    </div>
+                    </div> -->
                   </div>
                 <div class="mb-3">
                     <label for="city" class="form-label">City</label>
@@ -113,11 +114,11 @@
                   <div class="mb-3">
                     <label for="message_query" class="form-label">Message <span class="text-danger">*</span></label>
                     <textarea class="form-control" id="message_query" rows="3" minlength="50" required></textarea>
-                    <div class="invalid-feedback">
+                    <!-- <div class="invalid-feedback">
                     Message should contains upto 50 character.
-                    </div>
+                    </div> -->
                   </div>
-                    <button class="contact_us_btn btn w-50" type="submit" onclick="sendEmail()" >Submit</button>
+                    <button class="contact_us_btn btn w-50" type="button" onclick="sendEmail()" >Submit</button>
             </form>
         </section>
     </section>
