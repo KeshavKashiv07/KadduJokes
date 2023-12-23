@@ -80,21 +80,21 @@
         </section>
         <!-- COLUMN 2 -->
         <section class="contactus_form col-lg-6 col-md-6 col-sm-12 px-5 py-4" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-center">
-          <form>
+          <form onsubmit="return validateForm()">
             <div class="mb-3">
                 <label for="full_name" class="form-label">Full Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="full_name" required placeholder="John" minlength="2">
-                <!-- <div id="error-full-name" class="error-message"></div> -->
+                <div id="error-full-name" class="error-message text-danger m-1 fst-italic"></div>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="email" required placeholder="name@example.com" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address">
-                <!-- <div id="error-email" class="error-message"></div> -->
+                <input type="email" class="form-control" id="email" required placeholder="name@example.com">
+                <div id="error-email" class="error-message text-danger m-1 fst-italic"></div>
             </div>
             <div class="mb-3">
                 <label for="phone_number" class="form-label">Phone Number <span class="text-danger">*</span></label>
-                <input type="tel" class="form-control" id="phone_number" required placeholder="XXX-XXX-XXXX" minlength="10" title="Please enter a valid 10-digit phone number">
-                <!-- <div id="error-phone" class="error-message"></div> -->
+                <input type="tel" class="form-control" id="phone_number" required placeholder="XXX-XXX-XXXX" minlength="10">
+                <div id="error-phone" class="error-message text-danger m-1 fst-italic"></div>
             </div>
             <div class="mb-3">
                 <label for="city" class="form-label">City</label>
@@ -107,10 +107,10 @@
             <div class="mb-3">
                 <label for="message_query" class="form-label">Message <span class="text-danger">*</span></label>
                 <textarea class="form-control" id="message_query" rows="3" minlength="20" required></textarea>
-                <!-- <div id="error-message-query" class="error-message"></div> -->
+                <div id="error-message-query" class="error-message text-danger m-1 fst-italic"></div>
             </div>
-            <button class="contact_us_btn btn w-50" type="button" onclick="sendEmail()">Submit</button>
-        </form>        
+            <button class="contact_us_btn btn w-50" type="button" onclick="submitForm()">Submit</button>
+        </form>     
         </section>
     </section>
     </section>
