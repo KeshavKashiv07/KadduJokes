@@ -255,9 +255,9 @@ function playGame(banner_number) {
     console.log("funtion called...") 
     let anchor_teg = document.createElement("a");
     if(banner_number == 0){
-        anchor_teg.href = "/assets/pages/learning.html";
+        anchor_teg.href = "/learning.html";
     }else{
-        anchor_teg.href = "/assets/pages/gaming.html";
+        anchor_teg.href = "/gaming.html";
     }
    // anchor_teg.target = "_blank";
     document.body.appendChild(anchor_teg); 

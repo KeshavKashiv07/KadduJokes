@@ -1030,7 +1030,7 @@ body {
     margin-top: 30px !important;
     margin-bottom: 30px !important;
   }
-  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
+  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies,#prev_search,#next_search{
     padding: 5px;
   }
   .card-title,.our_channel_title,.subscriber,.videos,.views{
@@ -1148,7 +1148,7 @@ body {
     margin-top: 30px !important;
     margin-bottom: 30px !important;
   }
-  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies{
+  #next,#prev,#next_mostPopular,#prev_mostPopular,#prev_movies,#next_movies,#next_search,#prev_search{
     padding: 5px;
   }
   .card-title,.our_channel_title,.subscriber,.videos,.views{
