@@ -937,7 +937,7 @@ body {
   .our_channel_image{
     width: 90px !important;
   }
-  .our_channel_heading,.movies,.mostpopular,.latest,.game_name_heading,.search_video_heading{
+  .our_channel_heading,.movies,.mostpopular,.latest,.game_name_heading,.search_video_heading,.about_heading{
     font-size: 22px !important;
   }
   .footer_logo_column{
@@ -966,7 +966,7 @@ body {
   .game_summary_container{
     padding: 0 !important;
   }
-  .game_summary_text{
+  .game_summary_text,.about_tagline{
     font-size: smaller;
     line-height: 22px !important;
   }
@@ -976,10 +976,10 @@ body {
   .contact_us_container,.contact_us_content{
     padding: 15px 10px !important;
   }
-  .contactus_heading{
+  .contactus_heading,.course_name{
     font-size:1.8em !important;
   }
-  .contactus_text {
+  .contactus_text,.about_text,.what_items {
     font-size: smaller;
   }
   .contactus_detail_container {
@@ -1007,9 +1007,19 @@ body {
   .main_game_img{
     margin-bottom: 15px !important;
   }
+  .what_list,.what_content,.what_container,.about_container{
+    padding: 10px !important;
+  }
+  .learning_content_container{
+    padding: 10px !important;
+  }
 }
 /* MEDIA QUERIES (Tablet Devices) */
 @media only screen and (min-width:421px) and (max-width:768px){
+  
+  .learning_content_container{
+    padding: 10px !important;
+  }
   .navbar{
     padding: 8px !important;
   }
@@ -1124,6 +1134,9 @@ body {
   }
   .main_game_img{
     margin-bottom: 15px !important;
+  }
+  .what_list,.what_content{
+    padding: 10px !important;
   }
 }
 /* MEDIA QUERIES (Laptop Devices) */
@@ -1244,5 +1257,8 @@ body {
   }
   .main_game_img{
     margin-bottom: 15px !important;
+  }
+  .what_list,.what_content{
+    padding: 10px !important;
   }
 }
