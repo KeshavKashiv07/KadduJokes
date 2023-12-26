@@ -1010,14 +1010,14 @@ body {
   .what_list,.what_content,.what_container,.about_container{
     padding: 10px !important;
   }
-  .learning_content_container{
+  .learning_content_container,.learning_content{
     padding: 10px !important;
   }
 }
 /* MEDIA QUERIES (Tablet Devices) */
 @media only screen and (min-width:421px) and (max-width:768px){
   
-  .learning_content_container{
+  .learning_content_container,.learning_content{
     padding: 10px !important;
   }
   .navbar{
