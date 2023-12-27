@@ -3,7 +3,7 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 //SURAJ BHAIA API KEY : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
 
-const Api_Key = "AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts";
+const Api_Key = "AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM";
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
@@ -11,6 +11,10 @@ const video_count = document.querySelector("#video_count")
 const title = document.querySelector("#channel_name")
 const description = document.querySelector("#description")
 const views = document.querySelector("#views")
+
+window.onload=function(){
+    document.getElementById("autoplay").play();
+}
 
 //Create an object to store fetched data
 const FetchedVideosData = {
