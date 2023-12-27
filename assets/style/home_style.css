@@ -1013,6 +1013,10 @@ body {
   .learning_content_container,.learning_content{
     padding: 10px !important;
   }
+  .featured_video{
+    height: 300px !important;
+    object-fit: fill !important;
+  }
 }
 /* MEDIA QUERIES (Tablet Devices) */
 @media only screen and (min-width:421px) and (max-width:768px){
