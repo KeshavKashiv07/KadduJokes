@@ -1,0 +1,99 @@
+.first_container{
+    background-image: url('/assets/channel_images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.navigation_column{
+    background-image: url('/assets/channel_images/wooden_stick.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.nav-links{
+    color: black;
+    font-family: PhosphateSolid;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+.nav-links:hover{
+    color: white;
+}
+.para_one{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 16px;
+}
+.watch_movie_button{
+    background-color: red;
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+}
+.watch_movie_button:hover{
+    border: 2px solid white;
+    color: white;
+}
+.second_container{
+    width: 100%;
+    position:absolute;
+    z-index: 1;
+    bottom: -320px;
+    background-image: url('/assets/channel_images/wooden_badge.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: border-box;
+}
+.channel_name_heading{
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    color: white;
+    font-family: PhosphateSolid;
+}
+.subscriber_heading,.totalviews_heading,.totalvideos_heading{
+    font-family: 'Montserrat',sans-serif;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+@font-face {
+    font-family: PhosphateSolid;
+    src: url(/assets/fonts/PhosphateSolid.ttf);
+}
+.subscriber_number,.totalviews_number,.totalvideos_number{
+    font-family: PhosphateSolid;
+    font-size: 2.5em;
+    color: white;
+}
+.third_container{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/assets/channel_images/background_two.png');
+    border-bottom-left-radius:150px;
+    border-bottom-right-radius: 150px;
+}
+.about_neta_image{
+    position: relative;
+    top:88px ;
+}
+.about_neta_heading{
+    font-family: PhosphateSolid;
+    font-size: 3.5em;
+    color: white;
+    background-image: url('/assets/channel_images/wooden_stick_one.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: max-content;
+    /* margin-left: 80px;   */
+    /* margin-top: 80px; */
+}
+.about_neta_col{
+    padding-left:180px;
+}
+.about_neta_para{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 16px;
+    background-color: white;
+}
