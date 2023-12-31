@@ -1,9 +1,14 @@
 // Hersh API Key : AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs
 // Keshav API Key : AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
-//SURAJ BHAIA API KEY : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
+// SURAJ BHAIA API KEY : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
 
-const Api_Key = "AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM";
+const Channel_name_api_key = "AIzaSyCI-MNRmjQj_N8WDAyfBceT9ysj6vngMV8"
+const Data_count_api_key="AIzaSyCg8wIGAkk-SrZ2ZPUZczMfrCicPHFPO_0"
+const Latest_videos_api_key="AIzaSyAWt7PHwmN2fCRreVBthbEzvgad6Xjok5g"
+const Popular_videos_api_key="AIzaSyAWt7PHwmN2fCRreVBthbEzvgad6Xjok5g"
+const Movies_api_key="AIzaSyB0wSWtR6rnAsDR6nuhpDAH87N5SOT4uFk"
+
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 const subscriber_count = document.querySelector("#subscriber_count")
@@ -111,7 +116,7 @@ const searchVideos = () => {
 // Function to fatching subscribers , views and videos.
 const getYoutubeSubscribers = async () => {
     try {
-        const getSubData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Youtube_ID}&key=${Api_Key}`)
+        const getSubData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Youtube_ID}&key=${Data_count_api_key}`)
         console.log(getSubData);
 
         const youtube_subscribers = getSubData.data.items[0].statistics.subscriberCount;
@@ -129,7 +134,7 @@ const getYoutubeSubscribers = async () => {
 // Function to fatching channel name and description.
 const getYoutubeTitle = async () => {
     try {
-        const getTitleData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id=${Youtube_ID}&key=${Api_Key}`)
+        const getTitleData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id=${Youtube_ID}&key=${Channel_name_api_key}`)
         console.log(getTitleData);
 
         const channel_name = getTitleData.data.items[0].brandingSettings.channel.title;
@@ -145,7 +150,7 @@ const getYoutubeTitle = async () => {
 //Function to fetch latest video details and display in a card && its for kddu joks sated api link
 const getYoutubeVideoDetails = async () => {
     try {
-        const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Api_Key}`);
+        const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Latest_videos_api_key}`);
         console.log(getVideoData);
 
         const videos = getVideoData.data.items;
@@ -182,7 +187,7 @@ const getYoutubeVideoDetails = async () => {
 // Function for Most Popular videos 
 const getMostPopularVideos = async () => {
     try {
-        const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=30&order=viewCount&regionCode=IN&key=${Api_Key}`);
+        const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=20&order=viewCount&regionCode=IN&key=${Popular_videos_api_key}`);
         console.log(getpopularVideo);
 
         const videos = getpopularVideo.data.items;
@@ -220,7 +225,7 @@ const getMostPopularVideos = async () => {
 const getComedyMoviesVideos = async () => {
     try {
         const playlistId ="PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR"
-        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Api_Key}`);
+        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Movies_api_key}`);
         console.log(getMoviesVideo);
 
         videos = getMoviesVideo.data.items;

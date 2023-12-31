@@ -1,9 +1,9 @@
 // Hersh API Key : AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs
 // Keshav API Key : AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
-//Suraj bhaia API Key : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
+// Suraj bhaia API Key : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
 
-const Api_Key = "AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts";
+const Movies_api_key="AIzaSyB0wSWtR6rnAsDR6nuhpDAH87N5SOT4uFk"
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 //Create an object to store fetched data
@@ -15,7 +15,7 @@ const getComedyMoviesVideos = async () => {
     console.log("funtion runing...")
     try {
         const playlistId ="PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR"
-        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Api_Key}`);
+        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Movies_api_key}`);
         console.log(getMoviesVideo);
 
         videos = getMoviesVideo.data.items;
