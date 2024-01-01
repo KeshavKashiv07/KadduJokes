@@ -1,3 +1,15 @@
+.searchBar{
+    width: 20%;
+    border: 3px dashed brown;
+    position: relative;
+    border-radius: 50px;
+}
+.searchBar::placeholder{
+    font-family: 'Montserrat',sans-serif;
+    color: grey;
+    font-size: 16px;
+}
+
 .first_container{
     background-image: url('/assets/channel_images/background.png');
     background-repeat: no-repeat;
@@ -37,7 +49,7 @@
     width: 100%;
     position:absolute;
     z-index: 1;
-    bottom: -320px;
+    bottom: -350px;
     background-image: url('/assets/channel_images/wooden_badge.png');
     background-position: center;
     background-repeat: no-repeat;

@@ -16,7 +16,14 @@
 <body>
     <!-- FIRST SECTION  -->
     <section class="container-fluid first_container img-fluid pb-4">
-        <section class="row row_one py-5">
+        <section class="row search_container p-3">
+            <div class="d-flex justify-content-end">
+            <input type="search" class="searchBar form-control" id="searchInput" placeholder="Search">
+            <ul class="search_results p-0" id="searchResults"></ul>
+                <!-- dynamically populated here  -->
+        </div>
+        </section>
+        <section class="row row_one py-4">
             <!-- Navbar col  -->
             <section class="navigation_column col-lg-12 col-md-6 col-sm-12 d-flex justify-content-center ">
                 <ul class="nav_list d-flex p-2 mb-0" type="none">
