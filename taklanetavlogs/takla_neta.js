@@ -63,7 +63,7 @@ const searchVideos = () => {
                     `<li>
             <a href="${video.videoUrl}" class="search_video_title_link text-decoration-none" target="_blank">
             <div class="search_list d-flex">
-                <img class="search_thumbnails" src="${video.videoThumnnail}" alt="..">
+                <img class="search_thumbnails img-fluid rounded-1" src="${video.videoThumnnail}" alt="..">
                 <p class="search_title ms-2">${videoTitle}</p>
             </div>
             </a>
