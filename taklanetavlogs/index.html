@@ -16,14 +16,21 @@
 <body>
     <!-- FIRST SECTION  -->
     <section class="container-fluid first_container img-fluid pb-4">
-        <section class="row search_container p-3">
-            <div class="d-flex justify-content-end">
-            <input type="search" class="searchBar form-control" id="searchInput" placeholder="Search">
-            <ul class="search_results p-0" id="searchResults">
-                <!-- dynamically populated here  -->
-            </ul>
+        <!-- <section class="row search-container p-3">
+        <div class="d-flex justify-content-end">
+            <input type="search" class="searchBar form-control" id="searchInput" placeholder="Search"  oninput="searchVideos()">
+            <ul class="search-results p-0" id="searchResults">
+              </ul>
         </div>
+        </section> -->
+
+        <section class="search-container p-3 pb-0">
+            <div>
+                <input type="search" class="searchBar form-control" id="searchInput"  placeholder="Search" oninput="searchVideos()">
+                 <ul class="search-results p-0" id="searchResults"> </ul>
+            </div>
         </section>
+
         <section class="row row_one py-4">
             <!-- Navbar col  -->
             <section class="navigation_column col-lg-12 col-md-6 col-sm-12 d-flex justify-content-center ">
@@ -87,5 +94,19 @@
             <img src="/assets/channel_images/character_two.png" alt="character_two" class="about_neta_image img-fluid" width="500">
         </section>
     </section>
+
+    
+<!-- axiox & Javascript file link -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Javascript file link -->
+<script src="/taklanetavlogs/takla_neta.js"></script>
+<!-- Icon Links -->
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<!-- AOS SCRIPT  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
