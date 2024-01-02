@@ -3,11 +3,19 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 // SURAJ BHAIA API KEY : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
 
-const Channel_name_api_key = "AIzaSyCI-MNRmjQj_N8WDAyfBceT9ysj6vngMV8"
-const Data_count_api_key="AIzaSyCg8wIGAkk-SrZ2ZPUZczMfrCicPHFPO_0"
-const Latest_videos_api_key="AIzaSyAWt7PHwmN2fCRreVBthbEzvgad6Xjok5g"
-const Popular_videos_api_key="AIzaSyAWt7PHwmN2fCRreVBthbEzvgad6Xjok5g"
-const Movies_api_key="AIzaSyB0wSWtR6rnAsDR6nuhpDAH87N5SOT4uFk"
+// Api Key created by one Mail(Keshavkashiv9650@gmail.com)
+// const Channel_name_api_key = "AIzaSyCI-MNRmjQj_N8WDAyfBceT9ysj6vngMV8"          
+// const Data_count_api_key="AIzaSyCg8wIGAkk-SrZ2ZPUZczMfrCicPHFPO_0"            
+// const Latest_videos_api_key="AIzaSyAWt7PHwmN2fCRreVBthbEzvgad6Xjok5g"         
+// const Popular_videos_api_key="AIzaSyAWt7PHwmN2fCRreVBthbEzvgad6Xjok5g"        
+// const Movies_api_key="AIzaSyB0wSWtR6rnAsDR6nuhpDAH87N5SOT4uFk"   
+
+// ApiKey created by five diffrents mails.
+const Channel_name_api_key = "AIzaSyDRq7h25VI8dq5hdT5-qeT3UHmfS5-buZA"
+const Data_count_api_key="AIzaSyDw4oaIHFsGEYnf0t9Vwz50j2fdtMAgl4w"
+const Latest_videos_api_key="AIzaSyCnktjLOeks-FDU9hb-zvVXUd-WvP9YrPI"
+const Popular_videos_api_key="AIzaSyDGDUyX4agDmz2x3o8MKv48dEEDHPBRgO0"
+const Movies_api_key="AIzaSyCx3WR-a4Yr_DlwaH8JrIPHBoTP3JbzG4g" 
 
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
