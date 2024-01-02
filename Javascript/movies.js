@@ -3,7 +3,7 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 // Suraj bhaia API Key : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
 
-const Movies_api_key="AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts"
+const Movies_api_key="AIzaSyB0wSWtR6rnAsDR6nuhpDAH87N5SOT4uFk"
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 //Create an object to store fetched data
