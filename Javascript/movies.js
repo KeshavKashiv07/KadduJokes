@@ -3,8 +3,8 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 // Suraj bhaia API Key : AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts
 
-const Movies_api_key="AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts"
-const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
+// const Movies_api_key="AIzaSyCjSmsBb1vg7WdTtIHl_jSMsfS-RVbKMts"
+// const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
 //Create an object to store fetched data
 const FetchedVideosData = {
@@ -14,17 +14,28 @@ const FetchedVideosData = {
 const getComedyMoviesVideos = async () => {
     console.log("funtion runing...")
     try {
-        const playlistId ="PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR"
-        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Movies_api_key}`);
-        console.log(getMoviesVideo);
+        const jsonUrl = 'https://script.google.com/macros/s/AKfycbyESb0oXqQhwNRr2F3cslm26kmHhFMxti8zRdSzlG76yQ1_iEpAUrU3hVWMkSdlX0Vbvw/exec'
 
-        videos = getMoviesVideo.data.items;
-        videos.forEach(video => {
-            const videoId = video.snippet.resourceId.videoId;
-            const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
-            const videoTitle = video.snippet.title;
-            const videoThumnnail = video.snippet.thumbnails.high.url;           
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
 
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
             // Store data in the object
             FetchedVideosData.videosArray.push({
                 videoUrl,

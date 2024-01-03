@@ -13,9 +13,9 @@
 // ApiKey created by five diffrents mails.
 const Channel_name_api_key = "AIzaSyDRq7h25VI8dq5hdT5-qeT3UHmfS5-buZA"
 const Data_count_api_key="AIzaSyDw4oaIHFsGEYnf0t9Vwz50j2fdtMAgl4w"
-const Latest_videos_api_key="AIzaSyCnktjLOeks-FDU9hb-zvVXUd-WvP9YrPI"
-const Popular_videos_api_key="AIzaSyDGDUyX4agDmz2x3o8MKv48dEEDHPBRgO0"
-const Movies_api_key="AIzaSyCx3WR-a4Yr_DlwaH8JrIPHBoTP3JbzG4g" 
+// const Latest_videos_api_key="AIzaSyCnktjLOeks-FDU9hb-zvVXUd-WvP9YrPI"
+// const Popular_videos_api_key="AIzaSyDGDUyX4agDmz2x3o8MKv48dEEDHPBRgO0"
+// const Movies_api_key="AIzaSyCx3WR-a4Yr_DlwaH8JrIPHBoTP3JbzG4g" 
 
 const Youtube_ID = "UCa_O4LhZxDH1MMPUCLqNC9w";
 
@@ -157,15 +157,31 @@ const getYoutubeTitle = async () => {
 
 //Function to fetch latest video details and display in a card && its for kddu joks sated api link
 const getYoutubeVideoDetails = async () => {
-    try {
-        const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Latest_videos_api_key}`);
-        console.log(getVideoData);
+    //getLatestVideoData from YoutubeDataApi = get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Latest_videos_api_key}`);
 
-        const videos = getVideoData.data.items;
-        videos.forEach(video => {
-            const videoUrl = 'https://www.youtube.com/watch?v=' + video.snippet.resourceId.videoId;
-            const videoTitle = video.snippet.title;
-            const videoThumnnail = video.snippet.thumbnails.medium.url;
+    try {        
+        const jsonUrl = 'https://script.google.com/macros/s/AKfycbwcM0WFsycjZ-kXk9QwLW1otkKScaujrXLaj7VtC3yk2hCRLnX0AnzKeZ9LabOTdEms/exec'
+
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
 
             // Store data in the object
             FetchedVideosData.videosArray.push({
@@ -194,18 +210,33 @@ const getYoutubeVideoDetails = async () => {
 
 // Function for Most Popular videos 
 const getMostPopularVideos = async () => {
+    // GetpopularVideo from YouTube Data Api = get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=20&order=viewCount&regionCode=IN&key=${Popular_videos_api_key}`);
+
     try {
-        const getpopularVideo = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=20&order=viewCount&regionCode=IN&key=${Popular_videos_api_key}`);
-        console.log(getpopularVideo);
+        const jsonUrl = 'https://script.google.com/macros/s/AKfycbyVE4Dljnna1KK40VInXx1sx74gBRPqTWd7TrvJWp9Mb3Jdi_jx6M55R-jNWS5zqoSb5w/exec'
 
-        const videos = getpopularVideo.data.items;
-        videos.forEach(video => {
-            const videoId = video.id.videoId;
-            const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
-            const videoTitle = video.snippet.title;
-            const videoThumnnail = video.snippet.thumbnails.medium.url;
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
 
-            // Store data in the object
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+              // Store data in the object
             FetchedVideosData.videosArray.push({
                 videoUrl,
                 videoTitle,
@@ -231,17 +262,31 @@ const getMostPopularVideos = async () => {
 
 // Function for Comedy Movies videos 
 const getComedyMoviesVideos = async () => {
-    try {
-        const playlistId ="PLQlbrD8-eMGVf6LK-zz5pgTbl6AYocaeR"
-        const getMoviesVideo = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Movies_api_key}`);
-        console.log(getMoviesVideo);
+        // getMoviesVideo from YouTube Data Api = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${Movies_api_key}`);
 
-        videos = getMoviesVideo.data.items;
-        videos.forEach(video => {
-            const videoId = video.snippet.resourceId.videoId;
-            const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
-            const videoTitle = video.snippet.title;
-            const videoThumnnail = video.snippet.thumbnails.medium.url;
+    try { 
+        const jsonUrl = 'https://script.google.com/macros/s/AKfycbyESb0oXqQhwNRr2F3cslm26kmHhFMxti8zRdSzlG76yQ1_iEpAUrU3hVWMkSdlX0Vbvw/exec'
+
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
 
             // Store data in the object
             FetchedVideosData.videosArray.push({
