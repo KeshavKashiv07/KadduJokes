@@ -1,71 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP 5  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- CSS  -->
-    <link rel="stylesheet" href="/assets/style/channels.css">
+    <link rel="stylesheet" href="/taklanetavlogs/assets/style/channels.css">
     <title>Home</title>
 </head>
+
 <body>
-    <!-- FIRST SECTION  -->
-    <section class="container-fluid first_container img-fluid pb-4">
-        <section class="row row_one py-4">
-            <!-- Navbar col  -->
-            <section class="navigation_column col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center ">
-                <ul class="nav_list d-flex p-2 mb-0" type="none">
-                    <li class="nav_list_items mx-5 my-1"><a href="#" class="nav-links fw-bold text-uppercase text-decoration-none">Home</a></li>
-                    <li class="nav_list_items mx-5 my-1"><a href="#" class="nav-links fw-bold text-uppercase text-decoration-none">Videos</a></li>
-                    <li class="nav_list_items mx-5 my-1"><a href="#" class="nav-links fw-bold text-uppercase text-decoration-none">Contact Us</a></li>
-                </ul>
-            </section>
-            <section class="search_col col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
-                <section class="search-container px-3 position-absolute align-items-center d-flex">
-                    <div>
-                        <input type="search" class="searchBar form-control p-2" id="searchInput"  placeholder="Search" oninput="searchVideos()">
-                         <ul class="search-results py-2 px-1" id="searchResults"> </ul>
+    <main class="main_container container-fluid p-0 shadow-lg shadow-dark">
+        <!-- First section  -->
+        <section class="first_section px-3 py-4">
+            <div class="setting">
+                <section class="row gy-2">
+                    <section class="header_col col-12 col-sm-12 col-md-6 col-lg-6">
+                        <!-- HEADER SECTION  -->
+                        <section class="header_section d-flex py-2 justify-content-center">
+                            <header class="header_home m-0 p-0 ">
+
+                                <ul class="header_list_home d-flex p-0 m-0 py-3" type="none">
+                                    <li class="header_list_items"><a href="#"
+                                            class="header_list_link_home text-decoration-none">Home</a>
+                                    </li>
+                                    <li class="header_list_items"><a href="#"
+                                            class="header_list_link_home text-decoration-none">Videos</a>
+                                    </li>
+                                    <li class="header_list_items"><a href="#"
+                                            class="header_list_link_home text-decoration-none">Contact
+                                            Us</a></li>
+                                </ul>
+                            </header>
+                        </section>
+                    </section>
+                    <section class="search_col col-12 col-sm-12 col-md-6 col-lg-6">
+                        <section
+                            class="search-container px-3 py-2 position-relative  z-3 align-items-center d-flex justify-content-center">
+                            <div>
+                                <input type="search" class="searchBar form-control " id="searchInput"
+                                    placeholder="Search" oninput="searchVideos()">
+                                <ul class="search-results py-2 px-1" id="searchResults"> </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </div>
+            <div class="setting">
+            <section class="row my-5 row_one gy-5">
+                <section
+                    class="taklaneta_img_col col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-satrt align-items-center">
+                    <img src="/taklanetavlogs/assets/channel_images/character_one.png" alt="Takla Neta"
+                        class="taklaneta_img img-fluid" width="450">
+                </section>
+                <section class="taklaneta_heading_col col-12 col-sm-12 col-md-6 col-lg-6">
+                    <img src="/taklanetavlogs/assets/channel_images/takla_title.png" alt="Takla Neta Heading"
+                        class="taklaneta_heading_img img-fluid">
+                    <p class="takla_neta_para text-center fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Labore, magnam
+                        quae corrupti dolor iusto eligendi cum voluptatum cupiditate dolore est eveniet praesentium
+                        repudiandae et impedit aut totam eaque blanditiis! Alias. <br><br>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, doloribus dolorem,
+                        perferendis eligendi ullam commodi cumque vitae sapiente unde corrupti, odio accusantium porro
+                        eaque magnam rem. Libero ab explicabo earum! <br> <br>
+                        Beatae quo ipsa, dolor perspiciatis at ad optio officia esse cum itaque fugit corporis ut veniam
+                        perferendis voluptate. Iusto accusantium adipisci doloribus dolor ducimus? Atque ipsa saepe
+                        error labore ea?</p>
+                    <div class="btn_div d-flex justify-content-center">
+                        <button class="btn watch_movie_btn">Watch Now</button>
+                    </div>
+                </section>
+                <section class="col-12 col-sm-12 col-md-12 col-lg-12 wooden_badge_col rounded-4 ">
+                    <div class="data_row row">
+                        <h3 class="channel_heading display-5 text-center pb-3">Takla Neta Vlogs</h3>
+                        <section class="subs_col col-4 col-sm-4 col-md-4 col-lg-4 py-3">
+                            <h3 class="subs_heading fs-5 text-center">Subscriber</h3>
+                            <p class="subs_number fs-2 text-center">350K</p>
+                        </section>
+                        <section class="videos_col col-4 col-sm-4 col-md-4 col-lg-4 py-3">
+                            <h3 class="videos_heading fs-5 text-center">Videos</h3>
+                            <p class="videos_number fs-2 text-center">350K</p>
+                        </section>
+                        <section class="views_col col-4 col-sm-4 col-md-4 col-lg-4 py-3">
+                            <h3 class="views_heading fs-5 text-center">Views</h3>
+                            <p class="views_number fs-2 text-center">350K</p>
+                        </section>
                     </div>
                 </section>
             </section>
+        </div>
         </section>
-        <section class="row_two row py-4 px-3">
-            <!-- Character Image col  -->
-            <section class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center character_img_col">
-                <img src="/assets/channel_images/character_one.png" alt="char_one_img" class="char_one_image img-fluid" width="450">
-            </section>
-            <!-- Title Col  -->
-            <section class="col-lg-6 col-md-6 col-sm-12 channel_title_col">
-                <img src="/assets/channel_images/takla_title.png" alt="title" class="channel_title_img img-fluid" width="auto">
-                <p class="para_one text-center text-light px-3 d-flex justify-content-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, voluptate error soluta hic sequi voluptatem placeat labore mollitia, cum illo laborum unde rerum libero iure! Quas perferendis pariatur autem minus!
-                Saepe, dolores ea, repudiandae at iste corporis iusto illum facilis repellendus veritatis quas eius, sapiente quaerat esse. Aperiam tempore vero quasi facere. Molestiae, reiciendis!</p>
-                <div class="watch_movie_btn_container d-flex justify-content-center my-4">
-                    <button class="watch_movie_button btn">Watch Movie</button>
-                </div>
-            </section>
-        </section>
-    </section>
-    <div class=" py-5"></div>
-    
- 
 
-    
-<!-- axiox & Javascript file link -->
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<!-- Javascript file link -->
-<script src="/taklanetavlogs/takla_neta.js"></script>
-<!-- Icon Links -->
-<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<!-- AOS SCRIPT  -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+        <!-- SECOND SECTION  -->
+        <section class="second_section container-fluid py-5">
+            <div class="setting">
+            <section class="row second_section_row">
+                <section class="col-12 col-sm-12 col-md-6 col-lg-6 about_neta_text_col p-0 m-0">
+                    <div class="setting">
+                    <h3 class="about_neta_heading display-4 p-4">About Neta Ji</h3>
+                    <p class="about_neta_para rounded-4 bg-light p-4">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Veritatis
+                        excepturi doloribus tempore corporis, velit fugit atque similique! Perspiciatis natus a,
+                        asperiores qui cupiditate in distinctio culpa minus omnis assumenda rem. <br><br>
+                        Voluptas asperiores nostrum laboriosam tempore animi quas ex, numquam voluptatem soluta illo
+                        adipisci praesentium fuga magni hic, cupiditate sequi expedita. Numquam, repellendus eligendi
+                        neque maiores iusto ratione quibusdam amet repudiandae! <br> <br>
+                        Accusamus accusantium deleniti maxime fuga omnis eum quam a. Alias ex quasi hic! Nostrum
+                        architecto eaque fugiat, ratione iste fugit suscipit? Voluptatem laudantium, libero soluta
+                        corporis reiciendis minima praesentium deserunt. <br><br>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste esse possimus omnis ex magnam, id
+                        eligendi, deleniti, at ut voluptatem eveniet totam asperiores animi quia maxime. Laudantium quas
+                        sint quo.
+                        Eveniet molestias assumenda, dolores non exercitationem eum magni voluptas modi ea harum ex
+                        natus accusamus totam excepturi quibusdam optio corrupti fugiat obcaecati officiis provident,
+                        dolorum minima nemo earum? Hic, neque!</p>
+                    </div>
+                </section>
+                <section class="col-12 col-sm-12 col-md-6 col-lg-6 about_neta_img_col d-flex align-items-end justify-content-center">
+                    <img src="/taklanetavlogs/assets/channel_images/character_two.png" alt="" class="img-fluid takla_neta_img"
+                        width="450">
+                </section>
+            </section>
+        </div>
+        </section>
+
+        <!-- THIRD SECTION -->
+        <section class="third_section container-fluid py-4">
+            
+            <section class="third_section_row">
+                <h3 class="our_video_heading display-4 text-center col-12 col-ms-12 col-md-12 col-lg-12 py-2 mb-5">Our Video</h3>
+                <section class="latest_video_row row px-4 py-3">
+                    <section class="latest_videos_card  col-9 col-sm-6 col-md-10 col-lg-10 d-flex px-2 ">
+                        <p>Cards</p>
+                    </section>
+                    <section class="latest_videos_banner_col  col-3 col-sm-6 col-md-2 col-lg-2 d-flex justify-content-end pe-0">
+                        <img src="/taklanetavlogs/assets/channel_images/wooden_banner.png" alt="" class="latest_video_banner img-fluid" width="300">
+                    </section>
+                </section>
+                <section class="mostpopular_video_row row  px-4 py-3">
+                    <section class="mostpopular_videos_banner_col  col-3 col-sm-6 col-md-2 col-lg-2 d-flex justify-content-satrt ps-0">
+                        <img src="/taklanetavlogs/assets/channel_images/wooden_banner.png" alt="" class="mostpopular_video_banner img-fluid" width="300">
+                    </section>
+                    <section class="mostpopular_videos_card  col-9 col-sm-6 col-md-10 col-lg-10 d-flex px-2">
+                        <p>Cards</p>
+                    </section>
+                </section>
+            </section>
+       
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT FILE  -->
+    <!-- axiox & Javascript file link -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Javascript file link -->
+    <script src="/taklanetavlogs/takla_neta.js"></script>
+    <!-- Icon Links -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS SCRIPT  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
