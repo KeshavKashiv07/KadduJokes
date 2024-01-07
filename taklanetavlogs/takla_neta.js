@@ -3,15 +3,14 @@
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 
 const Api_Key = "AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs";
-
 // Takla neta vlogs channel id 
 const Youtube_ID = "UCUmu2O8bSFbaUki1WCxs92A";
 
-const subscriber_count = document.querySelector(".subscriber_number")
-const video_count = document.querySelector(".totalvideos_number")
-const title = document.querySelector(".channel_name_heading")
-const description = document.querySelector("#description")
-const views = document.querySelector(".totalviews_number")
+const subscriber_count = document.querySelector(".subs_number")
+const video_count = document.querySelector(".videos_number")
+//const title = document.querySelector(".channel_name_heading")
+//const description = document.querySelector("#description")
+const views = document.querySelector(".views_number")
 
 // Create an object to store fetched data
 const FetchedVideosData = {
@@ -105,7 +104,7 @@ const getYoutubeTitle = async () => {
 };
 
 //Function to fetch latest video details and display in a card && its for kddu joks sated api link
-const getYoutubeVideoDetails = async () => {
+const getYoutubeLatestVideos = async () => {
     try {
         const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=UUUmu2O8bSFbaUki1WCxs92A&key=${Api_Key}`);
         //console.log(getVideoData);
@@ -115,13 +114,9 @@ const getYoutubeVideoDetails = async () => {
             const videoId = video.snippet.resourceId.videoId;
             const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
             // console.log(videoUrl);
-
-            const videoTitle = video.snippet.title;
-            const videoTitles = document.querySelector(".videoTitle")            
+            const videoTitle = video.snippet.title;         
             //console.log(videoTitle);
-
             const videoThumnnail = video.snippet.thumbnails.medium.url;
-            //videoTitles.innerHTML += `<img src="${videoThumnnail}" alt=".."><h6>${videoTitle}</h6><hr>`;
             // console.log(videoThumnnail)
 
             // Store data in the object
@@ -130,15 +125,320 @@ const getYoutubeVideoDetails = async () => {
                 videoTitle,
                 videoThumnnail
             });
-        });
 
+          document.querySelector(".cards-content").innerHTML +=
+          `<div class="card mx-2 my-2">
+          <a href="${videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
+          <div class="embed-responsive embed-responsive-16by9">  
+          <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+          </div>
+          <div class="card-body p-0 py-1 px-2">
+              <p class="card-title latest_video_title">${videoTitle}</p>
+          </div>
+          </a>
+          </div>`              
+        });
     } catch (error) {
         console.error("Error fetching video data:", error);
     }
-
 };
 
 
-getYoutubeVideoDetails();
+// Function for Most Popular videos to takla neta vlogs
+const getMostPopularVideos = async () => {
+    // Get most popular Video from YouTube Data Api = get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${Youtube_ID}&maxResults=20&order=viewCount&regionCode=IN&key=${Popular_videos_api_key}`);
+
+    try {
+        const Most_popular_jsonUrl = 'https://script.google.com/macros/s/AKfycbwXaExHBkl47w17SqGNU9T0MBtnkjufndJ1uKF7ENkXAp2IObE070KJC4ZXXk_UyrCa/exec'
+
+        const response = await fetch(Most_popular_jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+              // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
+
+            document.querySelector(".mostPopular-cards-content").innerHTML +=
+                `<div class="card mx-2 my-2">
+        <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
+        <div class="embed-responsive embed-responsive-16by9">  
+        <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body p-0 py-1 px-2">
+            <p class="card-title mostpopular_video_title">${videoTitle}</p>
+        </div>
+        </a>
+    </div>`
+        });
+    } catch (error) {
+        console.error("Error fetching video data:", error);
+    }
+}
+
+
+// Function for kedranath videos to takla neta vlogs
+const getSeriesKedranathVlogs = async () => {
+    // Get kedranath Videos from YouTube Data Api = get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLa6FtKNCB5x928bdMQOlM00xZkAjwQonf&key=${api_key}`)
+
+    try {
+        const Series_kedarnath_jsonUrl = 'https://script.google.com/macros/s/AKfycbwYcpZqS-OSTOuSbsNqTOI5pnRdXB4X840Q35MojCKVikI0WcCz28Vc5MSU6S13XMfJ/exec'
+
+        const response = await fetch(Series_kedarnath_jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+              // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
+
+            document.querySelector(".kedharnath-cards-content").innerHTML +=
+            `<div class="card mx-2 my-2">
+            <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
+            <div class="embed-responsive embed-responsive-16by9">  
+            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            </div>
+            <div class="card-body p-0 py-1 px-2">
+                <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            </div>
+            </a>
+        </div>`
+        });
+    } catch (error) {
+        console.error("Error fetching video data:", error);
+    }
+}
+
+
+// Function for Jaipur videos to takla neta vlogs
+const getSeriesJaipurVlogs = async () => {
+    // Get jaipur Videos from YouTube Data Api = get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=PLa6FtKNCB5x9tpuOrKK-O7WkYvZPeh9EC&key=${api_key}`)
+
+    try {
+        const Series_Jaipur_jsonUrl = 'https://script.google.com/macros/s/AKfycbxUAdg9zykqlThPAEli0muAzE1wPoCji1kBAt53-EJiN4HfcapDb1s_gedfv5MZ-05u/exec'
+
+        const response = await fetch(Series_Jaipur_jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+              // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
+
+            document.querySelector(".jaipur-cards-content").innerHTML +=
+            `<div class="card mx-2 my-2">
+            <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
+            <div class="embed-responsive embed-responsive-16by9">  
+            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            </div>
+            <div class="card-body p-0 py-1 px-2">
+                <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            </div>
+            </a>
+        </div>`
+        });
+    } catch (error) {
+        console.error("Error fetching video data:", error);
+    }
+}
+
+// Function for ladhak videos to takla neta vlogs
+const getSeriesLadhakVlogs = async () => {
+    // Get Ladhak Videos from YouTube Data Api = get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=PLa6FtKNCB5x_Oouclkcicz-f-V_QZS9YO&key=${api_key}`)
+    try {
+        const Series_ladhak_jsonUrl = 'https://script.google.com/macros/s/AKfycbyjk3p5eISfI3L2KTCwX4Y43Ei6Un8nuOAWYXEcKxWNl4NT2ujudY9DzGtkMcS7EQtm/exec'
+
+        const response = await fetch(Series_ladhak_jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+              // Store data in the object
+            FetchedVideosData.videosArray.push({
+                videoUrl,
+                videoTitle,
+                videoThumnnail
+            });
+
+            document.querySelector(".ladhak-cards-content").innerHTML +=
+            `<div class="card mx-2 my-2">
+            <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
+            <div class="embed-responsive embed-responsive-16by9">  
+            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            </div>
+            <div class="card-body p-0 py-1 px-2">
+                <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            </div>
+            </a>
+        </div>`
+        });
+    } catch (error) {
+        console.error("Error fetching video data:", error);
+    }
+}
+
+
+getSeriesLadhakVlogs();
+getSeriesJaipurVlogs();
+getSeriesKedranathVlogs();
+getMostPopularVideos();
+getYoutubeLatestVideos();
 getYoutubeSubscribers();
 getYoutubeTitle();
+
+
+
+//Slider Code for Latest Videos
+const next = document.querySelector('#next')
+const prev = document.querySelector('#prev')
+
+function handleScrollNext(direction) {
+    const cards = document.querySelector('.cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+function handleScrollPrev(direction) {
+    const cards = document.querySelector('.cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+next.addEventListener('click', handleScrollNext)
+prev.addEventListener('click', handleScrollPrev)
+
+
+//Slider Code for Popular Videos
+const next_mostPopular = document.querySelector('#next_mostPopular')
+const prev_mostPopular = document.querySelector('#prev_mostPopular')
+
+function handleScrollNext_mostPopular(direction) {
+    const cards = document.querySelector('.mostPopular-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+function handleScrollPrev_mostPopular(direction) {
+    const cards = document.querySelector('.mostPopular-cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+next_mostPopular.addEventListener('click', handleScrollNext_mostPopular)
+prev_mostPopular.addEventListener('click', handleScrollPrev_mostPopular)
+
+
+//Slider Code for Kedharnath Vlogs
+const next_kedharnath = document.querySelector('#next_kedharnath')
+const prev_kedharnath = document.querySelector('#prev_kedharnath')
+
+function handleScrollNext_kedharnath(direction) {
+    const cards = document.querySelector('.kedharnath-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+function handleScrollPrev_kedharnath(direction) {
+    const cards = document.querySelector('.kedharnath-cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+next_kedharnath.addEventListener('click', handleScrollNext_kedharnath)
+prev_kedharnath.addEventListener('click', handleScrollPrev_kedharnath)
+
+
+//Slider Code for Jaipur Vlogs
+const next_jaipur = document.querySelector('#next_jaipur')
+const prev_jaipur = document.querySelector('#prev_jaipur')
+
+function handleScrollNext_jaipur(direction) {
+    const cards = document.querySelector('.jaipur-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+function handleScrollPrev_jaipur(direction) {
+    const cards = document.querySelector('.jaipur-cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+next_jaipur.addEventListener('click', handleScrollNext_jaipur)
+prev_jaipur.addEventListener('click', handleScrollPrev_jaipur)
+
+
+//Slider Code for Ladhak Vlogs
+const next_ladhak = document.querySelector('#next_ladhak')
+const prev_ladhak = document.querySelector('#prev_ladhak')
+
+function handleScrollNext_ladhak(direction) {
+    const cards = document.querySelector('.ladhak-cards-content')
+    cards.scrollLeft = cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+function handleScrollPrev_ladhak(direction) {
+    const cards = document.querySelector('.ladhak-cards-content')
+    cards.scrollLeft = cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100
+}
+next_ladhak.addEventListener('click', handleScrollNext_ladhak)
+prev_ladhak.addEventListener('click', handleScrollPrev_ladhak)

@@ -88,15 +88,15 @@
                         <h3 class="channel_heading display-5 text-center pb-3">Takla Neta Vlogs</h3>
                         <section class="subs_col col-4 col-sm-4 col-md-4 col-lg-4 py-3">
                             <h3 class="subs_heading fs-5 text-center">Subscriber</h3>
-                            <p class="subs_number fs-2 text-center">350K</p>
+                            <p class="subs_number fs-2 text-center"></p>
                         </section>
                         <section class="videos_col col-4 col-sm-4 col-md-4 col-lg-4 py-3">
                             <h3 class="videos_heading fs-5 text-center">Videos</h3>
-                            <p class="videos_number fs-2 text-center">350K</p>
+                            <p class="videos_number fs-2 text-center"></p>
                         </section>
                         <section class="views_col col-4 col-sm-4 col-md-4 col-lg-4 py-3">
                             <h3 class="views_heading fs-5 text-center">Views</h3>
-                            <p class="views_number fs-2 text-center">350K</p>
+                            <p class="views_number fs-2 text-center"></p>
                         </section>
                     </div>
                 </section>
@@ -104,7 +104,7 @@
         </div>
         </section>
 
-        <!-- SECOND SECTION  -->
+<!-- SECOND SECTION  -->
         <section class="second_section container-fluid py-5">
             <div class="setting">
             <section class="row second_section_row">
@@ -137,50 +137,277 @@
         </div>
         </section>
 
-        <!-- THIRD SECTION -->
-        <section class="third_section container-fluid py-4">
-            
+<!-- THIRD SECTION -->
+        <section class="third_section container-fluid py-4">            
             <section class="third_section_row">
                 <h3 class="our_video_heading display-4 text-center col-12 col-ms-12 col-md-12 col-lg-12 py-2 mb-5">Our Video</h3>
                 <section class="latest_video_row row px-4 py-3">
-                    <section class="latest_videos_card  col-9 col-sm-6 col-md-10 col-lg-10 d-flex px-2 ">
-                        <p>Cards</p>
-                    </section>
-                    <section class="latest_videos_banner_col  col-3 col-sm-6 col-md-2 col-lg-2 d-flex justify-content-end pe-0">
-                        <img src="/taklanetavlogs/assets/channel_images/wooden_banner.png" alt="" class="latest_video_banner img-fluid" width="300">
-                    </section>
+                <section class="latest_videos_card  col-9 col-sm-6 col-md-10 col-lg-10 d-flex px-2 ">                       
+
+                    <!--LATEST VIDEOS CONTAINER  -->
+                        <section class="latest_videos_container row m-0 px-3 container-fluid" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                            <section class="latest_video_cards_container my-3 p-0">
+                              <div class="slider">
+                                <button id="prev" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                                  <defs>
+                                    <linearGradient id="gradient1">
+                                      <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                      <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                    </linearGradient>
+                                  </defs>
+                                  <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                                  <g id="group" transform="translate(0,0) scale(1)">
+                                    <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                    <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                                  </g>
+                                </svg>
+                              </button>
+                                <div class="cards-content d-flex"></div>
+                              <button id="next" class="btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                                  <defs>
+                                    <linearGradient id="gradient1">
+                                      <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                      <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                    </linearGradient>
+                                  </defs>
+                                  <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                                  <g id="group" transform="translate(0,0) scale(1)">
+                                    <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                    <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                                  </g>
+                                </svg>
+                              </button>
+                              </div>
+                            </section>
+                        </section>
+
                 </section>
-                <section class="mostpopular_video_row row  px-4 py-3">
-                    <section class="mostpopular_videos_banner_col  col-3 col-sm-6 col-md-2 col-lg-2 d-flex justify-content-satrt ps-0">
-                        <img src="/taklanetavlogs/assets/channel_images/wooden_banner.png" alt="" class="mostpopular_video_banner img-fluid" width="300">
-                    </section>
-                    <section class="mostpopular_videos_card  col-9 col-sm-6 col-md-10 col-lg-10 d-flex px-2">
-                        <p>Cards</p>
-                    </section>
+                <section class="latest_videos_banner_col  col-3 col-sm-6 col-md-2 col-lg-2 d-flex justify-content-end pe-0">
+                    <img src="/taklanetavlogs/assets/channel_images/wooden_banner.png" alt="" class="latest_video_banner img-fluid" width="300">
                 </section>
             </section>
-       
+
+            <section class="mostpopular_video_row row  px-4 py-3">
+             <section class="mostpopular_videos_banner_col  col-3 col-sm-6 col-md-2 col-lg-2 d-flex justify-content-satrt ps-0">
+                    <img src="/taklanetavlogs/assets/channel_images/wooden_banner.png" alt="" class="mostpopular_video_banner img-fluid" width="300">
+                 </section>
+                <section class="mostpopular_videos_card  col-9 col-sm-6 col-md-10 col-lg-10 d-flex px-2">
+                    <!--MOST POPULAR VIDEOS CONTAINER  -->
+                    <section class="mostpopular_videos_container row m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                        <section class="mostpopular_video_cards_container my-3 p-0">
+                          <div class="slider">
+                            <button id="prev_mostPopular" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                              <defs>
+                                <linearGradient id="gradient1">
+                                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                </linearGradient>
+                              </defs>
+                              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                              <g id="group" transform="translate(0,0) scale(1)">
+                                <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                              </g>
+                            </svg>
+                          </button>
+                            <div class="mostPopular-cards-content d-flex"></div>
+                          <button id="next_mostPopular" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                              <defs>
+                                <linearGradient id="gradient1">
+                                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                </linearGradient>
+                              </defs>
+                              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                              <g id="group" transform="translate(0,0) scale(1)">
+                                <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                              </g>
+                            </svg>
+                          </button>
+                          </div>
+                        </section>
+                    </section>
+                </section>
+             </section>
+            </section>       
         </section>
 
+<!-- FOURTH SECTION -->
+        <section class="fourth_section container-fluid py-5 m-0">
+             <!--Kedharnath vloges container  -->
+            <section class="fourth_section_row">
+                <h3 class="series_heading display-4 text-center col-12 col-sm-12 col-md-12 col-lg-12 py-2 mb-5">Series
+                    </h3>
+                <section class="series_row row px-4 py-3">
+                    <section class="series_videos_text_col p-0 col-5 col-sm-5 col-md-3 col-lg-3 d-flex px-2 text-uppercase">
+                        <h3 class="series_text text-uppercase display-6 p-0">Kedharnath<br>Volgs</h3>
+                    </section>
+                    <section class="series_videos_cards  col-7 col-sm-7 col-md-9 col-lg-9 d-flex justify-content-start px-1">                       
+                       <!--Kedharnath vloges card  -->
+                       <section class="kedharnath_videos_container row m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                        <section class="kedharnath_video_cards_container my-3 p-0">
+                          <div class="slider">
+                            <button id="prev_kedharnath" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                              <defs>
+                                <linearGradient id="gradient1">
+                                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                </linearGradient>
+                              </defs>
+                              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                              <g id="group" transform="translate(0,0) scale(1)">
+                                <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                              </g>
+                            </svg>
+                          </button>
+                            <div class="kedharnath-cards-content d-flex"></div>
+                          <button id="next_kedharnath" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                              <defs>
+                                <linearGradient id="gradient1">
+                                  <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                  <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                </linearGradient>
+                              </defs>
+                              <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                              <g id="group" transform="translate(0,0) scale(1)">
+                                <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                              </g>
+                            </svg>
+                          </button>
+                          </div>
+                        </section>
+                        </section>
+                    </section>
+                </section>
 
+                <section class="series_row row  px-4 py-3">
+                    <!--Jaipur vloges container  -->
+                    <section class="series_videos_banner_col  col-7 col-sm-7 col-md-9 col-lg-9 d-flex justify-content-end ps-0">                        
+                           <!--Jaipur vloges cards  -->               
+                           <section class="jaipur_videos_container row m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                             <section class="jaipur_video_cards_container my-3 p-0">
+                              <div class="slider">
+                                <button id="prev_jaipur" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                                  <defs>
+                                    <linearGradient id="gradient1">
+                                      <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                      <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                    </linearGradient>
+                                  </defs>
+                                  <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                                  <g id="group" transform="translate(0,0) scale(1)">
+                                    <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                    <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                                  </g>
+                                </svg>
+                              </button>
+                                <div class="jaipur-cards-content d-flex"></div>
+                              <button id="next_jaipur" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                                  <defs>
+                                    <linearGradient id="gradient1">
+                                      <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                      <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                    </linearGradient>
+                                  </defs>
+                                  <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                                  <g id="group" transform="translate(0,0) scale(1)">
+                                    <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                    <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                                  </g>
+                                </svg>
+                              </button>
+                              </div>
+                              </section>
+                            </section>
+                    </section>
+                    <section class="series_videos_card d-flex justify-content-end  col-5 col-sm-5 col-md-3 col-lg-3 d-flex px-2">
+                        <h3 class="series_text text-uppercase display-6">Jaipur <br>Vlogs</h3>
+                    </section>
+                </section>
+
+                <section class="series_row row px-4 py-3">
+                    <!--Ladhak vloges container  -->
+                    <section class="series_videos_text_col p-0 col-5 col-sm-5 col-md-3 col-lg-3 d-flex px-2 text-uppercase">
+                        <h3 class="series_text text-uppercase display-6 p-0">ladhak<br>Vlogs</h3>
+                    </section>
+                    <section class="series_videos_cards  col-7 col-sm-7 col-md-9 col-lg-9 d-flex justify-content-start px-1">
+                        <!--Ladhak vloges cards  -->               
+                        <section class="ladhak_videos_container row m-0 px-3 container-fluid" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                            <section class="ladhak_video_cards_container my-3 p-0">
+                             <div class="slider">
+                               <button id="prev_ladhak" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                                 <defs>
+                                   <linearGradient id="gradient1">
+                                     <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                     <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                   </linearGradient>
+                                 </defs>
+                                 <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                                 <g id="group" transform="translate(0,0) scale(1)">
+                                   <path d="M128.000 74.667L85.333 128.000L128.000 181.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                   <path d="M170.667 74.667L128.000 128.000L170.667 181.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                                 </g>
+                               </svg>
+                             </button>
+                               <div class="ladhak-cards-content d-flex"></div>
+                             <button id="next_ladhak" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256" fill="none" id="my-svg">
+                                 <defs>
+                                   <linearGradient id="gradient1">
+                                     <stop class="stop1" offset="0%" stop-color="#8f66ff"></stop>
+                                     <stop class="stop2" offset="100%" stop-color="#3d12ff"></stop>
+                                   </linearGradient>
+                                 </defs>
+                                 <rect id="backgr" width="256" height="256" fill="none" rx="60"></rect>
+                                 <g id="group" transform="translate(0,0) scale(1)">
+                                   <path d="m128 74.667 42.667 53.333 -42.667 53.333" stroke="#fcfcfc" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="primary"></path>
+                                   <path d="m85.333 74.667 42.667 53.333 -42.667 53.333" stroke="#feaa28" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" id="secondary"></path>
+                                 </g>
+                               </svg>
+                             </button>
+                             </div>
+                             </section>
+                           </section>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+
+        <!-- FOOTER  -->
+        <footer class="footer_section container-fluid pt-5">
+            <section class="footer_row row">
+                <section class="footer_img_col col-4 col-sm-4 col-md-4 col-lg-4">
+                    <img src="/taklanetavlogs/assets/channel_images/character_three.png" alt="" class="footer_img img-fluid" width="500">
+                </section>
+                <section class="footer_heading_col col-4 col-sm-4 col-md-4 col-lg-4 d-flex align-items-center justify-content-center">
+                    <h3 class="footer_heading display-2 text-uppercase text-center text-white">Takla Neta</h3>
+                </section>
+                <section class="footer_img_col col-4 col-sm-4 col-md-4 col-lg-4">
+                    <img src="/taklanetavlogs/assets/channel_images/character_four.png" alt="" class="footer_img img-fluid" width="500">
+                </section>
+            </section>
+        </footer>
+    
     </main>
 
-
-
-    <!-- JAVASCRIPT FILE  -->
-    <!-- axiox & Javascript file link -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- Javascript file link -->
-    <script src="/taklanetavlogs/takla_neta.js"></script>
-    <!-- Icon Links -->
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- AOS SCRIPT  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<!-- JAVASCRIPT FILE  -->
+<!-- axiox & Javascript file link -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Javascript file link -->
+<script src="/taklanetavlogs/takla_neta.js"></script>
+<!-- Icon Links -->
+<link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<!-- AOS SCRIPT  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 
 </html>

@@ -68,7 +68,22 @@
 .about_neta_para {
     font-weight: 500;
 }
+.third_section {
+    background-image: url('/taklanetavlogs/assets/channel_images/bg_sofa.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
 
+.our_video_heading,.series_heading {
+    background-image: url('/taklanetavlogs/assets/channel_images/wooden_stick_one.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: PhosphateRR Solid;
+    color: white;
+}
 .latest_video_row {
     background-image: url('/taklanetavlogs/assets/channel_images/cloud.png');
     background-position: center;
@@ -92,6 +107,20 @@
 }
 .character_mostpopular_img{
     left:80px;
+}
+.fourth_section{
+    background-image: url('/taklanetavlogs/assets/channel_images/bg_sofa.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.series_row{
+    margin: 15px 0;
+}
+.series_text{
+  font-family: PhosphateRR Solid; 
+  color: white; 
 }
 
 .header_home {
@@ -213,21 +242,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.third_section {
-    background-image: url('/taklanetavlogs/assets/channel_images/bg_sofa.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.our_video_heading {
-    background-image: url('/taklanetavlogs/assets/channel_images/wooden_stick_one.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-family: PhosphateRR Solid;
-    color: white;
-}
 
 .channel_heading,
 .subs_number,
@@ -244,11 +259,18 @@
     color: white;
 }
 
-
-
-
-
-
+.footer_section{
+    background-image: url('/taklanetavlogs/assets/channel_images/footer_bg\ copy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.151);
+    background-blend-mode: multiply;
+    
+}
+.footer_heading{
+    font-family: PhosphateRR Solid;
+}
 
 
 /* TERMS AND CONDITION, DISCLAIMER, PRIVACY POLICY CSS  */
@@ -482,16 +504,18 @@
         width: 279px !important;
     }
 
-    .third_section {
+    .third_section,.fourth_section {
         padding: 10px 10px !important;
     }
 
     .latest_video_row,
-    .mostpopular_video_row {
+    .mostpopular_video_row{
         padding: 10px 10px !important;
         margin: 10px auto !important;
     }
-
+    .series_row{
+        padding: 10px 0 !important;
+    }
     .latest_video_banner,
     .mostpopular_video_banner {
         width: 80px !important;
@@ -696,7 +720,12 @@
         padding: 10px 0 !important;
 
     }
-
+    .series_row{
+        padding: 10px 0 !important;
+    }
+    .series_text{
+        /* font-size: 24px !important; */
+    }
     .latest_video_row,
     .mostpopular_video_row {
         padding: 10px 10px !important;
@@ -933,3 +962,206 @@
         padding: 20px 10px !important;
     }
 }
+
+
+
+
+
+
+
+
+/* SLIDER AND CARDS CSS */
+
+.latest,
+.mostpopular,
+.movies,
+.our_channel_heading,
+.search_video_heading {
+  font-family: 'Poppins', 'sans-serif';
+  color: #FEAA28;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.latest_video_title,
+.mostpopular_video_title,
+.movies_video_title,
+.search_video_title,
+.movie_title_link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: medium;
+  color: whitesmoke;
+}
+
+#prev:hover,
+#next:hover,
+#prev_mostPopular:hover,
+#next_mostPopular:hover,
+#prev_movies:hover,
+#next_movies:hover#prev_search:hover,
+#next_search:hover {
+  transform: scale(1.2);
+  transition: 0.4s ease-in-out;
+}
+
+
+
+
+/* SLIDER CSS */
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  min-width: 300px;
+  min-height: 180px;
+  cursor: pointer;
+  width: calc(100%/3);
+  background-color: rgb(48, 48, 138);
+  animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both
+}
+
+.card:hover {
+  transition: 500ms;
+  transform: scale(0.9, 0.9);
+}
+.card img{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cards-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.cards-content::-webkit-scrollbar {
+  height: 0px;
+}
+
+.cards-content:after {
+  content: '';
+  display: block;
+  min-width: 20px;
+  height: 100px;
+  position: relative;
+}
+
+.custom-shape-divider-bottom-1701437909 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1701437909 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 500px;
+}
+
+.custom-shape-divider-bottom-1701437909 .shape-fill {
+  fill: #FEAA28;
+}
+
+/* Most Popular videos */
+.mostPopular-cards-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.mostPopular-cards-content::-webkit-scrollbar {
+  height: 0px;
+}
+
+.mostPopular-cards-content:after {
+  content: '';
+  display: block;
+  min-width: 20px;
+  height: 100px;
+  position: relative;
+}
+
+/* Kedharnath-cards-container videos */
+.kedharnath-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .kedharnath-cards-content::-webkit-scrollbar {
+    height: 0px;
+  }
+  
+  .kedharnath-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+  }
+
+
+/* jaipur-cards-container videos */
+.jaipur-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .jaipur-cards-content::-webkit-scrollbar {
+    height: 0px;
+  }
+  
+  .jaipur-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+  }
+
+/* Ladhak-cards-container videos */
+.ladhak-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .ladhak-cards-content::-webkit-scrollbar {
+    height: 0px;
+  }
+  
+  .ladhak-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+  }
