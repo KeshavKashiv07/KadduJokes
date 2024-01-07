@@ -127,13 +127,13 @@ const getYoutubeLatestVideos = async () => {
             });
 
           document.querySelector(".cards-content").innerHTML +=
-          `<div class="card mx-2 my-2">
+          `<div class="card mx-2 my-2 border border-0 rounded-3 shadow shadow-lg shadow-dark">
           <a href="${videoUrl}" class="latest_video_title_link text-decoration-none" target="_blank">
           <div class="embed-responsive embed-responsive-16by9">  
-          <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+          <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid rounded-bottom-0">
           </div>
-          <div class="card-body p-0 py-1 px-2">
-              <p class="card-title latest_video_title">${videoTitle}</p>
+          <div class="card-body p-0 py-3 px-2 rounded-3">
+              <p class="card-title latest_video_title fs-6">${videoTitle}</p>
           </div>
           </a>
           </div>`              
@@ -180,12 +180,12 @@ const getMostPopularVideos = async () => {
             });
 
             document.querySelector(".mostPopular-cards-content").innerHTML +=
-                `<div class="card mx-2 my-2">
+                `<div class="card mx-2 my-2 border border-0 rounded-3 shadow shadow-lg shadow-dark">
         <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
         <div class="embed-responsive embed-responsive-16by9">  
-        <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+        <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid rounded-bottom-0">
         </div>
-        <div class="card-body p-0 py-1 px-2">
+        <div class="card-body p-0 py-3 px-2 rounded-3">
             <p class="card-title mostpopular_video_title">${videoTitle}</p>
         </div>
         </a>
@@ -233,13 +233,13 @@ const getSeriesKedranathVlogs = async () => {
             });
 
             document.querySelector(".kedharnath-cards-content").innerHTML +=
-            `<div class="card mx-2 my-2">
+            `<div class="card mx-2 my-2 broder border-0 shadow-lg shadow shadow-dark rounded-3">
             <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
             <div class="embed-responsive embed-responsive-16by9">  
-            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid rounded-bottom-0">
             </div>
-            <div class="card-body p-0 py-1 px-2">
-                <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            <div class="card-body series_card_body p-0 py-3 px-2 rounded-bottom-3">
+                <p class="card-title mostpopular_video_title"><b class="text-uppercase">Episode:</b> ${videoTitle}</p>
             </div>
             </a>
         </div>`
@@ -286,13 +286,13 @@ const getSeriesJaipurVlogs = async () => {
             });
 
             document.querySelector(".jaipur-cards-content").innerHTML +=
-            `<div class="card mx-2 my-2">
+            `<div class="card mx-2 my-2 shadow shadow-lg- shadow-large rounded-3 border border-0">
             <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
             <div class="embed-responsive embed-responsive-16by9">  
-            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid rounded-bottom-0">
             </div>
-            <div class="card-body p-0 py-1 px-2">
-                <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            <div class="card-body series_card_body p-0 py-3 px-2 rounded-bottom-3">
+                <p class="card-title mostpopular_video_title"><b class="text-uppercase">Episode:</b>${videoTitle}</p>
             </div>
             </a>
         </div>`
@@ -337,13 +337,13 @@ const getSeriesLadhakVlogs = async () => {
             });
 
             document.querySelector(".ladhak-cards-content").innerHTML +=
-            `<div class="card mx-2 my-2">
+            `<div class="card mx-2 my-2 rounded-3 border border-0 shadow shadow-lg shadow-dark">
             <a href="${videoUrl}" class="mostpopular_video_title_link text-decoration-none" target="_blank">
             <div class="embed-responsive embed-responsive-16by9">  
-            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid">
+            <img src="${videoThumnnail}" alt="thumbnails" class="card-img-top img-fluid rounded-bottom-0">
             </div>
-            <div class="card-body p-0 py-1 px-2">
-                <p class="card-title mostpopular_video_title">${videoTitle}</p>
+            <div class="card-body series_card_body p-0 py-3 px-2 rounded-bottom-3">
+                <p class="card-title mostpopular_video_title"><b class="text-uppercase">Episode:</b> ${videoTitle}</p>
             </div>
             </a>
         </div>`
