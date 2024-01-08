@@ -113,6 +113,20 @@
     left: 80px;
 }
 
+.latest_videos_banner_heading {
+    right: 70px;
+    bottom: 560px;
+    font-family: PhosphateRR Solid;
+    color: #856948;
+}
+
+.mostpopular_videos_banner_heading {
+    left: 60px;
+    top: 600px;
+    font-family: PhosphateRR Solid;
+    color: #856948;
+}
+
 .fourth_section {
     background-image: url('/taklanetavlogs/assets/channel_images/bg_sofa.png');
     background-position: center;
@@ -262,16 +276,18 @@
     max-height: 250px;
     width: 400px;
     margin-top: 8px;
-    background-color: #b026c7;
-        background-image:
-            radial-gradient(at 47% 33%, hsl(13.25, 77%, 40%) 0, transparent 59%),
-            radial-gradient(at 82% 65%, hsl(60.00, 88%, 44%) 0, transparent 55%);
-        background-position: center;
-        backdrop-filter: blur(15px) saturate(148%);
-        -webkit-backdrop-filter: blur(15px) saturate(148%);
-        background-color: rgba(209, 209, 209, 0.23);
-        border-radius: 12px;
-        border: 2px solid rgba(255, 255, 255, 0.125);
+    background: #8a238749;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 12px;
+    background-position: center;
+    backdrop-filter: blur(12px) saturate(148%);
+    -webkit-backdrop-filter: blur(12px) saturate(148%);
+    /* background-color: rgba(209, 209, 209, 0.23); */
+    /* border: 0px solid rgba(255, 255, 255, 0.125); */
     position: absolute;
 }
 
@@ -303,7 +319,7 @@
     color: white;
 }
 
-.footer_section_home{
+.footer_section_home {
     background-image: url('/taklanetavlogs/assets/channel_images/footer_bg\ copy.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -316,7 +332,8 @@
 .footer_heading {
     font-family: PhosphateRR Solid;
 }
-.footer_row{
+
+.footer_row {
     background-image: url('/taklanetavlogs/assets/channel_images/footer_bg.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -497,6 +514,7 @@
 @media only screen and (max-width:480px) {
     .first_section {
         padding: 10px 10px !important;
+        background-size: cover;
     }
 
     .channel_heading {
@@ -511,10 +529,12 @@
     .wooden_badge_col {
         margin: 10px 0 !important;
         /* background-size: 300px !important; */
-        background-color: #b026c7;
-        background-image:
-            radial-gradient(at 47% 33%, hsl(13.25, 77%, 40%) 0, transparent 59%),
-            radial-gradient(at 82% 65%, hsl(60.00, 88%, 44%) 0, transparent 55%);
+        background: #8A2387;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-position: center;
         backdrop-filter: blur(12px) saturate(148%);
         -webkit-backdrop-filter: blur(12px) saturate(148%);
@@ -722,8 +742,30 @@
     .footer_logo_column {
         padding: 20px 10px !important;
     }
-    .footer_row{
+
+    .footer_row {
         background-position: top !important;
+    }
+
+    .takla_neta_vlog_logo {
+        width: 60px !important;
+    }
+
+    .channel_footer_title,
+    .other_channel_title,
+    .contactus_title,
+    .social_link_title {
+        font-size: 18px !important;
+    }
+
+    .channel_footer_description,
+    .channel_items_link,
+    .contactus_link,
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer {
+        font-size: 14px !important;
     }
 
     .char_img_one,
@@ -742,9 +784,6 @@
 
 /* TABLET MEDIA QUERY  */
 @media only screen and (min-width: 481px) and (max-width:768px) {
-    body {
-        background-color: yellow;
-    }
 
     .first_section {
         padding: 10px 10px !important;
@@ -785,10 +824,12 @@
     .wooden_badge_col {
         margin: 10px 0 !important;
         /* background-size: 300px !important; */
-        background-color: #b026c7;
-        background-image:
-            radial-gradient(at 47% 33%, hsl(13.25, 77%, 40%) 0, transparent 59%),
-            radial-gradient(at 82% 65%, hsl(60.00, 88%, 44%) 0, transparent 55%);
+        background: #8A2387;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-position: center;
         backdrop-filter: blur(12px) saturate(148%);
         -webkit-backdrop-filter: blur(12px) saturate(148%);
@@ -918,9 +959,16 @@
     .privacy_policy_char_img_col {
         height: 400px !important;
     }
-    .char_img_one,.char_img_two,.char_img_three,.privacy_policy_char_img_one,.privacy_policy_char_img_two,.privacy_policy_char_img_three{
+
+    .char_img_one,
+    .char_img_two,
+    .char_img_three,
+    .privacy_policy_char_img_one,
+    .privacy_policy_char_img_two,
+    .privacy_policy_char_img_three {
         display: none;
     }
+
     .terms_text,
     .disclaimer_text,
     .privacy_policy_text {
@@ -936,8 +984,30 @@
     .footer_logo_column {
         padding: 20px 10px !important;
     }
-    .footer_row{
+
+    .footer_row {
         background-position: top !important;
+    }
+
+    .takla_neta_vlog_logo {
+        width: 80px !important;
+    }
+
+    .channel_footer_title,
+    .other_channel_title,
+    .contactus_title,
+    .social_link_title {
+        font-size: 22px !important;
+    }
+
+    .channel_footer_description,
+    .channel_items_link,
+    .contactus_link,
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer {
+        font-size: 16px !important;
     }
 }
 
