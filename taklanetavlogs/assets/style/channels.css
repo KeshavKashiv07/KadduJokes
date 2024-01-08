@@ -168,9 +168,9 @@
 
 .card {
     min-height: 150px !important;
+    /* height: 250px !important; */
     border: 2px solid white !important;
 }
-
 .card-body {
     background-color: #25368A;
 }
@@ -1212,10 +1212,7 @@
     transform: scale(0.9, 0.9);
 }
 
-.card img {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
+
 
 .cards-content {
     display: flex;
