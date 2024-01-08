@@ -159,7 +159,6 @@ const getYoutubeTitle = async () => {
 //Function to fetch latest video details and display in a card && its for kddu joks sated api link
 const getYoutubeVideoDetails = async () => {
     //getLatestVideoData from YoutubeDataApi = get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=UUa_O4LhZxDH1MMPUCLqNC9w&key=${Latest_videos_api_key}`);
-
     try {        
         const jsonUrl = 'https://script.google.com/macros/s/AKfycbwcM0WFsycjZ-kXk9QwLW1otkKScaujrXLaj7VtC3yk2hCRLnX0AnzKeZ9LabOTdEms/exec'
 
