@@ -2,15 +2,19 @@
 // Keshav API Key : AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
 // Harsh New API KEY : AIzaSyDmfzTHpIxSzmy1dvzKQLRxgq8uY07i4jM
 
-const Api_Key = "AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs";
+// Api Keys
+const subscriber_count_Api_Key = "AIzaSyDQ2tUWaxbq1BHa3oPySAQ62DgxyWGlUZs";
+const video_count_Api_Key = "AIzaSyDGDUyX4agDmz2x3o8MKv48dEEDHPBRgO0";
+
 // Takla neta vlogs channel id 
 const Youtube_ID = "UCUmu2O8bSFbaUki1WCxs92A";
 
 const subscriber_count = document.querySelector(".subs_number")
 const video_count = document.querySelector(".videos_number")
+const views = document.querySelector(".views_number")
 //const title = document.querySelector(".channel_name_heading")
 //const description = document.querySelector("#description")
-const views = document.querySelector(".views_number")
+
 
 // Create an object to store fetched data
 const FetchedVideosData = {
@@ -77,7 +81,7 @@ const searchVideos = () => {
 
 // Function to fatching subscribers , views and videos.
 const getYoutubeSubscribers = async () => {
-    const getSubData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Youtube_ID}&key=${Api_Key}`)
+    const getSubData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Youtube_ID}&key=${subscriber_count_Api_Key}`)
     //console.log(getSubData);
 
     const youtube_subscribers = getSubData.data.items[0].statistics.subscriberCount;
@@ -90,9 +94,9 @@ const getYoutubeSubscribers = async () => {
     views.innerHTML = formatNumber(parseInt(youtube_views));
 };
 
-// Function to fatching channel name and description.
+// Function to fatching channel name Title and description.
 const getYoutubeTitle = async () => {
-    const getTitleData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id=${Youtube_ID}&key=${Api_Key}`)
+    const getTitleData = await axios.get(`https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id=${Youtube_ID}&key=${video_count_Api_Key}`)
    // console.log(getTitleData);
 
     const channel_name = getTitleData.data.items[0].brandingSettings.channel.title;
@@ -105,19 +109,31 @@ const getYoutubeTitle = async () => {
 
 //Function to fetch latest video details and display in a card && its for kddu joks sated api link
 const getYoutubeLatestVideos = async () => {
-    try {
-        const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=UUUmu2O8bSFbaUki1WCxs92A&key=${Api_Key}`);
-        //console.log(getVideoData);
-        
-        const videos = getVideoData.data.items;
-        videos.forEach(video => {
-            const videoId = video.snippet.resourceId.videoId;
-            const videoUrl = 'https://www.youtube.com/watch?v=' + videoId;
-            // console.log(videoUrl);
-            const videoTitle = video.snippet.title;         
-            //console.log(videoTitle);
-            const videoThumnnail = video.snippet.thumbnails.medium.url;
-            // console.log(videoThumnnail)
+    //const getVideoData = await axios.get(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=UUUmu2O8bSFbaUki1WCxs92A&key=${Api_Key}`);
+    try {        
+        const lastest_videos_jsonUrl = 'https://script.google.com/macros/s/AKfycbxXmVY0Lftw2P47I3vGuEeEmLaiHJKcuiRYVO72VghfAXJ847cvxnkskkhbNf3L1unr/exec'
+
+        const response = await fetch(lastest_videos_jsonUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonData = await response.json();
+        console.log("Running", jsonData);
+
+        // Access the items object in the JSON response
+        const items = jsonData.items || {};
+
+        // Iterate through each video entry
+        Object.keys(items).forEach(key => {
+            const videoEntry = items[key];
+                // Access video details
+                const videoId = videoEntry.videoId;
+                const videoTitle = videoEntry.videoTitle;
+                const videoThumnnail = videoEntry.videoThumbnail;
+
+                // Construct video URL
+                const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
 
             // Store data in the object
             FetchedVideosData.videosArray.push({
@@ -360,7 +376,7 @@ getSeriesKedranathVlogs();
 getMostPopularVideos();
 getYoutubeLatestVideos();
 getYoutubeSubscribers();
-getYoutubeTitle();
+//getYoutubeTitle();
 
 
 
