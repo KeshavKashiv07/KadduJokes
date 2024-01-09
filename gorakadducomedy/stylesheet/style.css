@@ -84,39 +84,47 @@
     background-size: cover;
 }
 
-.video_text_column {
+.char_two,
+.char_three {
+    z-index: 0;
+}
+
+.video_heading {
     font-family: PhosphateSolid;
     background-image: url('/gorakadducomedy/assets/images/videos_heading_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    color: #BB01C5;
+    font-size: 3.5em;
 }
 
-.video_heading {
-    color: #BB01C5 !important;
-    font-size: 4em;
-}
+
 
 .latest_video_row {
     background-image: url('/gorakadducomedy/assets/images/latest-video-bg.png');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
-.latest_videos_heading,.mostpopular_videos_heading,.movies_heading {
+.latest_videos_heading,
+.mostpopular_videos_heading,
+.movies_heading {
     letter-spacing: 1.5px;
     font-family: 'Inter', sans-serif;
     color: #25368A;
 }
-.mostpopular_video_row{
+
+.mostpopular_video_row {
     background-image: url('/gorakadducomedy/assets/images/popular-videos-bg.png');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.movies_row{
+
+.movies_row {
     background-image: url('/gorakadducomedy/assets/images/movies_section_bg.png');
     background-position: top;
     background-size: cover;
@@ -133,32 +141,84 @@
 }
 
 .card-img-top {
-    height: 170px;
+    height: 150px;
+}
+
+.card-text:hover {
+    text-decoration: underline !important;
 }
 
 .card_title_link {
     font-family: 'Montserrat', sans-serif;
     color: #BF0000;
-    
+}
+
+/* THIRD SECTION CSS  */
+.third_section{
+    background-image: url('/gorakadducomedy/assets/images/about-us-section-bg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 15% !important;
+    height: auto;
+}
+.third_section_row{
+    background-image: url('/gorakadducomedy/assets/images/aboutus_content_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.aboutus_heading{
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+.aboutus_text{
+    font-family: 'Inter',sans-serif;
+    color: white;
+}
+
+/* FOURTH SECTION CSS  */
+.fourth_section{
+    background-image: url('/gorakadducomedy/assets/images/series_section_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.series_heading{
+    background-image: url('/gorakadducomedy/assets/images/videos_heading_bg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 3.5em ;
+    padding-bottom: 22px;
+    font-family: PhosphateRR Solid;
+    color: #FFAF53;
+}
+.series_title{
+    font-family: 'Montserrat',sans-serif;
+    color: white;
+    font-weight: 500;
 }
 
 
 /* PHONE MEDIA QUERY  */
 @media only screen and (max-width:480px) {
-    .channel_name_img {
-        width: 300px !important;
+    img.channel_name_img.img-fluid {
+        width: 320px !important;
+    }
+    img.img-fluid.character_one {
+        width: 160px !important;
     }
 
-    .character_one {
-        width: 180px !important;
+    h3.video_heading.text-uppercase.p-4.m-0 {
+        padding: 10px 15px !important;
+        font-size: 2.5em !important;
     }
 
-    .video_heading {
-        padding: 10px auto !important;
-        font-size: 1.8em !important;
-    }
-
-    .latest_video_row,.videos_section_row,.mostpopular_video_row,.movies_row {
+    .latest_video_row,
+    .videos_section_row,
+    .mostpopular_video_row,
+    .movies_row {
         padding: 10px 10px !important;
     }
 
@@ -168,7 +228,8 @@
     }
 
     .card {
-        width: 10rem !important;
+        min-width: 200px !important;
+        min-height: 200px !important;
     }
 
     .card-body {
@@ -177,6 +238,18 @@
 
     .card-text {
         font-size: 14px !important;
+    }
+    .third_section{
+        padding: 40px 10px !important;
+    }
+    img.aboutus_char_img.img-fluid{
+        width: 200px !important;
+    }
+    .third_section_row{
+        background-image:none !important;
+    }
+    .aboutus_text{
+        font-size: 16px !important;
     }
 }
 
@@ -193,11 +266,15 @@
         width: 300px !important;
     }
 
-    .video_heading {
-        padding: 10px 0 !important;
-        font-size: 2em !important;
+    h3.video_heading.text-uppercase.p-4.m-0 {
+        padding: 10px 15px !important;
+        font-size: 3em !important;
     }
-    .latest_video_row,.videos_section_row,.mostpopular_video_row,.movies_row {
+
+    .latest_video_row,
+    .videos_section_row,
+    .mostpopular_video_row,
+    .movies_row {
         padding: 10px 10px !important;
     }
 
@@ -207,7 +284,9 @@
     }
 
     .card {
-        width: 12rem !important;
+        min-width: 250px !important;
+        min-height: 200px !important;
+
     }
 
     .card-body {
@@ -217,9 +296,23 @@
     .card-text {
         font-size: 14px !important;
     }
+    .third_section{
+        padding: 40px 10px !important;
+    }
+    .img.aboutus_char_img.img-fluid {
+        width: 300px !important;
+        display: flex;
+        align-items: center !important;
+    }
+    .third_section_row{
+        background-image:none !important;
+    }
+    .aboutus_text{
+        font-size: 16px !important;
+    }
 }
 
-@media only screen  and (max-width:1024px){
+@media only screen and (max-width:1024px) {
     .channel_name_img {
         width: 300px !important;
     }
@@ -227,25 +320,42 @@
     .character_one {
         width: 300px !important;
     }
-    .video_heading {
-        padding: 10px 0 !important;
-        font-size:2.5em !important;
+
+    h3.video_heading.text-uppercase.p-4.m-0 {
+        padding: 10px 15px !important;
+        font-size: 3em !important;
+    }
+    .third_section{
+        padding: 40px 10px !important;
+    }
+    .img.aboutus_char_img.img-fluid {
+        width: 320px !important;
+        display: flex;
+        align-items: center !important;
+    }
+    .third_section_row{
+        background-image:none !important;
+    }
+    .aboutus_text{
+        font-size: 18px !important;
     }
 }
 
 
 /* SLIDERS CSS */
 .card {
-    min-width: 300px;
-    min-height: 200px;
+    min-width: 280px;
+    min-height: 250px;
     cursor: pointer;
     width: calc(100%/3);
     animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both
 }
+
 .card:hover {
     transition: 500ms;
     transform: scale(0.9, 0.9);
 }
+
 .cards-content {
     display: flex;
     align-items: center;
@@ -254,9 +364,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .cards-content:after {
     content: '';
     display: block;
@@ -264,6 +376,7 @@
     height: 100px;
     position: relative;
 }
+
 .custom-shape-divider-bottom-1701437909 {
     position: absolute;
     bottom: 0;
@@ -273,6 +386,7 @@
     line-height: 0;
     transform: rotate(180deg);
 }
+
 .custom-shape-divider-bottom-1701437909 .shape-fill {
     fill: #FEAA28;
 }

@@ -78,11 +78,11 @@ const getLatestYoutubeVideo = async () => {
             });
             const newTitle = truncateText(videoTitle, 5);
             document.querySelector(".cards-content").innerHTML +=
-                `<div class="card m-2 border-5 border-light" style="width: 18rem;">
-            <a href="${videoUrl}" class="img_link"><img src="${videoThumnnail}"
-                    class="card-img-top img-thumbnail p-2 rounded-0 rounded-bottom-2" alt="..."></a>
+                `<div class="card m-2 border-5 rounded-3 border-light" style="width: 18rem;">
+            <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
+                    class="card-img-top img-thumbnail rounded-top-3 shadow rounded-bottom-0 border-0 p-0" alt="..."></a>
             <div class="card-body">
-                <a href=""${videoUrl}"" class="card_title_link text-decoration-none">
+                <a href="${videoUrl}" target="_blank" class="card_title_link text-decoration-none">
                     <p class="card-text fw-medium px-0 py-0">${newTitle}</p>
                 </a>
             </div>
@@ -148,11 +148,11 @@ const getMostPopularVideo = async () => {
             });
             const newTitle = truncateText(videoTitle, 5);
             document.querySelector(".mostPopular-cards-content").innerHTML +=
-                `<div class="card m-2 border-5 border-light" style="width: 18rem;">
-                <a href="${videoUrl}" class="img_link"><img src="${videoThumnnail}"
-                        class="card-img-top img-thumbnail p-2 rounded-0 rounded-bottom-2" alt="..."></a>
+                `<div class="card m-2 rounded-3 border-5 border-light" >
+                <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
+                        class="card-img-top img-thumbnail border-0 p-0 shadow rounded-top-3 rounded-bottom-0" alt="..."></a>
                 <div class="card-body">
-                    <a href=""${videoUrl}"" class="card_title_link text-decoration-none">
+                    <a href="${videoUrl}" target="_blank" class="card_title_link text-decoration-none">
                         <p class="card-text fw-medium px-0 py-0">${newTitle}</p>
                     </a>
                 </div>
