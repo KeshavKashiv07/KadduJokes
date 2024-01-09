@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900@&display=swap'); */
+
+@font-face {
+    font-family: PhosphateRR Solid;
+    src: url('/gorakadducomedy/assets/fonts/PhosphateRR\ Solid.ttf');
+}
+
+@font-face {
+    font-family: PhosphateSolid;
+    src: url('/gorakadducomedy/assets/fonts/PhosphateSolid.ttf');
+}
+
+/* SETTING  */
+.setting {
+    max-width: 1600px;
+    margin: 0 auto;
+
+}
+
+/* FIRST SECTION CSS */
+#first_section {
+    background-image: url('/gorakadducomedy/assets/images/first_section_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.nav_list_links {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.nav_list_links:hover {
+    color: #F00101;
+    text-decoration: underline !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.data_div {
+    background-image: url('/gorakadducomedy/assets/images/data_div_bg.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.channel_heading {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+}
+
+.subs_heading,
+.videos_heading,
+.views_heading {
+    font-family: 'Inter', sans-serif;
+}
+
+.subs_number,
+.videos_number,
+.views_number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: #BF0000;
+}
+
+.youtube_box_div {
+    background-image: url('/gorakadducomedy/assets/images/youtube-div-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
+
+/* SECOND SECTION CSS  */
+.second_section {
+    background-image: url('/gorakadducomedy/assets/images/video_section_bg.png');
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video_text_column {
+    font-family: PhosphateSolid;
+    background-image: url('/gorakadducomedy/assets/images/videos_heading_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.video_heading {
+    color: #BB01C5 !important;
+    font-size: 4em;
+}
+
+.latest_video_row {
+    background-image: url('/gorakadducomedy/assets/images/latest-video-bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.latest_videos_heading,.mostpopular_videos_heading,.movies_heading {
+    letter-spacing: 1.5px;
+    font-family: 'Inter', sans-serif;
+    color: #25368A;
+}
+.mostpopular_video_row{
+    background-image: url('/gorakadducomedy/assets/images/popular-videos-bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.movies_row{
+    background-image: url('/gorakadducomedy/assets/images/movies_section_bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.prev_arrow_img {
+    transform: rotate(-0.5turn);
+}
+
+.card {
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-img-top {
+    height: 170px;
+}
+
+.card_title_link {
+    font-family: 'Montserrat', sans-serif;
+    color: #BF0000;
+    
+}
+
+
+/* PHONE MEDIA QUERY  */
+@media only screen and (max-width:480px) {
+    .channel_name_img {
+        width: 300px !important;
+    }
+
+    .character_one {
+        width: 180px !important;
+    }
+
+    .video_heading {
+        padding: 10px auto !important;
+        font-size: 1.8em !important;
+    }
+
+    .latest_video_row,.videos_section_row,.mostpopular_video_row,.movies_row {
+        padding: 10px 10px !important;
+    }
+
+    .card-img-top {
+        border: 0;
+        height: 80px !important;
+    }
+
+    .card {
+        width: 10rem !important;
+    }
+
+    .card-body {
+        padding: 10px 10px !important;
+    }
+
+    .card-text {
+        font-size: 14px !important;
+    }
+}
+
+
+
+/* TABLET MEDIA QUERY  */
+@media only screen and (max-width:768px) {
+
+    .channel_name_img {
+        width: 300px !important;
+    }
+
+    .character_one {
+        width: 300px !important;
+    }
+
+    .video_heading {
+        padding: 10px 0 !important;
+        font-size: 2em !important;
+    }
+    .latest_video_row,.videos_section_row,.mostpopular_video_row,.movies_row {
+        padding: 10px 10px !important;
+    }
+
+    .card-img-top {
+        border: 0;
+        height: 110px !important;
+    }
+
+    .card {
+        width: 12rem !important;
+    }
+
+    .card-body {
+        padding: 10px 10px !important;
+    }
+
+    .card-text {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen  and (max-width:1024px){
+    .channel_name_img {
+        width: 300px !important;
+    }
+
+    .character_one {
+        width: 300px !important;
+    }
+    .video_heading {
+        padding: 10px 0 !important;
+        font-size:2.5em !important;
+    }
+}
