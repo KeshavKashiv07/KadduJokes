@@ -350,12 +350,10 @@
     width: calc(100%/3);
     animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both
 }
-
 .card:hover {
     transition: 500ms;
     transform: scale(0.9, 0.9);
 }
-
 .cards-content {
     display: flex;
     align-items: center;
@@ -364,11 +362,9 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
-
 .cards-content::-webkit-scrollbar {
     height: 0px;
 }
-
 .cards-content:after {
     content: '';
     display: block;
@@ -376,7 +372,6 @@
     height: 100px;
     position: relative;
 }
-
 .custom-shape-divider-bottom-1701437909 {
     position: absolute;
     bottom: 0;
@@ -386,10 +381,10 @@
     line-height: 0;
     transform: rotate(180deg);
 }
-
 .custom-shape-divider-bottom-1701437909 .shape-fill {
     fill: #FEAA28;
 }
+
 
 /* Most Popular videos */
 .mostPopular-cards-content {
@@ -400,11 +395,9 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
-
 .mostPopular-cards-content::-webkit-scrollbar {
     height: 0px;
 }
-
 .mostPopular-cards-content:after {
     content: '';
     display: block;
@@ -412,3 +405,86 @@
     height: 100px;
     position: relative;
 }
+
+
+/* BandAurBaraati videos */
+.BandAurBaraati-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.BandAurBaraati-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+.BandAurBaraati-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* MusicClasses videos */
+.MusicClasses-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.MusicClasses-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+.MusicClasses-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+
+/* OnlineClasses videos */
+.OnlineClasses-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.OnlineClasses-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+.OnlineClasses-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* KalaKadduLLB videos */
+.KalaKadduLLB-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.KalaKadduLLB-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+.KalaKadduLLB-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
