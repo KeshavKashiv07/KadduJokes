@@ -22,29 +22,39 @@
 <body>
     <main class="main_section container-fluid px-0">
         <!-- FIRST SECTION  -->
-        <section id="first_section" class="px-0 m-0 pb-3">
+        <section id="first_section" class="px-0 m-0 pb-3" data-aos="zoom-in">
             <!-- HEADER  -->
-            <header class="header-section p-0 m-0 shadow shadow-lg shadow-dark bg-body-tertiary py-3 rounded-bottom-5">
-                <nav class="navigation_section navbar col-12 col-sm-12 col-md-12 col-lg-12">
+            <header
+                class="header_section p-0 py-1 m-0 shadow shadow-lg shadow-dark bg-body-tertiary py-3 rounded-bottom-5 gy-1">
+                <section class="navigation_section navbar">
                     <ul class="nav_list list-inline col-12 col-sm-12 col-md-12 col-lg-12 p-0 m-0 d-flex justify-content-evenly"
                         type="none">
                         <li class="nav_list_item list-inline-item"><a href="#"
                                 class="nav-links nav_list_links text-decoration-none">Home</a></li>
-                        <li class="nav_list_item list-inline-item"><a href="#"
+                        <li class="nav_list_item list-inline-item"><a href="#videos"
                                 class="nav-links nav_list_links text-decoration-none">Videos</a></li>
-                        <li class="nav_list_item list-inline-item"><a href="#"
+                        <li class="nav_list_item list-inline-item"><a href="#series"
                                 class="nav-links nav_list_links text-decoration-none">Series</a></li>
-                        <li class="nav_list_item list-inline-item"><a href="#"
+                        <li class="nav_list_item list-inline-item"><a target="_blank" href="https://www.kaddujoke.com/contactus.html"
                                 class="nav-links nav_list_links text-decoration-none">Contact Us</a></li>
                     </ul>
-                </nav>
+                </section>
             </header>
             <div class="setting">
-                <section class="first_section_row row pt-5 m-0 g-3">
+                <section class="first_section_row row pt-3 m-0 g-3">
+                    <section
+                        class="search-container position-relative mb-4  z-3 d-flex  col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center align-items-center">
+                        <div>
+                            <input type="search" class="searchBar form-control rounded-5 shadow shadow-lg"
+                                id="searchInput" placeholder="Search" oninput="searchVideos()">
+                            <ul class="search-results shadow shadow-lg shadow-dark  px-2 py-1 border border-3 border-light rounded-3"
+                                id="searchResults"> </ul>
+                        </div>
+                    </section>
                     <section class="first_column_one col-12 col-sm-12 col-md-6 col-lg-6 px-0">
                         <div class="channel_name_img_div d-flex justify-content-center">
                             <img src="/gorakadducomedy/assets/images/ch_name_img.png" alt=""
-                                class="channel_name_img img-fluid">
+                                class="channel_name_img img-fluid" width="600">
                         </div>
                         <div class="data_div py-5">
                             <section class="row w-auto p-0 m-0">
@@ -68,7 +78,7 @@
                         </div>
                     </section>
                     <section class="first_column_one col-12 col-sm-12 col-md-6 col-lg-6 ">
-                        <div class="first_section_char_img_div d-flex justify-content-center align-items-center">
+                        <div class="first_section_char_img_div d-flex justify-content-center align-items-end">
                             <img src="/gorakadducomedy/assets/images/first_section_char_one.png" alt=""
                                 class="img-fluid character_one">
                         </div>
@@ -78,7 +88,7 @@
         </section>
 
         <!-- SECOND SECTION  -->
-        <section class="second_section py-4">
+        <section class="second_section py-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="videos">
             <div class="setting">
                 <section class="videos_section_row row g-2 px-3 m-0 pt-5">
                     <section class="video_columns col-12 col-sm-12 col-md-4 col-lg-4">
@@ -190,7 +200,8 @@
         </section>
 
         <!-- THIRD SECTION  -->
-        <section class="third_section d-flex justify-content-center align-items-end mt-2">
+        <section class="third_section d-flex justify-content-center align-items-end mt-2" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
             <div class="setting">
                 <section class="third_section_row row py-4 m-0 g-3">
                     <section
@@ -202,126 +213,189 @@
                     </section>
                     <section class="about_char_text_col col-12 col-sm-12 col-md-6 col-lg-6">
                         <h3 class="aboutus_heading display-3">About Us</h3>
-                        <p class="aboutus_text d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Optio est omnis
-                            sed! Iure soluta, doloribus dolor delectus corporis eligendi, officiis aut eveniet magnam ab
-                            sit
-                            deleniti asperiores nobis distinctio ullam! <br><br>
-                            Architecto nobis officiis obcaecati repellat, hic nulla sequi perspiciatis fugiat temporibus
-                            maxime, aliquid atque alias asperiores placeat non assumenda libero esse aspernatur. Error
-                            voluptatem nihil possimus, quo eos eveniet eum! <br><br>
-                            Dicta, quo ex rerum voluptatibus officiis assumenda nobis quis dolorem voluptatum! Fugiat
-                            autem
-                            ab doloribus molestias perferendis esse dolore? Dolores assumenda at minus est labore
-                            cupiditate
-                            sit deleniti, praesentium voluptas!</p>
+                        <p class="aboutus_text d-flex justify-content-center">Welcome to the comedic wonderland of Gora
+                            Kaddu Comedy, your go-to destination for animated hilarity on YouTube! Prepare yourself for
+                            a laughter-packed extravaganza as Gora Kaddu, the maestro of mirth, takes you on a
+                            rollicking journey through the animated realms of humor.
+                            <br><br>
+                            Gora Kaddu Comedy delivers a side-splitting array of animated videos and series that
+                            redefine the boundaries of laughter. With a kaleidoscope of colorful characters and absurd
+                            scenarios, each episode is a testament to Gora Kaddu's comedic genius. <br> <br> From quirky
+                            misadventures to witty social commentary, the channel's animated universe is a captivating
+                            blend of creativity and humor that keeps audiences coming back for more.
+                           </p>
                     </section>
                 </section>
             </div>
         </section>
 
         <!-- FOURTH SECTION  -->
-        <section class="fourth_section py-2">
-            <section class="fourth_section_row row m-0 py-5">
-                <h3
-                    class="series_heading display-4 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center m-0">
-                    Series</h3>
-                <section class="series_col_one col-12 col-sm-12 col-md-8 col-lg-8 py-5">
-                    <!-- Band Aur Baraati ROW  -->
-                    <section class="row g-2 my-4">
-                        <h4
-                            class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
-                            Band Aur Baraati</h4>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="prev_BandAurBaraati" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
-                                    class="prev_arrow_img"></button>
+        <section class="fourth_section py-2" data-aos="zoom-in" id="series">
+            <div class="setting">
+                <section class="fourth_section_row row m-0 py-5">
+                    <h3
+                        class="series_heading display-4 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center m-0">
+                        Series</h3>
+                    <section class="series_col_one col-12 col-sm-12 col-md-8 col-lg-8 py-5">
+                        <!-- Band Aur Baraati ROW  -->
+                        <section class="row g-2 my-4">
+                            <h4
+                                class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
+                                Band Aur Baraati</h4>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="prev_BandAurBaraati" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
+                                        class="prev_arrow_img"></button>
+                            </section>
+                            <!-- CARDS COULUMN -->
+                            <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
+                                <!-- CARDS  -->
+                                <div class="BandAurBaraati-cards-content"> </div>
+                            </section>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="next_BandAurBaraati" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
+                                        class="next_arrow_img"></button>
+                            </section>
                         </section>
-                        <!-- CARDS COULUMN -->
-                        <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
-                           <!-- CARDS  -->
-                        <div class="BandAurBaraati-cards-content"> </div>
+
+                        <!-- TEL WALA ROW  -->
+                        <section class="row g-2 mb-4">
+                            <h4
+                                class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
+                                Sangeet Wala</h4>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="prev_MusicClasses" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
+                                        class="prev_arrow_img"></button>
+                            </section>
+                            <!--Music Classes CARDS COULUMN -->
+                            <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
+                                <!-- MusicClasses CARDS  -->
+                                <div class="MusicClasses-cards-content"> </div>
+                            </section>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="next_MusicClasses" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
+                                        class="next_arrow_img"></button>
+                            </section>
                         </section>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="next_BandAurBaraati" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
-                                    class="next_arrow_img"></button>
+
+                        <!-- ONLINE CLASS ROW  -->
+                        <section class="row g-2 mb-4">
+                            <h4
+                                class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
+                                Online Classes</h4>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="prev_OnlineClasses" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
+                                        class="prev_arrow_img"></button>
+                            </section>
+                            <!--NEW SERIES CARDS COULUMN -->
+                            <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
+                                <!-- Online Classes CARDS  -->
+                                <div class="OnlineClasses-cards-content"> </div>
+                            </section>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="next_OnlineClasses" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
+                                        class="next_arrow_img"></button>
+                            </section>
+                        </section>
+
+                        <!-- KALA KADDU LLB ROW  -->
+                        <section class="row g-2 mb-4">
+                            <h4
+                                class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
+                                Kala Kaddu LLB</h4>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="prev_KalaKadduLLB" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
+                                        class="prev_arrow_img"></button>
+                            </section>
+                            <!--Kala Kaddu LLB CARDS COULUMN -->
+                            <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
+                                <!-- Kala Kaddu LLB CARDS  -->
+                                <div class="KalaKadduLLB-cards-content"> </div>
+                            </section>
+                            <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
+                                <button id="next_KalaKadduLLB" class="border-0 bg-transparent"><img
+                                        src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
+                                        class="next_arrow_img"></button>
+                            </section>
                         </section>
                     </section>
-
-                    <!-- TEL WALA ROW  -->
-                    <section class="row g-2 mb-4">
-                        <h4
-                            class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
-                            Sangeet Wala</h4>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="prev_MusicClasses" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
-                                    class="prev_arrow_img"></button>
-                        </section>
-                        <!--Music Classes CARDS COULUMN -->
-                        <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
-                            <!-- MusicClasses CARDS  -->
-                        <div class="MusicClasses-cards-content"> </div>
-                        </section>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="next_MusicClasses" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
-                                    class="next_arrow_img"></button>
-                        </section>
-                    </section>
-
-                    <!-- NEW SERIES ROW  -->
-                    <section class="row g-2 mb-4">
-                        <h4
-                            class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
-                            Online Classes</h4>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="prev_OnlineClasses" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
-                                    class="prev_arrow_img"></button>
-                        </section>
-                        <!--NEW SERIES CARDS COULUMN -->
-                        <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
-                            <!-- Online Classes CARDS  -->
-                            <div class="OnlineClasses-cards-content"> </div>
-                        </section>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="next_OnlineClasses" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
-                                    class="next_arrow_img"></button>
-                        </section>
-                    </section>
-
-                    <!-- NEW SERIES ROW  -->
-                    <section class="row g-2 mb-4">
-                        <h4
-                            class="series_title display-6 text-uppercase col-12 col-sm-12 col-ms-12 col-lg-12 text-center">
-                            Kala Kaddu LLB</h4>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="prev_KalaKadduLLB" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_prev.png" alt=""
-                                    class="prev_arrow_img"></button>
-                        </section>
-                        <!--NEW SERIES CARDS COULUMN -->
-                        <section class="card_column col-12 col-sm-12 col-md-12 col-lg-10">
-                            <!-- Kala Kaddu LLB CARDS  -->
-                            <div class="KalaKadduLLB-cards-content"> </div>
-                        </section>
-                        <section class="col-12 col-sm-12 col-md-12 col-lg-1 d-none d-sm-none d-md-none d-lg-flex">
-                            <button id="next_KalaKadduLLB" class="border-0 bg-transparent"><img
-                                    src="/gorakadducomedy/assets/images/series_button_next.png" alt=""
-                                    class="next_arrow_img"></button>
-                        </section>
+                    <section
+                        class="series_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-center justify-content-center d-none d-sm-none d-md-flex d-lg-flex">
+                        <img src="/gorakadducomedy/assets/images/series_char.png" alt="" width="200">
                     </section>
                 </section>
-                <section
-                    class="series_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-center justify-content-center d-none d-sm-none d-md-none d-lg-flex">
-                    <img src="/gorakadducomedy/assets/images/series_char.png" alt="" width="200">
-                </section>
-            </section>
+            </div>
         </section>
 
+        <!-- FOOTER  -->
+        <section class="footer_section container-fluid row p-0 mx-0 z-3 position-relative py-3 px-3">
+            <!-- COLUMN 1 -->
+            <section class="footer_logo_column col-12 col-sm-12 col-md-4 col-lg-3 py-3">
+                <a href="/index.html" class="logo_link"><img
+                        src="/gorakadducomedy/assets/images/gora_kaddu_comedy_logo.jpg" alt=""
+                        class="takla_neta_vlog_logo img-fluid" height="80" width="80"></a>
+                <h3 class="channel_footer_title mt-3 mb-1 display-4">Gora Kaddu Comedy</h3>
+                <p class="channel_footer_description fs-6">@gorakadducomedy</p>
+            </section>
+            <!-- COLUMN 2  -->
+            <section class="other_channel_container col-12 col-sm-12 col-md-4 col-lg-3 py-3">
+                <p class="other_channel_title fs-5 fw-bold">Our Channels</p>
+                <ul class="channels_list ps-0">
+                    <li type="none" class="channels_list_items"><a href="https://taklanetavlogs.kaddujoke.com/"
+                            class="channel_items_link text-decoration-none fs-6">Takla Neta Vlogs</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@GoraKadduComedy"
+                            class="channel_items_link text-decoration-none fs-6">Gora Kaddu Comedy</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@KalaKadduComedy"
+                            class="channel_items_link text-decoration-none fs-6">Kala Kaddu Comedy</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@TaklaNetaComedy"
+                            class="channel_items_link text-decoration-none fs-6">Takla Neta Comedy</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@MyJokeOf"
+                            class="channel_items_link text-decoration-none fs-6">My Joke Of</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@KadduJoke"
+                            class="channel_items_link text-decoration-none fs-6">Kaddu Joke</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@Gorakadducartoon"
+                            class="channel_items_link text-decoration-none fs-6">Gora Kaddu Cartoon</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@KalaKadduCartoon"
+                            class="channel_items_link text-decoration-none fs-6">Kala Kaddu Cartoon</a></li>
+                </ul>
+            </section>
+            <!-- COLUMN 3  -->
+            <section class="contactus_container col-12 col-sm-12 col-md-4 col-lg-3 py-3">
+                <p class="contactus_title fs-5 fw-bold">Contact Us</p>
+                <ul class="contactus_list ps-0">
+                    <li type="none" class="contactus_list_items"><i class="fa fa-envelope text-light me-2"
+                            aria-hidden="true"></i><a href="mailto:suraj@kaddujoke.com"
+                            class="contactus_link fs-6 fs-sm-1 text-decoration-none">suraj@kaddujoke.com</a></li>
+                </ul>
+            </section>
+            <!-- COLUMN 4  -->
+            <section class="social_links_container col-12 col-sm-12 col-md-4 col-lg-3 py-3 ">
+                <p class="social_link_title fs-5 fw-bold">Follow Us On</p>
+                <ul class="social_item d-flex p-0 justify-content-start" type="none">
+                    <li class="social_item_link mx-2"><a href="https://www.youtube.com/@taklanetavlogs" target="_blank"
+                            class="social_icon_link"><i class="fa fa-youtube fs-3 mx-2 py-2 px-1"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+            </section>
+
+            <!-- COPYRIGHT  -->
+            <section class="copyright_container container-fluid">
+                <section
+                    class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center align-items-center py-3">
+                    <p class="copyright text-center m-0">Copyright &copy; 2023-2024 KADDU JOKE. All Rights Reserved. <a
+                            class="privacy_policy text-decoration-underline" href="#">Privacy Policy</a> | <a
+                            class="terms_condition text-decoration-underline" href="#">Terms and Conditions</a> | <a
+                            class="disclaimer text-decoration-underline" href="#">Disclaimer</a> </p>
+                </section>
+            </section>
+
+        </section>
     </main>
 
     <!-- axiox & Javascript file link -->

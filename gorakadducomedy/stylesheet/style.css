@@ -12,12 +12,92 @@
     src: url('/gorakadducomedy/assets/fonts/PhosphateSolid.ttf');
 }
 
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #BF0000;
+    border-radius: 10px;
+}
+
 /* SETTING  */
 .setting {
     max-width: 1600px;
     margin: 0 auto;
 
 }
+
+/* SEARCH BAR CSS  */
+.search-container {
+    ::-webkit-scrollbar {
+        background-color: #f1f1f100;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #BF0000;
+        border-radius: 5px;
+        width: 7px;
+    }
+}
+
+.searchBar {
+    width: 150%;
+    border: 3px solid #BF0000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+}
+
+#searchInput::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.search-results li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search_thumbnails {
+    height: 50px;
+    width: 80px;
+}
+
+.search_title {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserratt', sans-serif;
+    color: white;
+}
+
+.search_title:hover {
+    text-decoration: underline !important;
+}
+
+.search_title:hover {
+    text-decoration: underline;
+}
+
+.search-results {
+    display: none;
+    overflow-y: auto;
+    max-height: 250px;
+    width: 380px;
+    margin-top: 8px;
+    background-image: url('/gorakadducomedy/assets/images/search_result_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+
+
 
 /* FIRST SECTION CSS */
 #first_section {
@@ -75,6 +155,7 @@
     background-size: contain;
     width: 50%;
 }
+
 
 /* SECOND SECTION CSS  */
 .second_section {
@@ -154,50 +235,155 @@
 }
 
 /* THIRD SECTION CSS  */
-.third_section{
+.third_section {
     background-image: url('/gorakadducomedy/assets/images/about-us-section-bg.png');
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5% 15% !important;
     height: auto;
 }
-.third_section_row{
+
+.third_section_row {
     background-image: url('/gorakadducomedy/assets/images/aboutus_content_bg.png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.aboutus_heading{
+
+.aboutus_heading {
     font-family: PhosphateRR Solid;
     color: white;
 }
-.aboutus_text{
-    font-family: 'Inter',sans-serif;
+
+.aboutus_text {
+    font-family: 'Inter', sans-serif;
     color: white;
 }
 
 /* FOURTH SECTION CSS  */
-.fourth_section{
+.fourth_section {
     background-image: url('/gorakadducomedy/assets/images/series_section_bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.series_heading{
+
+.series_heading {
     background-image: url('/gorakadducomedy/assets/images/videos_heading_bg.png');
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    font-size: 3.5em ;
+    font-size: 3.5em;
     padding-bottom: 22px;
     font-family: PhosphateRR Solid;
     color: #FFAF53;
 }
-.series_title{
-    font-family: 'Montserrat',sans-serif;
+
+.series_title {
+    font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: 500;
+}
+
+/* FOOTER SECTION  */
+.footer_section {
+    background-image: url('/gorakadducomedy/assets/images/footer_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.channel_footer_title {
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+
+.takla_neta_vlog_logo {
+    border-radius: 50px;
+}
+
+.channel_footer_description {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.other_channel_title,
+.contactus_title,
+.social_link_title,
+.channel_items_link,
+.contactus_link,
+.social_icon_link,
+.copyright,
+.privacy_policy,
+.terms_condition,
+.disclaimer {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* TERMS AND CONDITIONS CSS  */
+.main{
+    background-image: url('/gorakadducomedy/assets/images/terms_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.terms_heading{
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+.terms_second_section{
+    background-image: url('/gorakadducomedy/assets/images/front_banner.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.para_col{
+    padding: 7% 12%;
+}
+.terms_text{
+    background-color: white;
+    font-family: 'Montserrat',sans-serif;
+    line-height: 1.5em;
+}
+.gora_one_img{
+    right:130px;
+    top: 100px;
+}
+.gora_three_img{
+    left:90px;
+    top: 560px;
+}
+.gora_two_img{
+    right:20px;
+    top: 1100px;
+}
+.gora_five_img{
+right: 50px;
+top: 110px;
+}
+.gora_four_img{
+    left: 50px;
+    top: 500px;
+}
+.privacy_gora_one_img{
+    right: 110px;
+    top: 90px;
+}
+.privacy_gora_two_img{
+    right: 50px;
+    top: 1400px;
+}
+.privacy_gora_three_img{
+    left: 40px;
+    top: 700px;
+}
+.terms_footer_section{
+    background-image: url('/gorakadducomedy/assets/images/footer_terms_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -206,6 +392,7 @@
     img.channel_name_img.img-fluid {
         width: 320px !important;
     }
+
     img.img-fluid.character_one {
         width: 160px !important;
     }
@@ -239,18 +426,54 @@
     .card-text {
         font-size: 14px !important;
     }
-    .third_section{
+
+    .third_section {
         padding: 40px 10px !important;
     }
-    img.aboutus_char_img.img-fluid{
+
+    img.aboutus_char_img.img-fluid {
         width: 200px !important;
     }
-    .third_section_row{
-        background-image:none !important;
+
+    .third_section_row {
+        background-image: none !important;
     }
-    .aboutus_text{
+
+    .aboutus_text {
         font-size: 16px !important;
     }
+
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-results {
+        width: 300px;
+    }
+    .terms_row{
+        padding: 10px 0 !important;
+    }
+    .terms_char{
+        width: 150px;
+    }
+    .para_col{
+        padding:20px !important;
+    }
+    
 }
 
 
@@ -296,19 +519,50 @@
     .card-text {
         font-size: 14px !important;
     }
-    .third_section{
+
+    .third_section {
         padding: 40px 10px !important;
     }
+
     .img.aboutus_char_img.img-fluid {
         width: 300px !important;
         display: flex;
         align-items: center !important;
     }
-    .third_section_row{
-        background-image:none !important;
+
+    .third_section_row {
+        background-image: none !important;
     }
-    .aboutus_text{
+
+    .aboutus_text {
         font-size: 16px !important;
+    }
+
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .terms_row{
+        padding: 10px 0 !important;
+    }
+    .terms_char{
+        width: 180px;
+    }
+    .para_col{
+        padding:30px !important;
     }
 }
 
@@ -325,20 +579,67 @@
         padding: 10px 15px !important;
         font-size: 3em !important;
     }
-    .third_section{
+
+    .third_section {
         padding: 40px 10px !important;
     }
+
     .img.aboutus_char_img.img-fluid {
         width: 320px !important;
         display: flex;
         align-items: center !important;
     }
-    .third_section_row{
-        background-image:none !important;
+
+    .third_section_row {
+        background-image: none !important;
     }
-    .aboutus_text{
+
+    .aboutus_text {
         font-size: 18px !important;
     }
+    .terms_row{
+        padding: 10px 0 !important;
+    }
+    .terms_char{
+        width: 180px;
+    }
+    .gora_one_img{
+        right:50px;
+        top: 100px;
+    }
+    .gora_three_img{
+        left:35px;
+        top: 560px;
+        
+    }
+    .gora_two_img{
+        right:30px;
+        top: 1300px;
+        width: 200px;
+    }
+    .gora_five_img{
+        right: 10px;
+        top: 50px;
+    }
+    .gora_four_img{
+        left:5px;
+        top: 550px;
+    }
+    .privacy_gora_one_img{
+        right: 50px;
+        top: 90px;
+    }
+    .privacy_gora_two_img{
+        right: 10px;
+        top: 1515px;
+        width: 200px;
+    }
+    .privacy_gora_three_img{
+        left: 0px;
+        top: 830px;
+        width: 150px;
+    }
+    
 }
 
 
@@ -350,10 +651,12 @@
     width: calc(100%/3);
     animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both
 }
+
 .card:hover {
     transition: 500ms;
     transform: scale(0.9, 0.9);
 }
+
 .cards-content {
     display: flex;
     align-items: center;
@@ -362,9 +665,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .cards-content:after {
     content: '';
     display: block;
@@ -372,6 +677,7 @@
     height: 100px;
     position: relative;
 }
+
 .custom-shape-divider-bottom-1701437909 {
     position: absolute;
     bottom: 0;
@@ -381,6 +687,7 @@
     line-height: 0;
     transform: rotate(180deg);
 }
+
 .custom-shape-divider-bottom-1701437909 .shape-fill {
     fill: #FEAA28;
 }
@@ -395,9 +702,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .mostPopular-cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .mostPopular-cards-content:after {
     content: '';
     display: block;
@@ -416,9 +725,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .BandAurBaraati-cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .BandAurBaraati-cards-content:after {
     content: '';
     display: block;
@@ -436,9 +747,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .MusicClasses-cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .MusicClasses-cards-content:after {
     content: '';
     display: block;
@@ -457,9 +770,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .OnlineClasses-cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .OnlineClasses-cards-content:after {
     content: '';
     display: block;
@@ -477,9 +792,11 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .KalaKadduLLB-cards-content::-webkit-scrollbar {
     height: 0px;
 }
+
 .KalaKadduLLB-cards-content:after {
     content: '';
     display: block;
@@ -487,4 +804,3 @@
     height: 100px;
     position: relative;
 }
-

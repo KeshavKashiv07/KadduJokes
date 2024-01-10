@@ -42,6 +42,42 @@ const getYoutubeSubscribers = async () => {
 };
 getYoutubeSubscribers();
 
+// Function for found search videos
+const searchVideos = () => {
+    try {
+        //console.log("Search button clicked");
+        const videoName = document.getElementById('searchInput').value.toLowerCase();
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';       
+
+        const matchingVideos = FetchedVideosData.videosArray.filter(video => video.videoTitle.toLowerCase().includes(videoName.toLowerCase()));
+        console.log("Matching videos:", matchingVideos);            
+
+        if (videoName == "" || !videoName || matchingVideos.length == 0) {
+            document.querySelector(".search-results").style.display = 'none'
+        } else {
+            document.querySelector(".search-results").style.display = 'block'
+
+            document.querySelector(".search-results").innerHTML += `<div class="search-cards-content p-1"></div>`
+            matchingVideos.forEach(video => {
+                //console.log(`Title: ${video.videoTitle}, URL: ${video.videoUrl}, Thumbnail: ${video.videoThumnnail}`);
+                let videoTitle = truncateText(video.videoTitle, 9);
+                document.querySelector(".search-cards-content").innerHTML +=
+                    `<li>
+            <a href="${video.videoUrl}" class="search_video_title_link text-decoration-none" target="_blank">
+            <div class="search_list d-flex">
+                <img class="search_thumbnails img-fluid rounded-1" src="${video.videoThumnnail}" alt="..">
+                <p class="search_title ms-2">${videoTitle}</p>
+            </div>
+            </a>
+        </li>`
+            });
+        }
+    } catch (error) {
+        console.error("Error fetching search video data:", error);
+    }
+};
+
 
 //Function to fetch latest video details and display in a card && its for Gora Kaddu comedy
 const getLatestYoutubeVideo = async () => {
@@ -78,7 +114,7 @@ const getLatestYoutubeVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 5);
             document.querySelector(".cards-content").innerHTML +=
-                `<div class="card m-2 border-5 rounded-3 border-light" style="width: 18rem;">
+                `<div class="card m-2 border-5 rounded-3 border-light" style="width: 18rem;" data-aos="flip-up">
             <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
                     class="card-img-top img-thumbnail rounded-top-3 shadow rounded-bottom-0 border-0 p-0" alt="..."></a>
             <div class="card-body">
@@ -148,7 +184,7 @@ const getMostPopularVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 5);
             document.querySelector(".mostPopular-cards-content").innerHTML +=
-                `<div class="card m-2 rounded-3 border-5 border-light" >
+                `<div class="card m-2 rounded-3 border-5 border-light" data-aos="flip-up" >
                 <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
                         class="card-img-top img-thumbnail border-0 p-0 shadow rounded-top-3 rounded-bottom-0" alt="..."></a>
                 <div class="card-body">
@@ -217,7 +253,7 @@ const getBandAurBaraatiVideos = async () => {
             });
             const truncate_title = truncateText(videoTitle, 5);
             document.querySelector(".BandAurBaraati-cards-content").innerHTML +=
-                `<div class="card m-2 rounded-3 border-5 border-light" >
+                `<div class="card m-2 rounded-3 border-5 border-light" data-aos="flip-up">
                 <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
                         class="card-img-top img-thumbnail border-0 p-0 shadow rounded-top-3 rounded-bottom-0" alt="..."></a>
                 <div class="card-body">
@@ -287,7 +323,7 @@ const getMusicClassesVideos = async () => {
              });
              const truncate_title = truncateText(videoTitle, 5);
              document.querySelector(".MusicClasses-cards-content").innerHTML +=
-                 `<div class="card m-2 rounded-3 border-5 border-light" >
+                 `<div class="card m-2 rounded-3 border-5 border-light" data-aos="flip-up">
                  <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
                          class="card-img-top img-thumbnail border-0 p-0 shadow rounded-top-3 rounded-bottom-0" alt="..."></a>
                  <div class="card-body">
@@ -355,7 +391,7 @@ const getOnlineClassesVideos = async () => {
              });
              const truncate_title = truncateText(videoTitle, 5);
              document.querySelector(".OnlineClasses-cards-content").innerHTML +=
-                 `<div class="card m-2 rounded-3 border-5 border-light" >
+                 `<div class="card m-2 rounded-3 border-5 border-light" data-aos="flip-up">
                  <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
                          class="card-img-top img-thumbnail border-0 p-0 shadow rounded-top-3 rounded-bottom-0" alt="..."></a>
                  <div class="card-body">
@@ -423,7 +459,7 @@ const getKalaKadduLLBVideos = async () => {
              });
              const truncate_title = truncateText(videoTitle, 5);
              document.querySelector(".KalaKadduLLB-cards-content").innerHTML +=
-                 `<div class="card m-2 rounded-3 border-5 border-light" >
+                 `<div class="card m-2 rounded-3 border-5 border-light" data-aos="flip-up">
                  <a href="${videoUrl}" target="_blank" class="img_link"><img src="${videoThumnnail}"
                          class="card-img-top img-thumbnail border-0 p-0 shadow rounded-top-3 rounded-bottom-0" alt="..."></a>
                  <div class="card-body">
