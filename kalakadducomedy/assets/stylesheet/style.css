@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900@&display=swap'); */
+
+@font-face {
+    font-family: PhosphateRR Solid;
+    src: url('/kalakadducomedy/assets/fonts/PhosphateRR\ Solid.ttf');
+}
+
+@font-face {
+    font-family: PhosphateSolid;
+    src: url('/kalakadducomedy/assets/fonts/PhosphateSolid.ttf');
+}
+
+/* SETTING  */
+.setting {
+    max-width: 1600px;
+    margin: 0 auto;
+
+}
+
+/* FOOTER SECTION  */
+.footer_section {
+    background-image: url('/kalakadducomedy/assets/images/footer_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.channel_footer_title {
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+
+.takla_neta_vlog_logo {
+    border-radius: 50px;
+}
+
+.channel_footer_description {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.other_channel_title,
+.contactus_title,
+.social_link_title,
+.channel_items_link,
+.contactus_link,
+.social_icon_link,
+.copyright,
+.privacy_policy,
+.terms_condition,
+.disclaimer {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* TERMS AND CONDITIONS CSS  */
+.main{
+    background-image: url('/kalakadducomedy/assets/images/terms_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.terms_heading{
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+.terms_second_section{
+    background-image: url('/kalakadducomedy/assets/images/front_banner.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.para_col{
+    padding: 7% 12%;
+}
+.terms_text{
+    background-color: white;
+    font-family: 'Montserrat',sans-serif;
+    line-height: 1.5em;
+}
+.gora_one_img{
+    right:130px;
+    top: 100px;
+}
+.gora_three_img{
+    left:90px;
+    top: 560px;
+}
+.gora_two_img{
+    right:20px;
+    top: 1100px;
+}
+.gora_five_img{
+right: 50px;
+top: 110px;
+}
+.gora_four_img{
+    left: 50px;
+    top: 500px;
+}
+.privacy_gora_one_img{
+    right: 110px;
+    top: 90px;
+}
+.privacy_gora_two_img{
+    right: 50px;
+    top: 1400px;
+}
+.privacy_gora_three_img{
+    left: 40px;
+    top: 700px;
+}
+.terms_footer_section{
+    background-image: url('/kalakadducomedy/assets/images/footer_terms_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* PHONE MEDIA QUERY  */
+@media only screen and (max-width:480px) {
+
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-results {
+        width: 300px;
+    }
+    .terms_row{
+        padding: 10px 0 !important;
+    }
+    .terms_char{
+        width: 150px;
+    }
+    .para_col{
+        padding:20px !important;
+    }
+    
+}
+
+
+
+/* TABLET MEDIA QUERY  */
+@media only screen and (max-width:768px) {
+
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .terms_row{
+        padding: 10px 0 !important;
+    }
+    .terms_char{
+        width: 180px;
+    }
+    .para_col{
+        padding:30px !important;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .terms_row{
+        padding: 10px 0 !important;
+    }
+    .terms_char{
+        width: 180px;
+    }
+    .gora_one_img{
+        right:50px;
+        top: 100px;
+    }
+    .gora_three_img{
+        left:35px;
+        top: 560px;
+        
+    }
+    .gora_two_img{
+        right:30px;
+        top: 1300px;
+        width: 200px;
+    }
+    .gora_five_img{
+        right: 10px;
+        top: 50px;
+    }
+    .gora_four_img{
+        left:5px;
+        top: 550px;
+    }
+    .privacy_gora_one_img{
+        right: 50px;
+        top: 90px;
+    }
+    .privacy_gora_two_img{
+        right: 10px;
+        top: 1515px;
+        width: 200px;
+    }
+    .privacy_gora_three_img{
+        left: 0px;
+        top: 830px;
+        width: 150px;
+    }
+    
+}
