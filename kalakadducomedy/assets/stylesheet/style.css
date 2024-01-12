@@ -19,17 +19,176 @@
 
 }
 
+/* SEARCH BAR CSS  */
+.search-container {
+    ::-webkit-scrollbar {
+        background-color: #f1f1f100;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #BF0000;
+        border-radius: 5px;
+        width: 7px;
+    }
+}
+
+.searchBar {
+    width: 150%;
+    border: 3px solid #0374DB;
+    font-family:PhosphateRR Solid;
+    font-size: 16px;
+    color: #0374DB !important;
+
+}
+
+#searchInput::placeholder {
+    font-family: PhosphateRR Solid;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0374DB;
+}
+
+.search-results li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search_thumbnails {
+    height: 50px;
+    width: 80px;
+}
+
+.search_title {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserratt', sans-serif;
+    color: white;
+}
+
+.search_title:hover {
+    text-decoration: underline !important;
+}
+
+.search_title:hover {
+    text-decoration: underline;
+}
+
+.search-results {
+    display: none;
+    overflow-y: auto;
+    max-height: 250px;
+    width: 380px;
+    margin-top: 8px;
+    background-image: url('/gorakadducomedy/assets/images/search_result_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+
 /* FIRST SECTION CSS  */
-.first_section{
+.first_section {
     background-image: url('/kalakadducomedy/assets/images/first_section_bg.png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.nav_links{
+
+.nav_links {
     font-family: PhosphateRR Solid;
     color: #0374DB;
 }
+
+/* SECOND SECTION css  */
+.second_section {
+    padding: 0 15%;
+    top: 650px;
+}
+
+.data_row {
+    background-image: url('/kalakadducomedy/assets/images/second_section-row_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.channel_name_title {
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+
+.subscriber_heading,
+.videos_heading,
+.views_heading {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.subs_number,
+.videos_number,
+.views_number {
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+
+/* THIRD SECTION  */
+.third_section{
+    background-image: url('/kalakadducomedy/assets/images/aboutus_bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.third_section_row{
+    padding-top: 100px;
+}
+.aboutus_heading{
+    background-image: url('/kalakadducomedy/assets/images/aboutus_heading_bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+.aboutus_text{
+    font-family: 'Montserrat',sans-serif;
+    background-color: white;
+}
+
+/* FOURTH SECTION CSS */
+.fourth_section{
+    background-image: url('/kalakadducomedy/assets/images/fourth_section_bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fourth_section_col{
+    background-image: url('/kalakadducomedy/assets/images/aboutus_heading_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+img.thumbnail_img.thumbnail-img.card-img-top.p-1 {
+    height: 180px;
+}
+.title_link{
+    font-family: 'Inter',sans-serif;
+    color: white;
+}
+.title_link:hover{
+    text-decoration: underline !important;
+}
+.card-body{
+    background-color: #FFA113;
+}
+img.mostpopular_video_banner.img-fluid {
+    height: 250px ;
+}
+
 
 /* FOOTER SECTION  */
 .footer_section {
@@ -68,64 +227,77 @@
 }
 
 /* TERMS AND CONDITIONS CSS  */
-.main{
+.main {
     background-image: url('/kalakadducomedy/assets/images/terms_bg.png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.terms_heading{
+
+.terms_heading {
     font-family: PhosphateRR Solid;
     color: white;
 }
-.terms_second_section{
+
+.terms_second_section {
     background-image: url('/kalakadducomedy/assets/images/front_banner.png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.para_col{
+
+.para_col {
     padding: 7% 12%;
 }
-.terms_text{
+
+.terms_text {
     background-color: white;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5em;
 }
-.gora_one_img{
-    right:130px;
+
+.gora_one_img {
+    right: 130px;
     top: 100px;
 }
-.gora_three_img{
-    left:90px;
+
+.gora_three_img {
+    left: 90px;
     top: 560px;
 }
-.gora_two_img{
-    right:20px;
+
+.gora_two_img {
+    right: 20px;
     top: 1100px;
 }
-.gora_five_img{
-right: 50px;
-top: 110px;
+
+.gora_five_img {
+    right: 50px;
+    top: 110px;
 }
-.gora_four_img{
+
+.gora_four_img {
     left: 50px;
     top: 500px;
 }
-.privacy_gora_one_img{
+
+.privacy_gora_one_img {
     right: 110px;
     top: 90px;
 }
-.privacy_gora_two_img{
+
+.privacy_gora_two_img {
     right: 50px;
     top: 1400px;
 }
-.privacy_gora_three_img{
+
+.privacy_gora_three_img {
     left: 40px;
     top: 700px;
 }
-.terms_footer_section{
-    background-image: url('/kalakadducomedy/assets/images/footer_terms_bg.png');
+
+.terms_footer_section {
+    background-image: url('/kalakadducomedy/assets/images/footer_bg.png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,21 +306,6 @@ top: 110px;
 
 /* PHONE MEDIA QUERY  */
 @media only screen and (max-width:480px) {
-    .first_section_row{
-        padding: 0 10px !important;
-    }
-    img.kala_two_img.img-fluid {
-        width: 190px;
-    }
-
-    .copyright,
-    .privacy_policy,
-    .terms_condition,
-    .disclaimer,
-    .channel_items_link,
-    .contactus_link {
-        font-size: 14px !important;
-    }
     .search-container {
         margin-top: 10px;
     }
@@ -161,29 +318,81 @@ top: 110px;
     .search-results {
         width: 300px;
     }
-    .terms_row{
-        padding: 10px 0 !important;
-    }
-    .terms_char{
-        width: 150px;
-    }
-    .para_col{
-        padding:20px !important;
-    }
-    
-}
 
-
-
-/* TABLET MEDIA QUERY  */
-@media only screen and (max-width:768px) {
-    .first_section_row{
-        padding: 0 20px !important;
+    .first_section_row {
+        padding: 0 5px !important;
+    }
+    .first_section_col{
+        padding: 10px 10px !important;
     }
 
-    img.kala_two_img.img-fluid,.img.kala_one_img.img-fluid {
+    img.kala_two_img.img-fluid {
         width: 190px;
     }
+
+    section.second_section.position-absolute {
+        padding: 10px 10px !important;
+        top: 820px;
+    }
+
+    .data_row {
+        padding: 30px 0 !important;
+        background-size: contain;
+    }
+
+    h3.channel_name_title.text-center.pb-5.display-5 {
+        font-size: 22px !important;
+        padding: 10px 0 !important
+    }
+
+    .subscriber_heading,
+    .videos_heading,
+    .views_heading {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 16px !important;
+    }
+
+    .subs_number,
+    .videos_number,
+    .views_number {
+        font-family: PhosphateRR Solid;
+        color: white;
+    }
+    .aboutus_heading{
+        margin: 20px 0;
+    }
+    .aboutus_text{
+        font-size: 16px !important;
+    }
+    .aboutus_char{
+        width: 250px !important;
+    }
+    img.char_one.img-fluid{
+        width: 250px;
+    }
+    section.latest_videos_col.col-12.col-sm-12.col-md-2.col-lg-2.d-flex.justify-content-evenly.p-0{
+        margin: 5px 0 !important;
+    }
+    .card.mx-2.rounded-4.shadow.shadow-lg.shadow-dark.bg-transparent.border.border-4 {
+        width: 11.5em !important;
+    }
+    .card-title{
+        font-size: 16px !important;
+    }
+    section.latest_videos_card_col.col-8.col-sm-12.col-md-8.col-lg-8.p-0.d-flex.align-items-center.justify-content-start{
+        margin-top: 20px !important;
+    }
+    section.latest_videos_col.col-4.col-sm-12.col-md-2.col-lg-2.d-flex.justify-content-evenly.p-0{
+        margin-top: 20px !important;
+    }
+    img.latest_video_banner.img-fluid{
+        width: auto !important;
+    }
+    img.mostpopular_video_banner.img-fluid{
+        height: 180px;
+    }
+
 
     .copyright,
     .privacy_policy,
@@ -202,59 +411,201 @@ top: 110px;
         width: 100%;
         margin-top: 10px;
     }
-    .terms_row{
+
+    .search-results {
+        width: 300px;
+    }
+
+    .terms_row {
         padding: 10px 0 !important;
     }
-    .terms_char{
+
+    .terms_char {
+        width: 150px;
+    }
+
+    .para_col {
+        padding: 20px !important;
+    }
+
+}
+
+
+
+/* TABLET MEDIA QUERY  */
+@media only screen and (max-width:768px) {
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .first_section_row {
+        padding: 0 20px !important;
+    }
+
+    img.kala_two_img.img-fluid,
+    .img.kala_one_img.img-fluid {
+        width: 190px;
+    }
+    .second_section{
+        padding: 10px 10px !important;
+        top: 400px;
+    }
+    .data_row{
+        background-size: contain;
+    }
+    .channel_name_title{
+        margin: 0 0 !important;
+        padding: 20px 0 !important;
+    }
+    .subscriber_heading,
+    .videos_heading,
+    .views_heading {
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 16px !important;
+    }
+
+    .subs_number,
+    .videos_number,
+    .views_number {
+        font-family: PhosphateRR Solid;
+        color: white;
+    }
+    p.aboutus_text.p-4.text-center.rounded-4.fw-medium{
+        padding: 10px 10px !important;
+    }
+    section.latest_videos_col.col-12.col-sm-12.col-md-2.col-lg-2.d-flex.justify-content-evenly.p-0{
+        margin: 5px 0 !important;
+    }
+    .card.mx-2.rounded-4.shadow.shadow-lg.shadow-dark.bg-transparent.border.border-4 {
+        width: 14rem !important;
+    }
+    .card-title{
+        font-size: 16px !important;
+    }
+    section.latest_videos_card_col.col-8.col-sm-8.col-md-9.col-lg-8.p-0.d-flex.align-items-center.justify-content-start{
+        margin-top: 20px !important;
+    }
+    section.latest_videos_col.col-4.col-sm-4.col-md-3.col-lg-2.d-flex.justify-content-evenly.p-0{
+        margin-top: 20px !important;
+    }
+    img.latest_video_banner.img-fluid{
+        width: auto !important;
+    }
+    section.mostpopular_video_row.row.m-0.gy-4.py-5{
+        padding: 20px 0 !important;
+    }
+    img.mostpopular_video_banner.img-fluid{
+        height: 150px;
+    }
+
+
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .terms_row {
+        padding: 10px 0 !important;
+    }
+
+    .terms_char {
         width: 180px;
     }
-    .para_col{
-        padding:30px !important;
+
+    .para_col {
+        padding: 30px !important;
     }
 }
 
 @media only screen and (max-width:1024px) {
-    .terms_row{
+    p.aboutus_text.p-4.text-center.rounded-4.fw-medium{
+        padding: 10px 10px !important;
+    }
+    section.latest_videos_col.col-12.col-sm-12.col-md-2.col-lg-2.d-flex.justify-content-evenly.p-0{
+        margin: 5px 0 !important;
+    }
+    .card-title{
+        font-size: 16px !important;
+    }
+    section.latest_videos_card_col.col-8.col-sm-8.col-md-9.col-lg-8.p-0.d-flex.align-items-center.justify-content-start{
+        margin-top: 20px !important;
+    }
+    section.latest_videos_col.col-4.col-sm-4.col-md-3.col-lg-2.d-flex.justify-content-evenly.p-0{
+        margin-top: 20px !important;
+    }
+    img.latest_video_banner.img-fluid{
+        width: auto !important;
+    }
+
+    .terms_row {
         padding: 10px 0 !important;
     }
-    .terms_char{
+
+    .terms_char {
         width: 180px;
     }
-    .gora_one_img{
-        right:50px;
+
+    .gora_one_img {
+        right: 50px;
         top: 100px;
     }
-    .gora_three_img{
-        left:35px;
+
+    .gora_three_img {
+        left: 35px;
         top: 560px;
-        
+
     }
-    .gora_two_img{
-        right:30px;
+
+    .gora_two_img {
+        right: 30px;
         top: 1300px;
         width: 200px;
     }
-    .gora_five_img{
+
+    .gora_five_img {
         right: 10px;
         top: 50px;
     }
-    .gora_four_img{
-        left:5px;
+
+    .gora_four_img {
+        left: 5px;
         top: 550px;
     }
-    .privacy_gora_one_img{
+
+    .privacy_gora_one_img {
         right: 50px;
         top: 90px;
     }
-    .privacy_gora_two_img{
+
+    .privacy_gora_two_img {
         right: 10px;
         top: 1515px;
         width: 200px;
     }
-    .privacy_gora_three_img{
+
+    .privacy_gora_three_img {
         left: 0px;
         top: 830px;
         width: 150px;
     }
-    
+
 }

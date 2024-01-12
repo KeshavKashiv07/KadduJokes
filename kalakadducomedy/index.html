@@ -18,46 +18,323 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <title>Kala Kaddu Comedy: Animated Humor & Funny Videos</title>
 </head>
+
 <body>
     <main class="main_container container-fluid p-0">
         <!-- FIRST SECTION  -->
         <section class="first_section">
             <div class="setting">
-            <header class="header_section_row row py-3 m-0">
-                <section class="naviagtion_section col-12 col-sm-12 col-md-6 col-lg-6">
-                    <nav class="nav-bar">
-                        <ul class="nav_list m-0 list-inline d-flex justify-content-evenly py-3">
-                            <li class="nav_list_items"><a href="#" class="nav-link nav_links">Home</a></li>
-                            <li class="nav_list_items"><a href="#" class="nav-link nav_links">About Us</a></li>
-                            <li class="nav_list_items"><a href="#" class="nav-link nav_links">Video</a></li>
-                            <li class="nav_list_items"><a href="#" class="nav-link nav_links">Series</a></li>
-                        </ul>
-                    </nav>
+                <header class="header_section_row row py-3 m-0">
+                    <section class="naviagtion_section col-12 col-sm-12 col-md-6 col-lg-6">
+                        <nav class="nav-bar">
+                            <ul class="nav_list m-0 list-inline d-flex justify-content-evenly py-3">
+                                <li class="nav_list_items"><a href="#" class="nav-link nav_links">Home</a></li>
+                                <li class="nav_list_items"><a href="#" class="nav-link nav_links">About Us</a></li>
+                                <li class="nav_list_items"><a href="#" class="nav-link nav_links">Video</a></li>
+                                <li class="nav_list_items"><a href="#" class="nav-link nav_links">Series</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+                    <section class="searchBar_section col-12 col-sm-12 col-md-6 col-lg-6">
+                        <section
+                            class="search-container position-relative  z-3 d-flex  col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-evenly align-items-center">
+                            <div>
+                                <input type="search" class="searchBar form-control rounded-5 shadow shadow-lg"
+                                    id="searchInput" placeholder="Search" oninput="searchVideos()">
+                                <ul class="search-results shadow shadow-lg shadow-dark  px-2 py-1 border border-3 border-light rounded-3"
+                                    id="searchResults"> </ul>
+                            </div>
+                        </section>
+                    </section>
+                </header>
+            </div>
+            <div class="setting">
+                <section class="first_section_row row m-0 g-5 pt-5 px-3">
+                    <section
+                        class="first_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center d-none d-sm-none d-md-flex d-lg-flex">
+                        <img src="/kalakadducomedy/assets/images/kala_1.png" alt="" class="kala_one_img img-fluid">
+                    </section>
+                    <section class="first_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-center">
+                        <img src="/kalakadducomedy/assets/images/channel_title_img.png" alt="Kala Kaddu Comedy"
+                            class="channel_title_img img-fluid">
+                    </section>
+                    <section class="first_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
+                        <img src="/kalakadducomedy/assets/images/kala_2.png" alt="" class="kala_two_img img-fluid">
+                    </section>
                 </section>
-                <section class="searchBar_section col-12 col-sm-12 col-md-6 col-lg-6"></section>
-            </header>
-        </div>
-        <div class="setting">
-            <section class="first_section_row row m-0 g-5 pt-5 px-3">
-                <section class="first_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center d-none d-sm-none d-md-flex d-lg-flex">
-                    <img src="/kalakadducomedy/assets/images/kala_1.png" alt="" class="kala_one_img img-fluid">
-                </section>
-                <section class="first_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex align-items-center">
-                    <img src="/kalakadducomedy/assets/images/channel_title_img.png" alt="Kala Kaddu Comedy" class="channel_title_img img-fluid">
-                </section>
-                <section class="first_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
-                    <img src="/kalakadducomedy/assets/images/kala_2.png" alt="" class="kala_two_img img-fluid">
-                </section>
-            </section>
-        </div>
+            </div>
         </section>
 
         <div class="divider py-5"></div>
 
         <!-- SECOND SECTION  -->
-        <section class="second_section">
+        <section class="second_section position-absolute">
+            <section class="second_section_row row m-0 ">
+                <section class="data_row row m-0 py-5">
+                    <h3 class="channel_name_title text-center pb-5 display-5">Kala Kaddu Comedy</h3>
+                    <section class="subs_col col-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="/kalakadducomedy/assets/images/subscriber.png" alt=""
+                                class="subscriber_icon_img img-fluid">
+                            <p class="subscriber_heading m-0 ps-2 fs-4">Subscribers</p>
+                        </div>
+                        <h3 class="subs_number text-center">350K</h3>
+                    </section>
+                    <section class="videos_col col-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="/kalakadducomedy/assets/images/view.png" alt="" class="videos_icon_img img-fluid">
+                            <p class="videos_heading m-0 ps-2 fs-4">Videos</p>
+                        </div>
+                        <h3 class="videos_number text-center">350K</h3>
+                    </section>
+                    <section class="view_col col-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="/kalakadducomedy/assets/images/watch_time.png" alt=""
+                                class="views_icon_img img-fluid">
+                            <p class="views_heading m-0 ps-2 fs-4">Watch Time</p>
+                        </div>
+                        <h3 class="views_number text-center">350K</h3>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!-- THIRD SECTION  -->
+        <section class="third_section px-3 pt-3 pb-0">
+            <div class="setting">
+                <section class="third_section_row row g-2">
+                    <section class="third_col col-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3 class="aboutus_heading text-center p-4 fs-1">About Us</h3>
+                        <p class="aboutus_text px-4 py-2 text-center rounded-4 fw-medium">Lorem ipsum dolor sit amet
+                            consectetur adipisicing
+                            elit. Sapiente fugit sint
+                            obcaecati molestias nisi praesentium eligendi, natus molestiae minus veniam repellat eaque
+                            est
+                            quas, eos, tempore tempora sed fugiat fuga! <br><br>
+                            Aperiam culpa sed fugit quibusdam facere dolorum ea earum ut quod. Sunt reprehenderit quod
+                            libero, tenetur alias dicta praesentium impedit maiores ipsam culpa quos quia dolor optio?
+                            Inventore, perferendis reiciendis. <br><br>
+                            Amet modi pariatur sed perferendis autem non nostrum sit voluptates quasi iusto esse
+                            necessitatibus, quos blanditiis a provident deleniti. Nostrum, ut voluptas? Voluptatem
+                            deserunt,
+                            eaque veniam explicabo qui non eveniet? <br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quam impedit optio eum,
+                            tempora
+                            vero suscipit magni soluta id itaque blanditiis repellat ut, earum ducimus officia
+                            voluptates!
+                            Unde, omnis laborum?
+                            Iste facere laboriosam vero, dolorem aliquam quam porro sequi sapiente neque consectetur
+                            praesentium, a molestias dolor optio cumque ut et perspiciatis facilis tempore. Repellat,
+                            corrupti! Dolore fuga iure eius amet.</p>
+                    </section>
+                    <section
+                        class="third_col col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+                        <img src="/kalakadducomedy/assets/images/aboutus_char.png" alt="aboutus_char"
+                            class="aboutus_char img-fluid">
+                    </section>
+                </section>
+            </div>
+        </section>
+
+        <!-- FOURTH SECTION CSS  -->
+        <section class="fourth_section">
+            <div class="setting">
+                <section class="fourth_section_row row m-0 pt-4 m-0">
+                    <section
+                        class="fourth_section-col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-evenly order-md-first d-none d-sm-none d-md-flex d-lg-flex">
+                        <img src="/kalakadducomedy/assets/images/char_one.png" alt="char_one"
+                            class="char_one img-fluid">
+                    </section>
+                    <section
+                        class="fourth_section_col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-evenly align-items-center order-first order-sm-first">
+                        <h3 class="video_heading display-3">Videos</h3>
+                    </section>
+                    <section
+                        class="fourth_section-col col-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-evenly d-none d-sm-none d-md-flex d-lg-flex">
+                        <img src="/kalakadducomedy/assets/images/char_two.png" alt="char_two"
+                            class="char_two img-fluid">
+                    </section>
+                    <!-- LATEST VIDEOS ROW  -->
+                    <section class="latest_video_row row m-0 my-3">
+                        <section
+                            class="latest_videos_col col-4 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-evenly p-0">
+                            <img src="/kalakadducomedy/assets/images/latest_video.png" alt="latest_video_banner"
+                                class="latest_video_banner img-fluid" width="250">
+                        </section>
+                        <section
+                            class="latest_videos_col col-12 col-sm-12 col-md-1 col-lg-1 d-none d-sm-none d-md-none d-lg-flex p-0">
+                            <button id="prev" class="bg-transparent border-0 "><img
+                                    src="/kalakadducomedy/assets/images/prev_arrow.png" alt=""
+                                    class="prev_arrow_img bg-none"></button>
+                        </section>
+                        <!-- CARD COLUMN  -->
+                        <section
+                            class="latest_videos_card_col col-8 col-sm-8 col-md-9 col-lg-8 p-0 d-flex align-items-center justify-content-start">
+                            <!-- CARDS  -->
+                            <div class="card mx-2 rounded-4 shadow shadow-lg shadow-dark bg-transparent border border-4"
+                                style="width: 20rem;">
+                                <a href="#" class="thumbnail_link"><img
+                                        src="/kalakadducomedy/assets/images/aboutus_bg.png" alt=""
+                                        class="p-0 thumbnail_img thumbnail-img card-img-top rounded-top-4"></a>
+                                <div class="card-body py-2 px-2 d-flex justify-content-center rounded-bottom-4">
+                                    <a href="#" class="title_link text-decoration-none">
+                                        <p class="card-title fs-4 py-2 rounded-5 fw-medium">Hello Kala Kaddu</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="latest_videos_col col-12 col-sm-12 col-md-1 col-lg-1 d-none d-sm-none d-md-none d-lg-flex p-0">
+                            <button id="next" class="bg-transparent border-0 "><img
+                                    src="/kalakadducomedy/assets/images/next_arrow.png" alt=""
+                                    class="prev_arrow_img bg-none"></button>
+                        </section>
+                    </section>
+
+                    <!-- MOST POPULAR VIDEOS ROW  -->
+                    <section class="mostpopular_video_row row m-0 gy-4 py-5">
+                        <section
+                            class="mostpopular_videos_col col-12 col-sm-12 col-md-1 col-lg-1 d-flex align-items-center p-0 d-none d-sm-none d-md-none d-lg-flex">
+                            <button id="prev" class="bg-transparent border-0 "><img
+                                    src="/kalakadducomedy/assets/images/prev_arrow.png" alt=""
+                                    class="prev_arrow_img bg-none"></button>
+                        </section>
+                        <section class="mostpopular_videos_col col-9 col-sm-9 col-md-9 col-lg-8 p-0">
+                            <!-- CARDS  -->
+                            <div class="card mx-2 rounded-4 shadow shadow-lg shadow-dark bg-transparent border border-4"
+                                style="width: 20rem;">
+                                <a href="#" class="thumbnail_link"><img
+                                        src="/kalakadducomedy/assets/images/aboutus_bg.png" alt=""
+                                        class="p-0 thumbnail_img thumbnail-img card-img-top rounded-top-4"></a>
+                                <div class="card-body py-2 px-2 d-flex justify-content-center rounded-bottom-4">
+                                    <a href="#" class="title_link text-decoration-none">
+                                        <p class="card-title fs-4 py-2 rounded-5 fw-medium">Hello Kala Kaddu</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- CARD COLUMN  -->
+                        <section
+                            class="mostpopular_videos_card_col col-12 col-sm-12 col-md-1 col-lg-1 d-flex align-items-center p-0 d-none d-sm-none d-md-none d-lg-flex">
+                            <button id="next" class="bg-transparent border-0 "><img
+                                    src="/kalakadducomedy/assets/images/next_arrow.png" alt=""
+                                    class="prev_arrow_img bg-none"></button>
+                        </section>
+                        <section
+                            class="mostpopular_videos_col col-3 col-sm-3 col-md-3 col-lg-2 p-0 d-flex align-items-center justify-content-evenly">
+                            <img src="/kalakadducomedy/assets/images/popular_video.png" alt="mostpopular_video_banner"
+                                class="mostpopular_video_banner img-fluid" width="250">
+                        </section>
+                    </section>
+
+                    <!-- MOVIE VIDEOS ROW  -->
+                    <section class="latest_video_row row m-0 my-3">
+                        <section
+                            class="latest_videos_col col-4 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-evenly p-0">
+                            <img src="/kalakadducomedy/assets/images/movie.png" alt="movie_banner"
+                                class="movie_banner img-fluid" width="250">
+                        </section>
+                        <section
+                            class="latest_videos_col col-12 col-sm-12 col-md-1 col-lg-1 d-none d-sm-none d-md-none d-lg-flex p-0">
+                            <button id="prev" class="bg-transparent border-0 "><img
+                                    src="/kalakadducomedy/assets/images/prev_arrow.png" alt=""
+                                    class="prev_arrow_img bg-none"></button>
+                        </section>
+                        <!-- CARD COLUMN  -->
+                        <section
+                            class="latest_videos_card_col col-8 col-sm-8 col-md-9 col-lg-8 p-0 d-flex align-items-center justify-content-start">
+                            <!-- CARDS  -->
+                            <div class="card mx-2 rounded-4 shadow shadow-lg shadow-dark bg-transparent border border-4"
+                                style="width: 20rem;">
+                                <a href="#" class="thumbnail_link"><img
+                                        src="/kalakadducomedy/assets/images/aboutus_bg.png" alt=""
+                                        class="p-0 thumbnail_img thumbnail-img card-img-top rounded-top-4"></a>
+                                <div class="card-body py-2 px-2 d-flex justify-content-center rounded-bottom-4">
+                                    <a href="#" class="title_link text-decoration-none">
+                                        <p class="card-title fs-4 py-2 rounded-5 fw-medium">Hello Kala Kaddu</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section
+                            class="latest_videos_col col-12 col-sm-12 col-md-1 col-lg-1 d-none d-sm-none d-md-none d-lg-flex p-0">
+                            <button id="next" class="bg-transparent border-0 "><img
+                                    src="/kalakadducomedy/assets/images/next_arrow.png" alt=""
+                                    class="prev_arrow_img bg-none"></button>
+                        </section>
+                    </section>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- FOOTER  -->
+        <section class="terms_footer_section container-fluid row p-0 mx-0 z-3 position-relative py-3 px-3">
+            <!-- COLUMN 1 -->
+            <section class="footer_logo_column col-12 col-sm-12 col-md-4 col-lg-3 py-3">
+                <a href="https://gorakadducomedy.kaddujoke.com/" class="logo_link"><img
+                        src="/kalakadducomedy/assets/images/channel_logo.png" alt=""
+                        class="takla_neta_vlog_logo img-fluid" height="80" width="80"></a>
+                <h3 class="channel_footer_title mt-3 mb-1 display-4">Kala Kaddu Comedy</h3>
+                <p class="channel_footer_description fs-6">@kalakadducomedy</p>
+            </section>
+            <!-- COLUMN 2  -->
+            <section class="other_channel_container col-12 col-sm-12 col-md-4 col-lg-3 py-3">
+                <p class="other_channel_title fs-5 fw-bold">Our Channels</p>
+                <ul class="channels_list ps-0">
+                    <li type="none" class="channels_list_items"><a href="https://taklanetavlogs.kaddujoke.com/"
+                            class="channel_items_link text-decoration-none fs-6">Takla Neta Vlogs</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://gorakadducomedy.kaddujoke.com/"
+                            class="channel_items_link text-decoration-none fs-6">Gora Kaddu Comedy</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://kalakadducomedy.kaddujoke.com/"
+                            class="channel_items_link text-decoration-none fs-6">Kala Kaddu Comedy</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@TaklaNetaComedy"
+                            class="channel_items_link text-decoration-none fs-6">Takla Neta Comedy</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@MyJokeOf"
+                            class="channel_items_link text-decoration-none fs-6">My Joke Of</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@KadduJoke"
+                            class="channel_items_link text-decoration-none fs-6">Kaddu Joke</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@Gorakadducartoon"
+                            class="channel_items_link text-decoration-none fs-6">Gora Kaddu Cartoon</a></li>
+                    <li type="none" class="channels_list_items"><a href="https://www.youtube.com/@KalaKadduCartoon"
+                            class="channel_items_link text-decoration-none fs-6">Kala Kaddu Cartoon</a></li>
+                </ul>
+            </section>
+            <!-- COLUMN 3  -->
+            <section class="contactus_container col-12 col-sm-12 col-md-4 col-lg-3 py-3">
+                <p class="contactus_title fs-5 fw-bold">Contact Us</p>
+                <ul class="contactus_list ps-0">
+                    <li type="none" class="contactus_list_items"><i class="fa fa-envelope text-light me-2"
+                            aria-hidden="true"></i><a href="mailto:suraj@kaddujoke.com"
+                            class="contactus_link fs-6 fs-sm-1 text-decoration-none">suraj@kaddujoke.com</a></li>
+                </ul>
+            </section>
+            <!-- COLUMN 4  -->
+            <section class="social_links_container col-12 col-sm-12 col-md-4 col-lg-3 py-3 ">
+                <p class="social_link_title fs-5 fw-bold">Follow Us On</p>
+                <ul class="social_item d-flex p-0 justify-content-start" type="none">
+                    <li class="social_item_link mx-2"><a href="https://www.youtube.com/@KalaKadduComedy" target="_blank"
+                            class="social_icon_link"><i class="fa fa-youtube fs-3 mx-2 py-2 px-1"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+            </section>
+
+            <!-- COPYRIGHT  -->
+            <section class="copyright_container container-fluid">
+                <section
+                    class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center align-items-center py-3">
+                    <p class="copyright text-center m-0">Copyright &copy; 2023-2024 KADDU JOKE. All Rights Reserved. <a
+                            class="privacy_policy text-decoration-underline"
+                            href="/kalakadducomedy/privacy_policy.html">Privacy Policy</a> | <a
+                            class="terms_condition text-decoration-underline"
+                            href="/kalakadducomedy/terms_and_conditions.html">Terms and Conditions</a> | <a
+                            class="disclaimer text-decoration-underline"
+                            href="/kalakadducomedy/disclaimer.html">Disclaimer</a> </p>
+                </section>
+            </section>
 
         </section>
+
     </main>
 </body>
 
