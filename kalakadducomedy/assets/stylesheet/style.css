@@ -19,6 +19,18 @@
 
 }
 
+/* FIRST SECTION CSS  */
+.first_section{
+    background-image: url('/kalakadducomedy/assets/images/first_section_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav_links{
+    font-family: PhosphateRR Solid;
+    color: #0374DB;
+}
+
 /* FOOTER SECTION  */
 .footer_section {
     background-image: url('/kalakadducomedy/assets/images/footer_bg.png');
@@ -122,6 +134,12 @@ top: 110px;
 
 /* PHONE MEDIA QUERY  */
 @media only screen and (max-width:480px) {
+    .first_section_row{
+        padding: 0 10px !important;
+    }
+    img.kala_two_img.img-fluid {
+        width: 190px;
+    }
 
     .copyright,
     .privacy_policy,
@@ -159,6 +177,13 @@ top: 110px;
 
 /* TABLET MEDIA QUERY  */
 @media only screen and (max-width:768px) {
+    .first_section_row{
+        padding: 0 20px !important;
+    }
+
+    img.kala_two_img.img-fluid,.img.kala_one_img.img-fluid {
+        width: 190px;
+    }
 
     .copyright,
     .privacy_policy,

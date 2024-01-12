@@ -222,7 +222,7 @@ const getBandAurBaraatiVideos = async () => {
     // "Playlist_id": "PLJhBye4d4noSdUK735XKPtfTpt7uTpfdU"
     // GET https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PLJhBye4d4noSdUK735XKPtfTpt7uTpfdU&key=AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
     try {
-        const Band_Aur_Baraati_jsonUrl = 'https://script.google.com/macros/s/AKfycbw3VKmAls5fE56Whpd90zyX82YzrohNqdRzQdeVRGQIvGwoF0TAA-Kfv8LNWLM3B1szvQ/exec'
+        const Band_Aur_Baraati_jsonUrl = 'https://script.google.com/macros/s/AKfycbyXhj_L9CCB6_-yc2LDR9zliXdlRQWTfvCYobp-8yUNVX3u8ASVzSvqg6mOckWk2hi3tw/exec';
 
         const response = await fetch(Band_Aur_Baraati_jsonUrl);
         if (!response.ok) {
@@ -292,7 +292,7 @@ const getMusicClassesVideos = async () => {
     // "playlist id": "PLJhBye4d4noQsnIi48lhjM3qm3uX7TdxR",
     // GET https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PLJhBye4d4noQsnIi48lhjM3qm3uX7TdxR&key=AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
      try {
-         const MusicClasses_jsonUrl = 'https://script.google.com/macros/s/AKfycbz7PcNMBgWK_1iTq4MJOJFB42w-5UfwKJ6jeFTfOUfiLeu4MrU1l2SwUwIzM2RKyDeO4Q/exec'
+         const MusicClasses_jsonUrl = 'https://script.google.com/macros/s/AKfycbziGLp3Pp8wjeFYzkwt7_Mxdi4iEZZInpcaGR6twrF3SglXH-5o8aTcbGD6YIJmLkdBjw/exec'
  
          const response = await fetch(MusicClasses_jsonUrl);
          if (!response.ok) {
@@ -360,7 +360,7 @@ const getOnlineClassesVideos = async () => {
     // "Playlist id": "PLJhBye4d4noSiY1-EH1VU_fmeL-nR2Me2"
     // GET https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PLJhBye4d4noSiY1-EH1VU_fmeL-nR2Me2&key=AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
      try {
-         const OnlineClasses_jsonUrl = 'https://script.google.com/macros/s/AKfycbzJLZ9YL5FxKJ5eq-Nk4vXbOZ4kt0oTzmrfbKNSBOq3xOgDM0HHm2sNdvWbz7HNnZByhQ/exec'
+         const OnlineClasses_jsonUrl = 'https://script.google.com/macros/s/AKfycbyDJnxPV8eSi63i_LEJwVLxSI4MLQ3trKcD5it8mNaLb7A4Tfss1JHkf41ZFYqhub9vTQ/exec'
  
          const response = await fetch(OnlineClasses_jsonUrl);
          if (!response.ok) {
@@ -428,7 +428,7 @@ const getKalaKadduLLBVideos = async () => {
    // "Playlist id": "PLJhBye4d4noSEy5ype3HoJxDJYtI_dSJ_"
     // GET https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PLJhBye4d4noSEy5ype3HoJxDJYtI_dSJ_&key=AIzaSyAeRQotjXR0sFjHyejnjPX_p4mZz778k-E
      try {
-         const KalaKadduLLB_jsonUrl = 'https://script.google.com/macros/s/AKfycbz0TRvWTJwj7tRRVTrzgI8UZCeHRy_3OkmxeGNR7LxW5t2pDj4D2ypmpR2U9zQOQuMk7w/exec'
+         const KalaKadduLLB_jsonUrl = 'https://script.google.com/macros/s/AKfycby0hI9U06aTEiVqy8xvlTSM8T5cM2iAAfdiVy93eLl_4k-rOKRLV83jYVju5ZaaL07P2Q/exec'
  
          const response = await fetch(KalaKadduLLB_jsonUrl);
          if (!response.ok) {
