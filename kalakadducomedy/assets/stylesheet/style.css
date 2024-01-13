@@ -81,7 +81,7 @@
     max-height: 250px;
     width: 380px;
     margin-top: 8px;
-    background-image: url('/gorakadducomedy/assets/images/search_result_bg.png');
+    background-image: url('/kalakadducomedy/assets/images/aboutus_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,9 +186,31 @@ img.thumbnail_img.thumbnail-img.card-img-top.p-1 {
     background-color: #FFA113;
 }
 img.mostpopular_video_banner.img-fluid {
-    height: 250px ;
+    height: 250px !important;
+}
+.fifth_section{
+    background-image: url('/kalakadducomedy/assets/images/series_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.series_heading{
+    background-image: url('/kalakadducomedy/assets/images/aboutus_heading_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-family: PhosphateRR Solid;
 }
 
+/* FIFTH SECTION  */
+.series_name_heading{
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+.series_char{
+    height: 800px;
+}
 
 /* FOOTER SECTION  */
 .footer_section {
@@ -332,7 +354,7 @@ img.mostpopular_video_banner.img-fluid {
 
     section.second_section.position-absolute {
         padding: 10px 10px !important;
-        top: 820px;
+        top: 887px !important;
     }
 
     .data_row {
@@ -375,7 +397,8 @@ img.mostpopular_video_banner.img-fluid {
         margin: 5px 0 !important;
     }
     .card.mx-2.rounded-4.shadow.shadow-lg.shadow-dark.bg-transparent.border.border-4 {
-        width: 11.5em !important;
+        min-width: 230px !important;
+        min-height: 235px !important;
     }
     .card-title{
         font-size: 16px !important;
@@ -391,6 +414,10 @@ img.mostpopular_video_banner.img-fluid {
     }
     img.mostpopular_video_banner.img-fluid{
         height: 180px;
+    }
+    .series_cards.card.mx-2.rounded-4.shadow.shadow-lg.shadow-dark.bg-transparent{
+        min-width: 180px !important;
+        min-height: 180px !important;
     }
 
 
@@ -483,7 +510,7 @@ img.mostpopular_video_banner.img-fluid {
         margin: 5px 0 !important;
     }
     .card.mx-2.rounded-4.shadow.shadow-lg.shadow-dark.bg-transparent.border.border-4 {
-        width: 14rem !important;
+        min-width: 14rem !important;
     }
     .card-title{
         font-size: 16px !important;
@@ -502,6 +529,10 @@ img.mostpopular_video_banner.img-fluid {
     }
     img.mostpopular_video_banner.img-fluid{
         height: 150px;
+    }
+    .series_cards.card.mx-2.rounded-4.shadow.shadow-lg.shadow-dark.bg-transparent{
+        min-width: 260px;
+        min-height: 220px;
     }
 
 
@@ -616,7 +647,7 @@ img.mostpopular_video_banner.img-fluid {
 /* SLIDERS CSS */
 .card {
     min-width: 280px;
-    min-height: 250px;
+    min-height: 280px;
     cursor: pointer;
     width: calc(100%/3);
     animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both

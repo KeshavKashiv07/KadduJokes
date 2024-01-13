@@ -115,7 +115,7 @@ try {
             const truncate_title = truncateText(videoTitle, 8);
             document.querySelector(".cards-content").innerHTML +=
                 ` <div class="card mx-2 rounded-4 shadow shadow-lg shadow-dark bg-transparent border border-4"
-                style="width: 20rem;">
+                style="width: 20rem;" data-aos="flip-left">
                 <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                         src="${videoThumnnail}" alt=""
                         class="p-0 thumbnail_img thumbnail-img card-img-top rounded-top-4"></a>
@@ -187,7 +187,7 @@ try {
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".mostPopular-cards-content").innerHTML +=
                 ` <div class="card mx-2 rounded-4 shadow shadow-lg shadow-dark bg-transparent border border-4"
-                style="width: 20rem;">
+                style="width: 20rem;" data-aos="flip-right">
                 <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                         src="${videoThumnnail}" alt=""
                         class="p-0 thumbnail_img thumbnail-img card-img-top rounded-top-4"></a>
