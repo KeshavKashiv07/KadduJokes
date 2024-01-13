@@ -609,3 +609,213 @@ img.mostpopular_video_banner.img-fluid {
     }
 
 }
+
+
+
+
+/* SLIDERS CSS */
+.card {
+    min-width: 280px;
+    min-height: 250px;
+    cursor: pointer;
+    width: calc(100%/3);
+    animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both
+}
+
+.card:hover {
+    transition: 500ms;
+    transform: scale(0.9, 0.9);
+}
+
+.cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1701437909 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1701437909 .shape-fill {
+    fill: #FEAA28;
+}
+
+
+/* Most Popular videos */
+.mostPopular-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.mostPopular-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.mostPopular-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+
+/* ShadiKaRishta videos */
+.ShadiKaRishta-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.ShadiKaRishta-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.ShadiKaRishta-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* SchoolLife videos */
+.SchoolLife-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.SchoolLife-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.SchoolLife-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* TrainYatra videos */
+.TrainYatra-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.TrainYatra-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.TrainYatra-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* NoteBan videos */
+.NoteBan-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.NoteBan-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.NoteBan-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+
+/* EnglishSpekingClasses videos */
+.EnglishSpekingClasses-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.EnglishSpekingClasses-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.EnglishSpekingClasses-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* PagaBeta videos */
+.PagaBeta-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.PagaBeta-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.PagaBeta-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
