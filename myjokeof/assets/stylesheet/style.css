@@ -21,80 +21,96 @@
 }
 
 /* HEADER SECTION  */
-.header_section{
+.header_section {
     background-image: url('/myjokeof/assets/images/header_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.nav_links{
+
+.nav_links {
     font-family: PhosphateRR Solid;
     color: #794900;
     font-size: 1.2em;
 }
-.nav_links:hover{
+
+.nav_links:hover {
     text-decoration: underline;
     color: white;
 }
-.searchBar{
+
+.searchBar {
     text-align: center;
     font-family: PhosphateRR Solid;
     color: #794900;
 }
-.searchBar::placeholder{
+
+.searchBar::placeholder {
     color: #794900;
-}   
+}
 
 /* FIRST SECTION CSS  */
-.first_section{
+.first_section {
     background-image: url('/myjokeof/assets/images/first_section_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.box_row{
+
+.box_row {
     margin: 0 25%;
 }
-.check_out{
+
+.check_out {
     font-family: 'Cherry Bomb One', system-ui;
 }
 
 /* SECOND SECTION  */
-.second_section{
+.second_section {
     background-image: url('/myjokeof/assets/images/second_sectionbg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 10px 5%;
 }
-.channel_title{
+
+.channel_title {
     font-family: 'Cherry Bomb One', system-ui;
     color: white;
 }
-.data_row{
+
+.data_row {
     background-color: white;
 }
-.subs_heading,.views_heading,.videos_heading{
-    font-family: 'Montserrat',sans-serif;
-    background-image: linear-gradient(#D22975,#EB7102);
+
+.subs_heading,
+.views_heading,
+.videos_heading {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(#D22975, #EB7102);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.subs_count,.views_count,.videos_count{
+
+.subs_count,
+.views_count,
+.videos_count {
     font-family: PhosphateRR Solid;
-    background-image: linear-gradient(#D22975,#EB7102);
+    background-image: linear-gradient(#D22975, #EB7102);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* THIRD SECTION  */
-.third_section{
+.third_section {
     background-image: url('/myjokeof/assets/images/third_section_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.series_heading,.video_heading{
+
+.series_heading,
+.video_heading {
     background-image: url('/myjokeof/assets/images/board.png');
     background-position: top;
     background-repeat: no-repeat;
@@ -102,40 +118,47 @@
     font-family: 'Cherry Bomb One', system-ui;
     color: white;
 }
-.series_name{
-    font-family:PhosphateRR Solid;
+
+.series_name {
+    font-family: PhosphateRR Solid;
     color: white;
 }
-.card{
+
+.card {
     width: 17rem;
     border-color: white !important;
 }
-.card-body{
+
+.card-body {
     background-color: #FF00C7;
 }
-.card-title{
+
+.card-title {
     color: white;
-    font-family:PhosphateRR Solid;
+    font-family: PhosphateRR Solid;
     letter-spacing: 1px;
 }
-.card-title:hover{
+
+.card-title:hover {
     text-decoration: underline;
 }
 
 /* FOURTH SECTION CSS  */
-.fourth_section{
+.fourth_section {
     background-image: url('/myjokeof/assets/images/fourth_section.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.popular_movies_row{
+
+.popular_movies_row {
     background-image: url('/myjokeof/assets/images/popular_moviesbg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.movies_row{
+
+.movies_row {
     background-image: url('/myjokeof/assets/images/moviesbg.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -182,22 +205,31 @@
 
 
 /* MEDIA QUERY */
-@media only screen and (max-width:480px){
-    .subs_heading,.views_heading,.videos_heading{
+@media only screen and (max-width:480px) {
+
+    .subs_heading,
+    .views_heading,
+    .videos_heading {
         font-size: 16px !important;
     }
-    .third_section{
+
+    .third_section {
         padding: 10px 10px !important;
     }
-    .card{
+
+    .card {
         width: 11em !important;
     }
-    .card-title{
+
+    .card-title {
         font-size: 16px !important;
     }
-    .series_heading,.video_heading{
+
+    .series_heading,
+    .video_heading {
         background-image: none;
     }
+
     .copyright,
     .privacy_policy,
     .terms_condition,
@@ -208,7 +240,8 @@
     }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:768px) {
+
     .copyright,
     .privacy_policy,
     .terms_condition,
