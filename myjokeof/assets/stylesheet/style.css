@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900@&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+@font-face {
+    font-family: PhosphateRR Solid;
+    src: url('/myjokeof/assets/fonts/PhosphateRR\ Solid.ttf');
+}
+
+@font-face {
+    font-family: PhosphateSolid;
+    src: url('/myjokeof/assets/fonts/PhosphateSolid.ttf');
+}
+
+/* SETTING  */
+.setting {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* HEADER SECTION  */
+.header_section{
+    background-image: url('/myjokeof/assets/images/header_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav_links{
+    font-family: PhosphateRR Solid;
+    color: #794900;
+    font-size: 1.2em;
+}
+.nav_links:hover{
+    text-decoration: underline;
+    color: white;
+}
+.searchBar{
+    text-align: center;
+    font-family: PhosphateRR Solid;
+    color: #794900;
+}
+.searchBar::placeholder{
+    color: #794900;
+}   
+
+/* FIRST SECTION CSS  */
+.first_section{
+    background-image: url('/myjokeof/assets/images/first_section_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box_row{
+    margin: 0 25%;
+}
+.check_out{
+    font-family: 'Cherry Bomb One', system-ui;
+}
+
+/* SECOND SECTION  */
+.second_section{
+    background-image: url('/myjokeof/assets/images/second_sectionbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px 5%;
+}
+.channel_title{
+    font-family: 'Cherry Bomb One', system-ui;
+    color: white;
+}
+.data_row{
+    background-color: white;
+}
+.subs_heading,.views_heading,.videos_heading{
+    font-family: 'Montserrat',sans-serif;
+    background-image: linear-gradient(#D22975,#EB7102);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.subs_count,.views_count,.videos_count{
+    font-family: PhosphateRR Solid;
+    background-image: linear-gradient(#D22975,#EB7102);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* THIRD SECTION  */
+.third_section{
+    background-image: url('/myjokeof/assets/images/third_section_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.series_heading,.video_heading{
+    background-image: url('/myjokeof/assets/images/board.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 400px auto;
+    font-family: 'Cherry Bomb One', system-ui;
+    color: white;
+}
+.series_name{
+    font-family:PhosphateRR Solid;
+    color: white;
+}
+.card{
+    width: 17rem;
+    border-color: white !important;
+}
+.card-body{
+    background-color: #FF00C7;
+}
+.card-title{
+    color: white;
+    font-family:PhosphateRR Solid;
+    letter-spacing: 1px;
+}
+.card-title:hover{
+    text-decoration: underline;
+}
+
+/* FOURTH SECTION CSS  */
+.fourth_section{
+    background-image: url('/myjokeof/assets/images/fourth_section.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.popular_movies_row{
+    background-image: url('/myjokeof/assets/images/popular_moviesbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.movies_row{
+    background-image: url('/myjokeof/assets/images/moviesbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* FOOTER CSS  */
+.footer_section {
+    background-image: url('/myjokeof/assets/images/footerbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.channel_footer_title {
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+
+.takla_neta_vlog_logo {
+    border-radius: 50px;
+}
+
+.channel_footer_description {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.other_channel_title,
+.contactus_title,
+.social_link_title,
+.channel_items_link,
+.contactus_link,
+.social_icon_link,
+.copyright,
+.privacy_policy,
+.terms_condition,
+.disclaimer {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width:480px){
+    .subs_heading,.views_heading,.videos_heading{
+        font-size: 16px !important;
+    }
+    .third_section{
+        padding: 10px 10px !important;
+    }
+    .card{
+        width: 11em !important;
+    }
+    .card-title{
+        font-size: 16px !important;
+    }
+    .series_heading,.video_heading{
+        background-image: none;
+    }
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .copyright,
+    .privacy_policy,
+    .terms_condition,
+    .disclaimer,
+    .channel_items_link,
+    .contactus_link {
+        font-size: 14px !important;
+    }
+}
