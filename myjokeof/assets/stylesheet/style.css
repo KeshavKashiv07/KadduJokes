@@ -251,3 +251,281 @@
         font-size: 14px !important;
     }
 }
+
+
+
+/* SLIDERS CSS */
+.card {
+    min-width: 280px;
+    min-height: 250px;
+    cursor: pointer;
+    width: calc(100%/3);
+    animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 0.6) both
+}
+
+.card:hover {
+    transition: 500ms;
+    transform: scale(0.9, 0.9);
+}
+
+.cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1701437909 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1701437909 .shape-fill {
+    fill: #FEAA28;
+}
+
+
+/* Most Popular videos */
+.mostPopular-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.mostPopular-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.mostPopular-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* TaklaNetaKalaKaddu videos */
+.TaklaNetaKalaKaddu-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.TaklaNetaKalaKaddu-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.TaklaNetaKalaKaddu-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* KalaKadduTaklaNetaAnimated videos */
+.KalaKadduTaklaNetaAnimated-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.KalaKadduTaklaNetaAnimated-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.KalaKadduTaklaNetaAnimated-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* KalaKadduKaJudwaa videos */
+.KalaKadduKaJudwaa-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.KalaKadduKaJudwaa-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.KalaKadduKaJudwaa-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+
+/* GarmiMaiBaarish videos */
+.GarmiMaiBaarish-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.GarmiMaiBaarish-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.GarmiMaiBaarish-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* ComedyToons videos */
+.ComedyToons-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.ComedyToons-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.ComedyToons-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+/* movies videos */
+.movies-cards-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.movies-cards-content::-webkit-scrollbar {
+    height: 0px;
+}
+
+.movies-cards-content:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+
+
+/* SEARCH BAR CSS  */
+.search-container {
+    ::-webkit-scrollbar {
+        background-color: #f1f1f100;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #BF0000;
+        border-radius: 5px;
+        width: 7px;
+    }
+}
+
+.searchBar {
+    width: 150%;
+    border: 3px solid #0374DB;
+    font-family:PhosphateRR Solid;
+    font-size: 16px;
+    color: #0374DB !important;
+
+}
+
+#searchInput::placeholder {
+    font-family: 'Chango',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0374DB;
+}
+
+.search-results li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search_thumbnails {
+    height: 50px;
+    width: 80px;
+}
+
+.search_title {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserratt', sans-serif;
+    color: white;
+}
+
+.search_title:hover {
+    text-decoration: underline !important;
+}
+
+.search_title:hover {
+    text-decoration: underline;
+}
+
+.search-results {
+    display: none;
+    overflow-y: auto;
+    max-height: 250px;
+    width: 360px;
+    margin-top: 8px;
+    background-image: url('/myjokeof/assets/images/third_section_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
