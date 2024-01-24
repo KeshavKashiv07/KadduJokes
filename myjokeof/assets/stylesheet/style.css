@@ -110,7 +110,7 @@
 }
 
 .series_heading,
-.video_heading {
+.video_heading,.aboutus_heading {
     background-image: url('/myjokeof/assets/images/board.png');
     background-position: top;
     background-repeat: no-repeat;
@@ -165,6 +165,19 @@
     background-size: cover;
 }
 
+/* FIFTH SECTION  */
+.fifth_section{
+    background-image: url('/myjokeof/assets/images/fifth_sectionbg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutus_para{
+    background-color: white;
+    font-family: 'Montserrat',sans-serif;
+}
+
+
 /* FOOTER CSS  */
 .footer_section {
     background-image: url('/myjokeof/assets/images/footerbg.png');
@@ -201,11 +214,75 @@
     color: white;
 }
 
+/* TERMS AND CONDITIONS CSS  */
+.main {
+    background-image: url('/myjokeof/assets/images/terms_bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.terms_heading {
+    font-family: PhosphateRR Solid;
+    color: white;
+}
+
+.terms_second_section {
+    background-image: url('/myjokeof/assets/images/front_banner.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.para_col {
+    padding: 7% 12%;
+}
+
+.terms_text {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+}
+.dis_police{
+    right: 80px;
+    top: 100px;
+}
+.dis_takla{
+    left: 50px;
+    top: 500px;
+}
+.priv_police{
+    right: 50px;
+    top: 600px;
+}
+.priv_kalatwo{
+    top: 50px;
+}
+.priv_kala{
+    left: 20px;
+    top: 1300px;
+}
+.terms_kala{
+    left: 50px;
+    top: 50px;
+}
+.terms_takla{
+    right: 50px;
+    top:600px;
+}
+.terms_kalatwo{
+    left: 20px;
+    top: 1100px;
+}
+
 
 
 
 /* MEDIA QUERY */
 @media only screen and (max-width:480px) {
+    .all_char_img{
+        width: 300px !important;
+    }
 
     .subs_heading,
     .views_heading,
@@ -218,7 +295,8 @@
     }
 
     .card {
-        width: 11em !important;
+        min-width: 10em !important;
+        min-height: 220px !important;
     }
 
     .card-title {
@@ -238,10 +316,26 @@
     .contactus_link {
         font-size: 14px !important;
     }
+    .aboutus_para{
+        font-size: 16px !important;
+    }
+    .terms_row {
+        padding: 10px 0 !important;
+    }
+
+    .terms_char {
+        width: 150px;
+    }
+
+    .para_col {
+        padding: 20px !important;
+    }
 }
 
 @media only screen and (max-width:768px) {
-
+.card{
+    min-width: 12rem !important;
+}
     .copyright,
     .privacy_policy,
     .terms_condition,
@@ -249,6 +343,62 @@
     .channel_items_link,
     .contactus_link {
         font-size: 14px !important;
+    }
+
+    .searchBar{
+        width: 100% !important;
+    }
+    .search-results{
+        width: 300px !important;
+    }
+    .aboutus_para{
+        padding: 5px 10px !important;
+        font-size: 16px !important;
+    }
+    .terms_row {
+        padding: 10px 0 !important;
+    }
+
+    .terms_char {
+        width: 180px;
+    }
+
+    .para_col {
+        padding: 30px !important;
+    }
+}
+@media only screen and (max-width:1024px){
+    .dis_police{
+        right: 20px;
+        top: 100px;
+    }
+    .dis_takla{
+        left: 20px;
+        top: 500px;
+    }
+    .priv_police{
+        right: 10px;
+        top: 600px;
+    }
+    .priv_kalatwo{
+        top: 50px;
+    }
+    .priv_kala{
+        left: 0;
+        top: 1600px;
+        width: 140px;
+    }
+    .terms_kala{
+        left: 0;
+        top: 80px;
+    }
+    .terms_takla{
+        right: 50px;
+        top:600px;
+    }
+    .terms_kalatwo{
+        left: -20px;
+        top: 1000px;
     }
 }
 
@@ -529,3 +679,5 @@
     background-size: cover;
     position: absolute;
 }
+
+

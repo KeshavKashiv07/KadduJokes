@@ -115,7 +115,7 @@ const getLatestYoutubeVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -187,7 +187,7 @@ const getMostPopularVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".mostPopular-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -259,7 +259,7 @@ const getTaklaNetaKalaKadduComedy = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".TaklaNetaKalaKaddu-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -330,7 +330,7 @@ const getKalaKadduTaklaNetaAnimatedComedy = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".KalaKadduTaklaNetaAnimated-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -401,7 +401,7 @@ const getKalaKadduKaJudwaa = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".KalaKadduKaJudwaa-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -473,7 +473,7 @@ const getGarmiMaiBaarishVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".GarmiMaiBaarish-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -545,7 +545,7 @@ const getComedyToonsVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".ComedyToons-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
@@ -616,7 +616,7 @@ const getMoviesVideo = async () => {
             });
             const truncate_title = truncateText(videoTitle, 7);
             document.querySelector(".movies-cards-content").innerHTML +=
-            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1">
+            `<div class="card border border-4 shadow shadow-lg rounded-3 m-1"  data-aos="flip-left">
                             <a href="${videoUrl}" target="_blank" class="thumbnail_link"><img
                                     src="${videoThumnnail}" alt=""
                                     class="p-0 thumbnail_img thumbnail-img card-img-top rounded-bottom-0 img-fluid"></a>
