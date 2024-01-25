@@ -2,6 +2,14 @@ body {
   background-color: black;
 
 }
+.games_heading{
+  font-family: Poppins,sans-serif;
+  color: #FEAA28;
+}
+.game_img_four,.game_img{
+  width: 1200px !important;
+  height: 300px !important;
+}
 
 .logo {
   border-radius: 100%;
